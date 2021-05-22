@@ -1,0 +1,50 @@
+// This applies for screen over 1000px
+@media (min-width:900px){
+    
+//Navbar
+.navbar-body{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
+    overflow-x: hidden;
+    padding: 0px 75px 0px 75px;
+    overflow: visible;
+    margin: 20px 0px;
+}
+ 
+//Body ******************
+
+//Counties Component
+#counties-img{
+    width: 500px!important;
+}
+
+//career page 
+#career-page-body{
+    width: 700px;
+    margin-left:auto;
+    margin-right:auto;
+}
+//Contact us page
+#contactus-page-body{
+    width: 1200px;
+    margin-left:auto;
+    margin-right:auto;
+}
+//Intake Requests Page
+#intake-page-body{
+    width: 800px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.intake-page-body-form{
+    width: 600px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+
+
+}

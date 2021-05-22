@@ -1,0 +1,462 @@
+// This applies for screen between 0px to 600px
+// Ex. Smartphones
+
+@media (min-width:0px){
+
+//Top Info *******************************************************
+
+.topinfo-body{
+    padding: 5px 75px 5px 0px;
+    font-size: 14px;
+    text-align: right;
+    background-color: #e5e5e5
+}
+.topinfo-body p{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.topinfo-body span{
+    font-weight: bold;
+}
+.topinfo-body a:link, .topinfo-body a:visited{
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+}
+.topinfo-body  a:hover{
+    text-decoration: underline;
+    color: rgb(115, 115, 255);
+}
+
+// Navbar ********************************************************
+
+.navbar-body{
+    padding: 0px 10px 0px 10px;
+    margin: 20px 0px;
+    font-family: Barlow;
+    font-weight:bold;
+}
+
+.navbar{
+    width:100%;
+}
+
+.navbar-logo-div1{
+    display: flex;
+    flex-flow: wrap;
+    flex-direction: row;
+}
+.navbar-logo1{
+    height: 50px;
+    margin-top:auto;
+    margin-bottom:auto;
+}
+.navbar-logo2{
+    height: 80px;
+}
+
+.navbar-link-div{
+    width: 100%;
+    height:100%;
+    margin-top:auto;
+    margin-bottom:auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.navbar-link-ul{
+    height: 100%;
+    width: 70%;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-top:auto;
+    margin-bottom:auto;
+}
+
+.dropdown-item{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    font-size: 13px;
+    border: 0px;
+    border-bottom: 1px solid #e5e5e5!important;
+    z-index: 10;
+    overflow: visible;
+}
+
+.navbar-link-menu-item{
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+}
+.navbar-toggler{
+    border: 0px;
+}
+#navbarToggler{
+    width: 100%;
+    margin-top: 0px;
+    border-top: 2px solid #3E62AE;
+    overflow: visible;
+    z-index:  10;
+    position:absolute;
+}
+.navbar-link-items a:link, .navbar-link-items a:visited{
+    text-decoration: none;
+    color: #7E7E7E;
+    font-size: 15px;
+}
+.navbar-link-items a:hover{
+    color: blue;
+}
+
+// Main ********************************************************
+// Body
+.body {
+    width: 100%;
+    background-color: white;
+    z-index: 1;
+    font-family: Barlow;
+}
+@font-face{
+    font-family:Barlow-Medium;
+    src: url(../resources/Extra/Barlow/Barlow-Medium.ttf);
+
+}
+
+@font-face{
+    font-family:Barlow;
+    src: url(../resources/Extra/Barlow/Barlow-Thin.ttf);
+    
+
+}
+
+.page-title{
+    padding: 25px 0px 25px 0px;
+    background-color: #cae9ff;
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: center;
+}
+
+.page-title-p{
+    font-family: Barlow-Medium;
+    margin-top:auto;
+    margin-bottom:auto;
+    font-size: 30px;
+    font-weight: bolder;
+    text-align:center;
+    width: 100%;
+    font-weight:bolder;
+}
+
+.page-body a:link, .page-body a:visited{
+    text-decoration: none;
+    color: black;
+}
+.page-body a:hover{
+    text-decoration: underline;
+    color: blue;
+}
+
+.page-body{
+    padding: 0px 75px 50px 75px;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+
+//Main Page
+#root, .main-body{
+    height: 50%;
+}
+html, body{
+    height: 100%
+}
+.image-container{
+    width: 100%;
+    height: 500px;
+}
+.image-container-image{
+    width: 100%;
+    height:auto;
+}
+.slide-div-info{
+    border: 1px solid grey;
+    background-color: white;
+    opacity: .7;
+    position:absolute;
+    left:100px;
+    top: 100px;
+    padding: 15px 15px;
+}
+
+.slide-div-info a{
+    text-decoration: none;
+    color: black;
+    opacity: .7;
+}
+
+.slide-div-info a:hover{
+    color: blue;
+}
+
+.slide-div-info-title{
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+.slide-div-info-info{
+    font-size: 20px;
+    margin-top:auto;
+    margin-bottom:auto;
+}
+
+.slide-container{
+    position: relative;
+}
+
+//Counties Component
+#counties-img{
+    width: 100%;
+}
+.page-counties-body-col{
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.page-counties{
+    background-color: #cae9ff;
+    padding: 50px 75px;
+}
+.page-counties-header{
+    text-align:left;
+}
+
+.page-counties-header{
+    padding-bottom: 25px;
+    font-size: 40px;
+    color:black;
+}
+.page-counties-body{
+    font-weight: bolder;
+    font-size: 20px;
+    color:black;
+    display:flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+
+}
+
+.page-counties-body a{
+    text-decoration: none;
+    color:black;
+}
+
+.page-counties-body a:hover{
+    text-decoration: none;
+    color:blue;
+}
+
+.page-counties-body ul{
+    list-style-image: url("../resources/Extra/checkmark.png");
+}
+
+//Mission Page
+#page-body-mission{
+    margin-top: 40px;
+    text-align: center;
+}
+
+#mission-img{
+    width: 600px;
+    padding: 25px;
+    border-radius: 40px;
+}
+
+//About Us Page
+
+#page-body-about{
+    margin-top: 40px;
+}
+
+#about-us-img{
+    width: 350px;
+    padding: 25px;
+    float:right;
+}
+
+//Career Page
+#career-body{
+    text-align: center;
+}
+
+.career-img{
+    height: 400px;
+    margin-bottom: 50px;
+    border-radius: 10px;
+}
+
+#career-page-body{
+    margin-top: 50px;
+}
+
+//Contact Us Page
+.required{
+    color:red;
+}
+#cu-button{
+    background-color: white;
+    border: 1px solid gray;
+    float:right;
+}
+#contactus-page-body{
+    font-size: 16px;
+}
+#contactus-page-body p, #contactus-page-body label{
+    margin-bottom: 0px;
+}
+
+#contactus-page-body label{
+    margin-top: 15px;
+}
+
+//Services Page
+#services-body h4{
+    font-weight:bold
+}
+#services-body{
+    font-size: 16px;
+}
+
+//Intake Page
+#intake-page-body{
+    font-size: 16px;
+}
+.form-section{
+    border: 1px solid grey;
+    padding: 20px 20px;
+    margin-bottom: 15px;
+}
+.form-row{
+    padding-bottom: 15px;
+}
+legend {
+    display: inline!important;
+    font-size:16px!important;
+    text-align:left;
+    width: initial!important;
+}
+
+.form-section input, .form-section textarea, .form-section select{
+    margin-top:auto;
+    margin-bottom:auto;
+    border-radius: 0px;
+}
+
+#intake-page-body p, #intake-page-body{
+    margin-bottom: 0px;
+}
+
+.intake-page-body-form{
+    width: 100%;
+    margin-left:auto;
+    margin-right:auto;
+}
+.form-text-box{
+    margin-top:auto;
+    margin-bottom:auto;
+}
+.intake-page-body-form label{
+    margin-top:auto;
+    margin-bottom:auto;
+}
+.hha_form{
+    margin-bottom: 15px;
+}
+
+// Footer ********************************************************
+.footer-body{
+    height:100%;
+    font-family: Barlow;
+    font-weight: bolder;
+}
+.footer-container{
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction:row;
+    background-color: #2b2d42;
+    padding: 50px 75px 50px 75px;
+}
+
+.footer-container-collumns{
+    width: 250px;
+    color:white;
+    padding-bottom: 75px;
+    font-size: 15px;
+}
+.footer-container-collumns a:link, .footer-container-collumns a:visited{
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+}
+
+.footer-container-collumns a:hover{
+    text-decoration: underline;
+    color: rgb(115, 115, 255);
+}
+
+.footer-link:link, .footer-link:visited{
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+}
+
+
+
+.footer-rights-reserved{
+    padding: 10px 0px 10px 0px;
+    text-align: center;
+    background-color:black;
+    color:#7E7E7E;;
+    height: 60%;
+}
+
+#footer-img{
+    padding:25px;
+    width: 200px;
+    filter: grayscale(100%);
+}
+
+// Home ***
+
+.home-body-intro{
+    justify-content: center;
+    width: 80%;
+}
+
+#cordial-md-span-home{
+    font-size: 30px;
+}
+
+.home-welcome{
+    font-size: 40px;
+    padding: 30px 75px 0px 75px;
+    font-weight:bolder;
+}
+
+.home-welcome p{
+    padding-bottom: 0px;
+}
+
+#home-welcome-welcome{
+    font-size: 25px;
+}
+
+
+}
