@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React, { Component} from "react";
 import "../styles/styles.scss";
 import "../styles/styles600px.scss";
 import img from "../resources/StockImages/pexels-rodnae-productions-6129507.jpg";
@@ -38,7 +38,7 @@ class Career extends Component {
                 </div>
                 {this.displayPageBody()}
                 <div>
-                    <img src={img} className="career-img"></img>
+                    <img src={img} alt=""className="career-img"></img>
                 </div>
             </div>
         );

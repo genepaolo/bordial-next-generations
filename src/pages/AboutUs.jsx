@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React, { Component} from "react";
 import "../styles/styles.scss";
 import "../styles/styles600px.scss";
 import MovingComponent from 'react-moving-text';
@@ -16,7 +16,7 @@ class AboutUs extends Component {
         return(
             <div className="page-body" id="page-body-about">
                 <div>
-                        <img src={img} id="about-us-img"></img>
+                        <img src={img} alt="" id="about-us-img"></img>
                     </div>
                     <MovingComponent
                     type="slideInFromTOP"

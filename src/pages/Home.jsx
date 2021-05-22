@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React, { Component} from "react";
 import "../styles/styles.scss";
 import "../styles/styles600px.scss";
 import { Fade } from 'react-slideshow-image';
@@ -78,7 +78,7 @@ class Home extends Component {
             <Fade>
                 <div className="each-fade">
                     <div className="image-container">
-                        <img className="image-container-image"src={fadeImages[0]} />
+                        <img className="image-container-image"src={fadeImages[0]} alt="" />
                     </div>
                     <div className="slide-div-info">
                         <MovingComponent
@@ -103,7 +103,7 @@ class Home extends Component {
                 </div>
                 <div className="each-fade">
                 <div className="image-container">
-                    <img className="image-container-image" src={fadeImages[1]} />
+                    <img className="image-container-image" src={fadeImages[1]} alt=""/>
                 </div>
                 <div className="slide-div-info">
                     <MovingComponent

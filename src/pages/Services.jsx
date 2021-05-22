@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React, { Component} from "react";
 import "../styles/styles.scss";
 import "../styles/styles600px.scss";
 import Counties from "../components/Counties";

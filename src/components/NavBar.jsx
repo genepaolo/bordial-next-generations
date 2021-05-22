@@ -3,7 +3,6 @@ import Media from 'react-media';
 import logo1 from "../resources/Logos/Cordial-Healthcare-Providers-Name.png";
 import logo2 from "../resources/Logos/Cordial-Healthcare-Providers-Pic.png";
 import '../styles/styles600px.scss';
-import {Navbar, Nav, NavDropdown} from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import'bootstrap/dist/js/bootstrap.bundle.min';
 
@@ -26,8 +25,8 @@ class NavBar extends Component {
         
         <nav className="navbar-link-div">
             <div className="navbar-logo-div1">
-                    <img src={logo2} className="navbar-logo2" />
-                    <img src={logo1} className="navbar-logo1" />
+                    <img src={logo2} alt="logo" className="navbar-logo2" />
+                    <img src={logo1} alt="CordialMD" className="navbar-logo1" />
             </div>
             <ul className="navbar-link-ul">
             <li className="active navbar-link-items" id="navbar-menu-1">
@@ -88,8 +87,8 @@ class NavBar extends Component {
             <nav className="navbar-link-div">
                 <nav class="navbar navbar-fixed-top navbar-light bg-white static-top">
                 <div className="navbar-logo-div2 col-11">
-                    <img src={logo2} className="navbar-logo2" />
-                    <img src={logo1} className="navbar-logo1" />
+                    <img src={logo2} alt="logo" className="navbar-logo2" />
+                    <img src={logo1} alt="CordialMD" className="navbar-logo1" />
                 </div>
 
 
@@ -105,10 +104,10 @@ class NavBar extends Component {
                             <a class="nav-link" href="/mission-statement">Mission</a>
                         </li>
                         <li class="dropdown-item">
-                            <a class="nav-link" href="#">About Us</a>
+                            <a class="nav-link" href="/about-us">About Us</a>
                         </li>
                         <li class="dropdown-item">
-                            <a class="nav-link" href="#">Services</a>
+                            <a class="nav-link" href="/services">Services</a>
                         </li>
                         
                         <li class="dropdown-item">

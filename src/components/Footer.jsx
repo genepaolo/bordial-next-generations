@@ -52,7 +52,7 @@ class Footer extends Component {
                         <a class="footer-link" href="/intake-requests">Intake Requests</a>
                     </li>
                     <div>
-                        <img src={img} id="footer-img"></img>
+                        <img src={img} alt="logo" id="footer-img"></img>
                     </div>
                 </div>
             </div>

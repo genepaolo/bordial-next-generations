@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React, { Component } from "react";
 import "../styles/styles.scss";
 import "../styles/styles600px.scss";
 import MovingComponent from 'react-moving-text';
@@ -31,7 +31,7 @@ class MissionStatement extends Component {
                     </p>
                 </MovingComponent>
                 <div>
-                    <img src={img} id="mission-img"></img>
+                    <img src={img} alt="" id="mission-img"></img>
                 </div>
             </div>
         );

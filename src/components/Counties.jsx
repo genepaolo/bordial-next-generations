@@ -1,15 +1,9 @@
-import React, { Component, useState } from "react";
+import React, { Component} from "react";
 import "../styles/styles.scss";
 import "../styles/styles600px.scss";
 import img from "../resources/StockImages/GoogleMap.png";
 
 class Counties extends Component {
-    constructor(props){
-        super(props);
-    }
-
-
-
     render(){
         return(
             <div className="page-counties">
@@ -27,7 +21,7 @@ class Counties extends Component {
                         <p><a href="/contact-us">Click here to contact us for an appointment today!</a></p>
                     </div>
                     <div className="page-counties-body-col">
-                        <img src={img} id="counties-img"></img>
+                        <img src={img} id="counties-img" alt="County Images"></img>
                     </div>
                 </div>
                 
