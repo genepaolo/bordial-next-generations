@@ -1,8 +1,7 @@
 {
-  "name": "cordialmd",
+  "name": "",
   "version": "0.1.0",
   "private": false,
-  "homepage": "https://genepaolo.github.io/cordialmd",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.8",
     "@testing-library/react": "^11.2.2",
