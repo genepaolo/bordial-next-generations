@@ -6,10 +6,10 @@
 //Top Info *******************************************************
 
 .topinfo-body{
-    padding: 5px 75px 5px 0px;
+    padding: 5px 50px 5px 0px;
     font-size: 14px;
     text-align: right;
-    background-color: #e5e5e5
+    background-color: #e5e5e5;
 }
 .topinfo-body p{
     margin-top: auto;
@@ -80,12 +80,16 @@
     padding-top: 5px;
     padding-bottom: 5px;
     padding-left: 20px;
-    font-size: 13px;
+    font-size: 18px;
     border: 0px;
+    color: #4e4e4e;
     border-bottom: 1px solid #e5e5e5!important;
     z-index: 10;
     overflow: visible;
+    font-family: Barlow-Medium;
+    font-weight:800px;
 }
+
 
 .navbar-link-menu-item{
     padding-left: 10px;
@@ -107,12 +111,14 @@
 }
 .navbar-link-items a:link, .navbar-link-items a:visited{
     text-decoration: none;
-    color: #7E7E7E;
-    font-size: 15px;
+    color: #4e4e4e;
+    font-size: 18px;
+    font-weight:bold;
 }
 .navbar-link-items a:hover{
     color: blue;
 }
+
 
 // Main ********************************************************
 // Body
@@ -198,7 +204,7 @@ html, body{
 .slide-div-info a{
     text-decoration: none;
     color: black;
-    opacity: .7;
+    opacity: .8;
 }
 
 .slide-div-info a:hover{
@@ -211,10 +217,13 @@ html, body{
 }
 
 .slide-div-info-info{
+    color: black;
     font-size: 20px;
+    font-weight: bolder;
     margin-top:auto;
     margin-bottom:auto;
 }
+
 
 .slide-container{
     position: relative;
@@ -306,6 +315,10 @@ html, body{
 }
 
 //Contact Us Page
+.form-section input{
+    font-weight: bold;
+}
+
 .required{
     color:red;
 }
@@ -334,6 +347,9 @@ html, body{
 }
 
 //Intake Page
+input, select, .custom-select{
+    font-weight: 1000!important;
+}
 #intake-page-body{
     font-size: 16px;
 }
@@ -378,6 +394,42 @@ legend {
 .hha_form{
     margin-bottom: 15px;
 }
+
+/* Modal Header */
+.modal-header {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+  }
+  
+  /* Modal Body */
+  .modal-body {padding: 2px 16px;}
+  
+  /* Modal Footer */
+  .modal-footer {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s
+  }
+  
+  /* Add Animation */
+  @keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+  }
 
 // Footer ********************************************************
 .footer-body{

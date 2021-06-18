@@ -15,7 +15,7 @@ class Footer extends Component {
                     <p>Cordial Healthcare Providers</p>
                     {/* <p>Office:</p> */}
                     {/* <p>Fax:</p> */}
-                    <p>Email: <a href ="mailto: cordialmmg@gmail.com">cordialmmg@gmail.com</a></p>
+                    <p>Email: <a href ="mailto: info@cordialmd.com">info@cordialmd.com</a></p>
                     <br/>
                     <p>127 S. Brand Blvd</p>
                     <p>Suite 333</p>
@@ -49,7 +49,7 @@ class Footer extends Component {
                         <a class="footer-link" href="/contact-us">Contact Us</a>
                     </li>
                     <li class="footer-item">
-                        <a class="footer-link" href="/intake-requests">Intake Requests</a>
+                        <a class="footer-link" href="/intake-requests">Intake Form</a>
                     </li>
                     <div>
                         <img src={img} alt="logo" id="footer-img"></img>
@@ -62,7 +62,7 @@ class Footer extends Component {
     displayRightsReserved(){
         return(
             <div className="footer-rights-reserved">
-                <p>Copyright © 2021. Coridal Health Providers. All rights reserved.</p>
+                <p>Copyright © 2021. Cordial Health Providers. All rights reserved.</p>
             </div>
         );
     }

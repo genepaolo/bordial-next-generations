@@ -38,7 +38,7 @@ class ContactUs extends Component {
             <div className="page-body" id="contactus-page-body">
                 <br></br>
                 <p>Cordial Healthcare Providers</p>
-                <p>Email: <a href ="mailto: cordialmmg@gmail.com">cordialmmg@gmail.com</a></p>
+                <p>Email: <a href ="mailto: info@cordialmd.com">info@cordialmd.com</a></p>
                 <br/>
                 <p>127 S. Brand Blvd</p>
                 <p>Suite 333</p>

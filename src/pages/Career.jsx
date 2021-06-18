@@ -1,7 +1,7 @@
 import React, { Component} from "react";
 import "../styles/styles.scss";
 import "../styles/styles600px.scss";
-import img from "../resources/StockImages/pexels-rodnae-productions-6129507.jpg";
+import img from "../resources/StockImages/shutterstock_473259139.jpg";
 import MovingComponent from 'react-moving-text';
 
 class Career extends Component {
@@ -24,7 +24,7 @@ class Career extends Component {
                 iteration="1"
                 fillMode="none">
                     <p>We would love for you to join us!</p>
-                    <p>For interested applicants, please submit your CV or resume to: <a href ="mailto: cordialmmg@gmail.com">cordialmmg@gmail.com</a></p>
+                    <p>For interested applicants, please submit your CV or resume to: <a href ="mailto: info@cordialmd.com">info@cordialmd.com</a></p>
                 </MovingComponent>
             </div>
         );

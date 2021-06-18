@@ -13,39 +13,33 @@ class IntakeRequests extends Component {
         }
     }
 
+
     sendEmail(e) {
         e.preventDefault();    //This is important, i'm not sure why, but the email won't send without it
     
         emailjs.sendForm('gmail', 'template_tpbxcoh', e.target, 'user_fysxm9swVB9DFCDMGbTB3')
           .then((result) => {
-              window.location.reload()  //This is if you still want the page to reload (since e.preventDefault() cancelled that behavior) 
+              window.location.reload();  //This is if you still want the page to reload (since e.preventDefault() cancelled that behavior)
+              alert("Thank you for filling out the form. The email you have provided should receive a confirmation and you should have a response within 24-48 hours. If there is not confirmation email, please contact us.");
           }, (error) => {
-              console.log(error.text);
+            alert("There was an issue processing your form submission. Please try again. Do not submit documents that exceed 500 KB. If the issue occurs again, please contact us.");
           });
     }
 
     displayPageBody(){
         return(
             <div className="page-body" id="intake-page-body">
-                <p>Please complete the form beow to submit an new intake request/referral.</p>
+                <p>Please complete the form beow to submit an new intake form/referral.</p>
                 <br></br>
                 <form onSubmit={this.sendEmail} class="intake-page-body-form">
                     <fieldset class="form-section">
-                        <legend>Personal Information</legend>
+                        <legend>Patient Information</legend>
                         <div class="form-row">
                             <div class="col-12 col-md-4">
                                 <label >First Name <span class="required">*</span></label>
                             </div>
                             <div class="form-text-box col-12 col-md-8">
                                 <input type="text" class="form-control" name="name_first" placeholder="..." required/>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="col-12 col-md-4">
-                                <label >Middle Name </label>
-                            </div>
-                            <div class="form-text-box col-12 col-md-8">
-                                <input type="text" class="form-control" name="name_middle" placeholder="..."/>
                             </div>
                         </div>
                         <div class="form-row">
@@ -76,14 +70,6 @@ class IntakeRequests extends Component {
                             <input class="form-control" type="date" name="birth-date" required/>
                             </div>
                         </div>
-                        <div class="form-row">
-                            <div class="col-12 col-md-4">
-                                <label >Age <span class="required">*</span></label>
-                            </div>
-                            <div class="form-text-box col-12 col-md-8">
-                                <input type="number" class="form-control" name="age" placeholder="..." required/>
-                            </div>
-                        </div>
                     </fieldset>
                     <fieldset class="form-section">
                         <legend>Address</legend>
@@ -95,12 +81,21 @@ class IntakeRequests extends Component {
                                 <input type="text" class="form-control" name="street" placeholder="..." required/>
                             </div>
                         </div>
+
                         <div class="form-row">
                             <div class="col-12 col-md-4">
                                 <label >City <span class="required">*</span></label>
                             </div>
                             <div class="form-text-box col-12 col-md-8">
                                 <input type="text" class="form-control" name="city" placeholder="..." required/>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-12 col-md-4">
+                                <label >Apt #</label>
+                            </div>
+                            <div class="form-text-box col-12 col-md-8">
+                                <input type="text" class="form-control" name="apt" placeholder="..."/>
                             </div>
                         </div>
                         <div class="form-row">
@@ -130,42 +125,18 @@ class IntakeRequests extends Component {
                         <legend>Demographics</legend>
                         <div class="form-row">
                             <div class="col-12 col-md-4">
-                                <label >Language</label>
+                                <label >Preferred Language</label>
                             </div>
                             <div class="form-text-box col-12 col-md-8">
                             <select class="custom-select" name="language">
                                 <option value=""  selected></option>
+                                <option value="Armenian">Arabic</option>
                                 <option value="Armenian">Armenian</option>
                                 <option value="English">English</option>
-                                <option value="Farci">Farci</option>
+                                <option value="Farci">Farsi</option>
                                 <option value="Russian">Russian</option>
-                                <option value="Tagalog">Tagalog</option>
                                 <option value="Spanish">Spanish</option>
-                                <option value="Other">Other</option>
-                            </select>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="col-12 col-md-4">
-                                <label >Other Langauge</label>
-                            </div>
-                            <div class="form-text-box col-12 col-md-8">
-                                <input type="text" class="form-control" name="langauge_other" placeholder="Answer if previous answer was 'Other'"/>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="col-12 col-md-4">
-                                <label >Race</label>
-                            </div>
-                            <div class="form-text-box col-12 col-md-8">
-                            <select class="custom-select" name="race">
-                                <option value="0"  selected>No Comment</option>
-                                <option value="1">Asian</option>
-                                <option value="2">Black or African American</option>
-                                <option value="3">Hispanice</option>
-                                <option value="4">White</option>
-                                <option value="5">Other</option>
-                
+                                <option value="Tagalog">Tagalog</option>
                             </select>
                             </div>
                         </div>
@@ -193,42 +164,26 @@ class IntakeRequests extends Component {
                         <legend>Contact Information</legend>
                         <div class="form-row">
                             <div class="col-12 col-md-4">
-                                <label >Contact Phone No.<span class="required">*</span></label>
+                                <label >Contact Person<span class="required">*</span></label>
                             </div>
                             <div class="form-text-box col-12 col-md-8">
-                                <input type="text" class="form-control" name="contact" placeholder="..." required/>
-                            </div>
-                        </div>
-                        {/* <div class="form-row">
-                            <div class="col-12 col-md-4">
-                                <label >Emergency Contact Person <span class="required">*</span></label>
-                            </div>
-                            <div class="form-text-box col-12 col-md-8">
-                                <input type="text" class="form-control" name="emerg_name" placeholder="..." required/>
+                                <input type="text" class="form-control" name="contact-name" placeholder="..." required/>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="col-12 col-md-4">
-                                <label >Emergency Contact Person Phone No.<span class="required">*</span></label>
+                                <label >Contact Email<span class="required">*</span></label>
                             </div>
                             <div class="form-text-box col-12 col-md-8">
-                                <input type="text" class="form-control" name="emerg_num" placeholder="..." required/>
-                            </div>
-                        </div> */}
-                        <div class="form-row">
-                            <div class="col-12 col-md-4">
-                                <label >Alternate Contact Person</label>
-                            </div>
-                            <div class="form-text-box col-12 col-md-8">
-                                <input type="text" class="form-control" name="alt_name" placeholder="..." />
+                                <input type="text" class="form-control" name="contact-email" placeholder="..." required/>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="col-12 col-md-4">
-                                <label >Alternate Contact Phone No.</label>
+                                <label >Contact Phone No.</label>
                             </div>
                             <div class="form-text-box col-12 col-md-8">
-                                <input type="number" class="form-control" name="alt_num" placeholder="..."/>
+                                <input type="text" class="form-control" name="contact-number" placeholder="..."/>
                             </div>
                         </div>
                     </fieldset>
@@ -239,28 +194,19 @@ class IntakeRequests extends Component {
                                 <label >Reason for visit/referral<span class="required">*</span></label>
                             </div>
                             <div class="form-text-box col-12 col-md-8">
-                            <select class="custom-select" name="referral_reason" required>
+                            <select class="custom-select" name="referral_reason" >
                                 <option value=""  selected>-- Choose Option --</option>
                                 <option value="Referral to Home Health">Referral to Home Health</option>
                                 <option value="Wound Care">Wound Care</option>
                                 <option value="Discharge from Hospital">Discharge from Hospital</option>
-                                <option value="Other">Other</option>
                             </select>
                             </div>
                         </div>
                         <div class="form-row">
-                            <div class="col-12 col-md-4">
-                                <label >Other Reason</label>
-                            </div>
-                            <div class="form-text-box col-12 col-md-8">
-                                <input type="text" class="form-control" name="referral_other" placeholder="Answer if previous answer was 'Other'"/>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="col-12 col-md-4">
+                            <div class="col-12 col-md-9">
                                 <label >Was the patient in an inpatient facility within the last 14 days? <span class="required">*</span></label>
                             </div>
-                            <div class="form-text-box col-12 col-md-8">
+                            <div class="form-text-box col-12 col-md-3">
                                 <div class="form-check">
                                     <label class="form-check-label">
                                         <input class="form-check-input" type="radio" name="quarantine" value="Yes" />
@@ -292,63 +238,41 @@ class IntakeRequests extends Component {
                             <div class="col-12">
                                     <label >If you have a preferred home health agency, please fill information below</label>
                             </div>
-                            <div class="col-2 col-md-2">
-                                <label >Name</label>
+                        </div>
+                        <br/>
+                        <div class="form-row">
+                            <div class="col-12 col-md-4">
+                                <label >Home Health Agency</label>
                             </div>
-                            <div class="form-text-box col-10 col-md-4 hha_form">
-                                <input type="text" class="form-control" name="hha_name" placeholder="..." />
-                            </div>
-                            <div class="col-2 col-md-2">
-                                <label >Contact Info.</label>
-                            </div>
-                            <div class="form-text-box col-10 col-md-4 hha_form">
-                                <input type="text" class="form-control" name="hha_ci" placeholder="..." />
-                            </div>
-                            <div class="col-2 col-md-2">
-                                <label >Email</label>
-                            </div>
-                            <div class="form-text-box col-10 col-md-4 hha_form">
-                                <input type="text" class="form-control" name="hha_email" placeholder="..." />
-                            </div>
-                            <div class="col-2 col-md-2">
-                                <label >Phone No.</label>
-                            </div>
-                            <div class="form-text-box col-10 col-md-4 hha_form">
-                                <input type="text" class="form-control" name="hha_phone" placeholder="..." />
-                            </div>
-                            <div class="col-2 col-md-2">
-                                <label >Address</label>
-                            </div>
-                            <div class="form-text-box col-10 col-md-4 hha_form">
-                                <input type="text" class="form-control" name="hha_addr" placeholder="..." />
-                            </div>
-                            <div class="col-2 col-md-2">
-                                <label >City</label>
-                            </div>
-                            <div class="form-text-box col-10 col-md-4 hha_form">
-                                <input type="text" class="form-control" name="hha_city" placeholder="..." />
-                            </div>
-                            <div class="col-2 col-md-2">
-                                <label >Zip Code</label>
-                            </div>
-                            <div class="form-text-box col-10 col-md-4 hha_form">
-                                <input type="text" class="form-control" name="hha_zip" placeholder="..." />
-                            </div>
-                            <div class="col-2 col-md-2">
-                                <label >Fax No.</label>
-                            </div>
-                            <div class="form-text-box col-10 col-md-4 hha_form">
-                                <input type="text" class="form-control" name="hha_fax" placeholder="..." />
+                            <div class="form-text-box col-12 col-md-8">
+                                <input type="text" class="form-control" name="hha-name" placeholder="..." />
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="col-12 col-md-4">
-                                <label >How soon does the patient need to be seen?</label>
+                                <label >Contact Person</label>
                             </div>
                             <div class="form-text-box col-12 col-md-8">
-                                <input type="text" class="form-control" name="severity" placeholder="..." />
+                                <input type="text" class="form-control" name="hha-cp" placeholder="..." />
                             </div>
                         </div>
+                        <div class="form-row">
+                            <div class="col-12 col-md-4">
+                                <label >Email</label>
+                            </div>
+                            <div class="form-text-box col-12 col-md-8">
+                                <input type="text" class="form-control" name="hha-email" placeholder="..." />
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-12 col-md-4">
+                                <label >Phone No.</label>
+                            </div>
+                            <div class="form-text-box col-12 col-md-8">
+                                <input type="text" class="form-control" name="hha_phone" placeholder="..."/>
+                            </div>
+                        </div>
+                        
                     </fieldset>
                     <fieldset class="form-section">
                         <legend>Insurance Information</legend>
@@ -360,57 +284,23 @@ class IntakeRequests extends Component {
                                 <input type="text" class="form-control" name="prim_name" placeholder="Insurance Name" required/>
                             </div>
                             <div class="form-text-box col-12 col-md-4">
-                                <input type="text" class="form-control" name="prim_num" placeholder="Insurance Number" required/>
+                                <input type="text" class="form-control" name="prim_num" placeholder="Medicare ID" required/>
                             </div>
                         </div>
-                        <div class="form-row">
-                            <div class="col-12 col-md-4">
-                                <label >Secondary Insurance</label>
-                            </div>
-                            <div class="form-text-box col-12 col-md-4">
-                                <input type="text" class="form-control" name="sec_name" placeholder="Insurance Name" />
-                            </div>
-                            <div class="form-text-box col-12 col-md-4">
-                                <input type="text" class="form-control" name="sec_num" placeholder="Insurance Number" />
-                            </div>
-                        </div>
-                    </fieldset>
-                    <fieldset class="form-section">
-                        <legend>Person Entering Referral</legend>
-                        <div class="form-row">
-                            <div class="col-12 col-md-4">
-                                <label >Name<span class="required">*</span></label>
-                            </div>
-                            <div class="form-text-box col-12 col-md-8">
-                                <input type="text" class="form-control" name="per_name" placeholder="..." required/>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="col-12 col-md-4">
-                                <label >Email<span class="required">*</span></label>
-                            </div>
-                            <div class="form-text-box col-12 col-md-8">
-                                <input type="text" class="form-control" name="per_email" placeholder="..." required/>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="col-12 col-md-4">
-                                <label >Phone Number</label>
-                            </div>
-                            <div class="form-text-box col-12 col-md-8">
-                                <input type="text" class="form-control" name="per_num" placeholder="..."/>
-                            </div>
-                        </div>
+                        
                     </fieldset>
                     <fieldset class="form-section">
                         <legend>Document</legend>
                         <div class="form-row">
                             <div class="col-12 col-md-4">
-                                <label >Upload Document</label>
+                                <label >Upload Additional Documents</label>
                             </div>
                             <div class="col-12 col-md-8">
-                                <input type="file"  name="file"  />
+                                <input type="file"  name="files"  multiple/>
                             </div>
+                            <br/>
+                            <br/>
+                            <p>Total document size must not exceed 500 KB. If you wish to send documents that exceed this limit, please email separately.</p>
                         </div>
                     </fieldset>
                     <fieldset class="form-section">
@@ -427,7 +317,7 @@ class IntakeRequests extends Component {
                     </fieldset>
                     <div class="form-row">
                             <div class="col-12 ">
-                                <label >The person enterring the referral should receive a confirmation email after submission.</label>
+                                <label >The person indicated in the Contact Information section should receive a confirmation email after submission. If no confirmation has been received more than 1 hour after submission, please email us regarding this issue.</label>
                             </div>
                         </div>
                     <br/>
@@ -442,7 +332,7 @@ class IntakeRequests extends Component {
         return(
             <div className="body" id="intake-requests-body">
                 <div className="page-title">
-                    <p className="page-title-p">Intake Requests</p>
+                    <p className="page-title-p">Intake Form</p>
                 </div>
                 {this.displayPageBody()}
             </div>

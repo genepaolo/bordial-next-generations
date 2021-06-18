@@ -19,7 +19,8 @@ class TopInfo extends Component {
         
         return (
             <div className="topinfo-body">
-                <p><span>Email:</span> <a href ="mailto: cordialmmg@gmail.com">cordialmmg@gmail.com</a></p>
+                <p><span>Office:</span> <a> 818.441.1137</a></p>
+                <p><span>Fax:</span> <a> 818.239.4525</a></p>
                 
             </div>
 

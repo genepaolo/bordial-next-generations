@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "../styles/styles.scss";
 import "../styles/styles600px.scss";
 import MovingComponent from 'react-moving-text';
-import img from "../resources/StockImages/georg-arthur-pflueger-eO_JhqabBY0-unsplash.jpg";
+import img from "../resources/StockImages/shutterstock_206476099.jpg";
 import Counties from "../components/Counties";
 
 class MissionStatement extends Component {
@@ -27,7 +27,8 @@ class MissionStatement extends Component {
                     <span id="page-counties-mission">The Mission of Cordial Healthcare Providers is to provide compassionate patient-centered care to the homebound patients with complex health issues and chronic conditions.</span>
                     <br></br>
                     <br></br>
-                    <p>Our goal is to improve the patient’s quality of life, prevent complications and exacerbations of diseases, reduce the risk of hospitalization, and avoid visits to the emergency room or urgent care. We strive to keep our patients happier, healthier and safer while avoiding unnecessary hospital visits.
+                    <p>
+                    Our goal is to improve the patient’s overall health, prevent complications and exacerbations of diseases, reduce the risk of hospitalization, and avoid visits to the emergency room or urgent care. We strive to keep our patients happier, healthier and safer while avoiding unnecessary hospital visits. We are also committed to empowering our patients with better understanding of their health condition and keep them involved in their treatment plan.
                     </p>
                 </MovingComponent>
                 <div>

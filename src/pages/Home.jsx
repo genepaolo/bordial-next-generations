@@ -4,7 +4,7 @@ import "../styles/styles600px.scss";
 import { Fade } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css'
 import si1 from "../resources/StockImages/pexels-thirdman-5327584.jpg";
-import si2 from "../resources/StockImages/pexels-anthony-shkraba-5215013.jpg";
+import si2 from "../resources/StockImages/1907671255-huge.jpg";
 import si3 from "../resources/StockImages/pexels-thirdman-5327584.jpg";
 import MovingComponent from 'react-moving-text';
 import Counties from "../components/Counties";

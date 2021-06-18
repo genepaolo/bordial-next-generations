@@ -14,22 +14,29 @@ class Services extends Component {
     displayPageBody(){
         return(
             <div className="page-body" id="services-body">
+                <br/>
                 <div>
-                    <h4>OUR SERVICES</h4>
+                <h4>Our Services</h4>
                     <ul>
                         <li>Primary Care</li>
-                        <li>Chronic Disease Management</li>
-                        <li>Home Health Coordination</li>
-                        <li>Preventive, Follow-up and Wellness Care</li>
+                        <li>Acute and Chronic Disease Management</li>
+                        <li>Home Health Coordination- Referrals for Skilled Nursing, Physical and Occupational Therapy, Wound Care, Speech Therapy, and other services needed</li>
+                        <li>Coordination of Social Services</li>
+                        <li>Preventitive Care</li>
                         <li>Physical Exam and Annual Wellness Visit</li>
-                        <li>Post Hospital Discharge Follow-ups</li>
-                        <li>In-home Diagnostic and Laboratory testing</li>
+                        <li>Post-Hospital Follow-up Visists</li>
+                        <li>In-home Laboratory testing and Diagnostic Imaging (X-ray, Electrocardiogram (EKG), Ultrasound)</li>
                         <li>Medication Evaluation and Management</li>
                         <li>Medical supply and equipment orders</li>
                         <li>Referrals to Specialists- Wound care, Psychiatrist, Cardiologist, Pain Management, Dermatologist, Ophthalmologist, Podiatrist etc.</li>
-                        <li>Coordination of Social Services</li>
                     </ul>
-                    <p>We accept Medicare B</p>
+                </div>
+                <br/>
+                <div>
+                <h4>Insurance Accepted</h4>
+                    <ul>
+                            <li>We accept Medicare Part B</li>
+                    </ul>
                 </div>
                 <br/>
                 <div>
@@ -64,7 +71,7 @@ class Services extends Component {
         return(
             <div className="body" id="services-body">
                  <div className="page-title">
-                    <p className="page-title-p">SERVICES</p>
+                    <p className="page-title-p">OUR SERVICES</p>
                 </div>
                 {this.displayPageBody()}
                 <Counties/>
