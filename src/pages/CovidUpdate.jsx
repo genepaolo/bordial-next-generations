@@ -8,6 +8,7 @@ import Counties from "../components/Counties";
 class CovidUpdate extends Component {
     constructor(props){
         super(props);
+        document.title = "COVID UPDATES - Cordial Health Providers";
         this.state = {
             active: 'covid-update'
         }

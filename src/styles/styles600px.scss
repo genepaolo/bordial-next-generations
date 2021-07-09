@@ -3,13 +3,15 @@
 
 @media (min-width:0px){
 
+
+
 //Top Info *******************************************************
 
 .topinfo-body{
     padding: 5px 50px 5px 0px;
     font-size: 14px;
     text-align: right;
-    background-color: #e5e5e5;
+    background-color: #ad343e;
 }
 .topinfo-body p{
     margin-top: auto;
@@ -24,15 +26,20 @@
     font-size: 15px;
 }
 .topinfo-body  a:hover{
-    text-decoration: underline;
-    color: rgb(115, 115, 255);
+    text-decoration: none;
+    color: white;
+}
+
+.topinfo-icons{
+    position: relative;
+    top: -3px;
 }
 
 // Navbar ********************************************************
 
 .navbar-body{
+    width: 100%;
     padding: 0px 10px 0px 10px;
-    margin: 20px 0px;
     font-family: Barlow;
     font-weight:bold;
 }
@@ -42,10 +49,9 @@
 }
 
 .navbar-logo-div1{
-    display: flex;
-    flex-flow: wrap;
-    flex-direction: row;
+    text-align: center;
 }
+
 .navbar-logo1{
     height: 50px;
     margin-top:auto;
@@ -60,20 +66,18 @@
     height:100%;
     margin-top:auto;
     margin-bottom:auto;
-    display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 .navbar-link-ul{
     height: 100%;
-    width: 70%;
+    width: 75%;
     list-style-type: none;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: flex-end;
-    margin-top:auto;
-    margin-bottom:auto;
+    justify-content: space-between;
+    margin: auto;
 }
 
 .dropdown-item{
@@ -82,18 +86,21 @@
     padding-left: 20px;
     font-size: 18px;
     border: 0px;
-    color: #4e4e4e;
+
     border-bottom: 1px solid #e5e5e5!important;
     z-index: 10;
     overflow: visible;
     font-family: Barlow-Medium;
-    font-weight:800px;
 }
 
+.nav-link{
+    color: black!important;
+    font-weight:normal;
+}
 
 .navbar-link-menu-item{
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
     padding-top: 15px;
     padding-bottom: 15px;
 
@@ -110,13 +117,15 @@
     position:absolute;
 }
 .navbar-link-items a:link, .navbar-link-items a:visited{
+    font-family:Barlow-Medium;
+    font-weight: normal;
     text-decoration: none;
-    color: #4e4e4e;
+    color: black;
     font-size: 18px;
-    font-weight:bold;
+    transition: 0.3s;
 }
 .navbar-link-items a:hover{
-    color: blue;
+    color: #ff968a;
 }
 
 
@@ -143,7 +152,7 @@
 
 .page-title{
     padding: 25px 0px 25px 0px;
-    background-color: #cae9ff;
+    background-color: #ffaea5;
     display: flex;
     flex-wrap: wrap;
     flex-flow: center;
@@ -163,6 +172,7 @@
 .page-body a:link, .page-body a:visited{
     text-decoration: none;
     color: black;
+    
 }
 .page-body a:hover{
     text-decoration: underline;
@@ -170,7 +180,7 @@
 }
 
 .page-body{
-    padding: 0px 75px 50px 75px;
+    padding: 0px 25px 50px 25px;
     font-size: 20px;
     font-weight: bolder;
 }
@@ -185,43 +195,86 @@ html, body{
 }
 .image-container{
     width: 100%;
-    height: 500px;
+    max-height: 800px;
 }
 .image-container-image{
     width: 100%;
-    height:auto;
 }
+// .slide-div-info{
+//     border: 1px solid grey;
+//     background-color: white;
+//     opacity: .7;
+//     position:absolute;
+//     left:100px;
+//     top: 100px;
+//     padding: 15px 15px;
+// }
+
+
 .slide-div-info{
     border: 1px solid grey;
-    background-color: white;
-    opacity: .7;
-    position:absolute;
-    left:100px;
-    top: 100px;
-    padding: 15px 15px;
+    background-color:rgba(255, 255, 255, 0.7);
+    position: relative;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    width: 100%;
+    z-index: 2;
 }
 
 .slide-div-info a{
-    text-decoration: none;
     color: black;
-    opacity: .8;
+    opacity: 0.7;
+    display: inline-block;
+    margin: 10px 0px;
 }
 
+#slide-div-button{
+    text-align: center;
+    font-size: 18px;
+    font-family: Barlow-Medium;
+    background-color:rgba(255, 150, 138, 1); //salmon pink
+    padding: 5px 30px;
+    display: inline-block;
+    margin-top: 20px;
+    border-color: #ff968a;
+    border-radius: 1.5em;
+    color: darkblue;
+    height: 40px;
+    border: 2px transparent solid;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    transition: 0.3s;
+}
+
+#slide-div-button:hover{
+    text-decoration: none;
+    border: 2px darkblue solid;
+    background-color:transparent
+}
+
+
 .slide-div-info a:hover{
-    color: blue;
+    color: #ff968a;
+    text-decoration: none;
 }
 
 .slide-div-info-title{
-    font-size: 25px;
+    color: #ff968a;
+    font-size: 30px;
+    font-family: Barlow-Medium;
     font-weight: bolder;
 }
 
 .slide-div-info-info{
     color: black;
-    font-size: 20px;
-    font-weight: bolder;
+    font-size: 18px;
+    font-family: Barlow-Medium;
     margin-top:auto;
     margin-bottom:auto;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 
@@ -234,8 +287,7 @@ html, body{
     width: 100%;
 }
 .page-counties-body-col{
-    margin-left:auto;
-    margin-right:auto;
+    margin: auto;
 }
 
 .page-counties{
@@ -315,20 +367,31 @@ html, body{
 }
 
 //Contact Us Page
-.form-section input{
-    font-weight: bold;
-}
 
 .required{
     color:red;
 }
-#cu-button{
-    background-color: white;
-    border: 1px solid gray;
-    float:right;
+.cu-btn{
+    padding: 5px 25px;
+    background-color: #ff968a;
+    border: 1px solid #ff968a;
+    float:left;
+    border-radius: 0;
+    transition: 0.3s;
+    color: black;
+    font-weight: bolder;
+}
+.cu-btn:hover{
+    background-color: inherit;
+    border: 1px solid #ff968a;
+    color: #ff968a;
+    border-radius: 0;
 }
 #contactus-page-body{
     font-size: 16px;
+    display:flex;
+    flex-direction:row;
+    flex-wrap: wrap;
 }
 #contactus-page-body p, #contactus-page-body label{
     margin-bottom: 0px;
@@ -338,6 +401,25 @@ html, body{
     margin-top: 15px;
 }
 
+#cu-name, #cu-email, #cu-msg{
+    border-radius: 0;
+    font-weight: bold;
+    
+}
+
+::-webkit-input-placeholder {
+    font-style: italic;
+ }
+ :-moz-placeholder {
+    font-style: italic;  
+ }
+ ::-moz-placeholder {
+    font-style: italic;  
+ }
+ :-ms-input-placeholder {  
+    font-style: italic; 
+ }
+
 //Services Page
 #services-body h4{
     font-weight:bold
@@ -345,8 +427,28 @@ html, body{
 #services-body{
     font-size: 16px;
 }
+.services-img{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.services-img img{
+    width: 100%;
+    max-width: 500px;
+}
 
 //Intake Page
+.radiobuttons{
+    display:flex;
+    flex-direction: row;
+}
+
+.radiobuttons .form-check{
+    padding-top: auto;
+    padding-bottom: auto;
+}
+
 input, select, .custom-select{
     font-weight: 1000!important;
 }
@@ -442,7 +544,7 @@ legend {
     display: flex;
     flex-wrap: wrap;
     flex-direction:row;
-    background-color: #2b2d42;
+    background-color: #1d3557;
     padding: 50px 75px 50px 75px;
 }
 
@@ -474,9 +576,10 @@ legend {
 .footer-rights-reserved{
     padding: 10px 0px 10px 0px;
     text-align: center;
-    background-color:black;
-    color:#7E7E7E;;
-    height: 60%;
+    background-color:white;
+    color:black;
+    height: 40px;
+    font-size: 10px;
 }
 
 #footer-img{
@@ -486,6 +589,25 @@ legend {
 }
 
 // Home ***
+
+.home-section-cols{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 18px;
+    font-weight: normal;
+    font-family: Barlow-Medium;
+}
+.home-section-imgs {
+    text-align: center;
+    margin: auto;
+}
+.home-section-imgs img{
+    width: 70%;
+}
+.home-section-title{
+    color: rgba(255, 150, 138, 1);
+    font-size: 30px;
+}
 
 .home-body-intro{
     justify-content: center;
@@ -498,8 +620,9 @@ legend {
 
 .home-welcome{
     font-size: 40px;
-    padding: 30px 75px 0px 75px;
-    font-weight:bolder;
+    padding: 75px 0px 0px 0px;
+    font-family: Barlow-Medium;
+    font-weight: normal;
 }
 
 .home-welcome p{
@@ -507,7 +630,9 @@ legend {
 }
 
 #home-welcome-welcome{
-    font-size: 25px;
+    font-family: Barlow-Medium;
+    font-weight: normal;
+    font-size: 30px;
 }
 
 

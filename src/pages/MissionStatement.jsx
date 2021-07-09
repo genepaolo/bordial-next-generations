@@ -8,6 +8,7 @@ import Counties from "../components/Counties";
 class MissionStatement extends Component {
     constructor(props){
         super(props);
+        document.title = "MISSION STATEMENT - Cordial Health Providers";
         this.state = {
             active: 'mission-statement'
         }

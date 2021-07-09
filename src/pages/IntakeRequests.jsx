@@ -8,6 +8,7 @@ import'bootstrap/dist/js/bootstrap.bundle.min';
 class IntakeRequests extends Component {
     constructor(props){
         super(props);
+        document.title = "INTAKE FORM - Cordial Health Providers";
         this.state = {
             active: 'intake-requests'
         }
@@ -29,25 +30,17 @@ class IntakeRequests extends Component {
     displayPageBody(){
         return(
             <div className="page-body" id="intake-page-body">
-                <p>Please complete the form beow to submit an new intake form/referral.</p>
+                <p>Complete the form below to submit a new patient referral.</p>
                 <br></br>
                 <form onSubmit={this.sendEmail} class="intake-page-body-form">
                     <fieldset class="form-section">
                         <legend>Patient Information</legend>
                         <div class="form-row">
                             <div class="col-12 col-md-4">
-                                <label >First Name <span class="required">*</span></label>
+                                <label >Patient Name <span class="required">*</span></label>
                             </div>
                             <div class="form-text-box col-12 col-md-8">
-                                <input type="text" class="form-control" name="name_first" placeholder="..." required/>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="col-12 col-md-4">
-                                <label >Last Name <span class="required">*</span></label>
-                            </div>
-                            <div class="form-text-box col-12 col-md-8">
-                                <input type="text" class="form-control" name="name_last" placeholder="..." required/>
+                                <input type="text" class="form-control" name="name" placeholder="..." required/>
                             </div>
                         </div>
                         <div class="form-row">
@@ -64,10 +57,42 @@ class IntakeRequests extends Component {
                         </div>
                         <div class="form-row">
                             <div class="col-12 col-md-4">
-                                <label >Birth Date <span class="required">*</span></label>
+                                <label >Date of Birth <span class="required">*</span></label>
                             </div>
                             <div class="form-text-box col-12 col-md-8">
                             <input class="form-control" type="date" name="birth-date" required/>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-12 col-md-4">
+                                <label >Contact Person<span class="required">*</span></label>
+                            </div>
+                            <div class="form-text-box col-12 col-md-8">
+                                <input type="text" class="form-control" name="contact-name" placeholder="..." required/>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-12 col-md-4">
+                                <label >Contact Email<span class="required">*</span></label>
+                            </div>
+                            <div class="form-text-box col-12 col-md-8">
+                                <input type="text" class="form-control" name="contact-email" placeholder="..." required/>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-12 col-md-4">
+                                <label >Contact Phone No.<span class="required">*</span></label>
+                            </div>
+                            <div class="form-text-box col-12 col-md-8">
+                                <input type="text" class="form-control" name="contact-number" placeholder="..." required/>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-12 col-md-4">
+                                <label >Relationship with Patient</label>
+                            </div>
+                            <div class="form-text-box col-12 col-md-8">
+                                <input type="text" class="form-control" name="contact-relationship" placeholder="..."/>
                             </div>
                         </div>
                     </fieldset>
@@ -144,14 +169,14 @@ class IntakeRequests extends Component {
                             <div class="col-12 col-md-4">
                                 <label >Interpreter Needed?<span class="required">*</span></label>
                             </div>
-                            <div class="form-text-box col-12 col-md-8">
-                                <div class="form-check">
+                            <div class="form-text-box col-12 col-md-8 radiobuttons">
+                                <div class="form-check col-sm-2">
                                     <label class="form-check-label">
                                         <input class="form-check-input" type="radio" name="interpreter" value="Yes" />
                                         Yes
                                     </label>
                                 </div>
-                                    <div class="form-check">
+                                    <div class="form-check col-sm-2">
                                     <label class="form-check-label">
                                         <input class="form-check-input" type="radio" name="interpreter" value="No" checked/>
                                         No
@@ -161,59 +186,52 @@ class IntakeRequests extends Component {
                         </div>
                     </fieldset>
                     <fieldset class="form-section">
-                        <legend>Contact Information</legend>
-                        <div class="form-row">
-                            <div class="col-12 col-md-4">
-                                <label >Contact Person<span class="required">*</span></label>
-                            </div>
-                            <div class="form-text-box col-12 col-md-8">
-                                <input type="text" class="form-control" name="contact-name" placeholder="..." required/>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="col-12 col-md-4">
-                                <label >Contact Email<span class="required">*</span></label>
-                            </div>
-                            <div class="form-text-box col-12 col-md-8">
-                                <input type="text" class="form-control" name="contact-email" placeholder="..." required/>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="col-12 col-md-4">
-                                <label >Contact Phone No.</label>
-                            </div>
-                            <div class="form-text-box col-12 col-md-8">
-                                <input type="text" class="form-control" name="contact-number" placeholder="..."/>
-                            </div>
-                        </div>
-                    </fieldset>
-                    <fieldset class="form-section">
                         <legend>Referral Information</legend>
                         <div class="form-row">
                             <div class="col-12 col-md-4">
-                                <label >Reason for visit/referral<span class="required">*</span></label>
+                                <label >Reason for visit<span class="required">*</span></label>
                             </div>
                             <div class="form-text-box col-12 col-md-8">
                             <select class="custom-select" name="referral_reason" >
                                 <option value=""  selected>-- Choose Option --</option>
                                 <option value="Referral to Home Health">Referral to Home Health</option>
                                 <option value="Wound Care">Wound Care</option>
-                                <option value="Discharge from Hospital">Discharge from Hospital</option>
+                                <option value="Discharged from Hospital">Discharge from Hospital</option>
+                                <option value="Discharged from Hospital">Referral to Hospice</option>
+                                <option value="Others">Other Reason</option>
                             </select>
                             </div>
                         </div>
                         <div class="form-row">
-                            <div class="col-12 col-md-9">
+                            <div class="col-12 col-md-4">
+                                <label >Answer if "Other Reason"</label>
+                            </div>
+                            <div class="col-12 col-md-8">
+                                <textarea type="text" placeholder="..."  class="form-control" name="other-reason"/>
+
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-12 col-md-4">
+                                <label >Additional Comments</label>
+                            </div>
+                            <div class="col-12 col-md-8">
+                                <textarea type="text" placeholder="..."  class="form-control" name="add-comments"/>
+
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-12">
                                 <label >Was the patient in an inpatient facility within the last 14 days? <span class="required">*</span></label>
                             </div>
-                            <div class="form-text-box col-12 col-md-3">
-                                <div class="form-check">
+                            <div class="form-text-box col-12 radiobuttons">
+                                <div class="form-check col-sm-1">
                                     <label class="form-check-label">
                                         <input class="form-check-input" type="radio" name="quarantine" value="Yes" />
                                         Yes
                                     </label>
                                 </div>
-                                    <div class="form-check">
+                                    <div class="form-check col-sm-1">
                                     <label class="form-check-label">
                                         <input class="form-check-input" type="radio" name="quarantine" value="No" checked/>
                                         No
@@ -230,7 +248,7 @@ class IntakeRequests extends Component {
                                 <option value="" selected>-- Choose Type --</option>
                                 <option value="1">Home Visit</option>
                                 <option value="2">Telehealth</option>
-                                <option value="3">Preferred Home Health Agency</option>
+                                <option value="3">Either</option>
                             </select>
                             </div>
                         </div>
@@ -317,11 +335,13 @@ class IntakeRequests extends Component {
                     </fieldset>
                     <div class="form-row">
                             <div class="col-12 ">
-                                <label >The person indicated in the Contact Information section should receive a confirmation email after submission. If no confirmation has been received more than 1 hour after submission, please email us regarding this issue.</label>
+                                <label >The person entering referral should receive a confirmation email after submission. If no confirmation has been received more than 1 hour after submission, please email us regarding this issue.</label>
                             </div>
                         </div>
                     <br/>
-                        <button id="cu-button"class="btn" type="submit">Submit Message</button>
+                        <div class="g-recaptcha" data-sitekey="6LcasYEbAAAAAD9mVqZGsorhxMnx5OBojDmy68w1"></div>
+                    <br/>
+                        <button id="cu-button"class="cu-btn" type="submit">SUBMIT</button>
                     </form>
 
             </div>
@@ -332,7 +352,7 @@ class IntakeRequests extends Component {
         return(
             <div className="body" id="intake-requests-body">
                 <div className="page-title">
-                    <p className="page-title-p">Intake Form</p>
+                    <p className="page-title-p">INTAKE FORM</p>
                 </div>
                 {this.displayPageBody()}
             </div>

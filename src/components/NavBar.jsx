@@ -22,74 +22,65 @@ class NavBar extends Component {
 
     displayNavbar1(){
         return(
-        
-        <nav className="navbar-link-div">
+        <div>
             <div className="navbar-logo-div1">
+                <a href="/">
                     <img src={logo2} alt="logo" className="navbar-logo2" />
                     <img src={logo1} alt="CordialMD" className="navbar-logo1" />
+                </a>
             </div>
+            
+            <nav className="navbar-link-div">
             <ul className="navbar-link-ul">
             <li className="active navbar-link-items" id="navbar-menu-1">
                 <a href="/">
                     <div className="navbar-link-menu-item">
-                        Home
-                    </div>
-                </a>
-            </li>
-            <li className="navbar-link-items" id="navbar-menu-2">
-                <a href="/mission-statement">
-                    <div className="navbar-link-menu-item">
-                        Mission
-                    </div>
-                </a>
-            </li>
-            <li className="navbar-link-items" id="navbar-menu-4">
-                <a href="/about-us">
-                    <div className="navbar-link-menu-item">
-                        About Us
+                        HOME
                     </div>
                 </a>
             </li>
             <li className="navbar-link-items" id="navbar-menu-3">
                 <a href="/services">
                     <div className="navbar-link-menu-item">
-                        Services
+                        SERVICES
                     </div>
                 </a>
             </li>
             <li className="navbar-link-items" id="navbar-menu-5">
                 <a href="/contact-us">
                     <div className="navbar-link-menu-item">
-                        Contact Us
+                        CONTACT US
                     </div>
                 </a>
             </li>
             <li className="navbar-link-items" id="navbar-menu-6">
                 <a href="/intake-requests">
                     <div className="navbar-link-menu-item">
-                        Intake Form
+                        INTAKE FORM
                     </div>
                 </a>
             </li>
             <li className="navbar-link-items" id="navbar-menu-7">
                 <a href="/career">
                     <div className="navbar-link-menu-item">
-                        Career
+                        CAREER
                     </div>
                 </a>
             </li>
             </ul>
-            </nav>);
+            </nav>
+        </div>
+        );
 
     }
     displayNavbar2(){
         return(
             <nav className="navbar-link-div">
                 <nav class="navbar navbar-fixed-top navbar-light bg-white static-top">
-                <div className="navbar-logo-div2 col-11">
+                <a className="navbar-logo-div2 col-11" href="/">
                     <img src={logo2} alt="logo" className="navbar-logo2" />
                     <img src={logo1} alt="CordialMD" className="navbar-logo1" />
-                </div>
+                </a>
 
 
                 <button class="btn col-1" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -99,12 +90,6 @@ class NavBar extends Component {
                     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                         <li class="dropdown-item">
                             <a class="nav-link" href="/">Home </a>
-                        </li>
-                        <li class="dropdown-item">
-                            <a class="nav-link" href="/mission-statement">Mission</a>
-                        </li>
-                        <li class="dropdown-item">
-                            <a class="nav-link" href="/about-us">About Us</a>
                         </li>
                         <li class="dropdown-item">
                             <a class="nav-link" href="/services">Services</a>
@@ -135,7 +120,6 @@ class NavBar extends Component {
 
         return (
             <div className="navbar-body">
-                
                 <Media queries={{ small: "(min-width: 900px)" }}>
                     {matches =>
                     matches.small ? (

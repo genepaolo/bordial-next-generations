@@ -2,10 +2,11 @@ import React, { Component} from "react";
 import "../styles/styles.scss";
 import "../styles/styles600px.scss";
 import Counties from "../components/Counties";
-
+import img from "../resources/StockImages/shutterstock_1932198155.jpg";
 class Services extends Component {
     constructor(props){
         super(props);
+        document.title = "SERVICES - Cordial Health Providers";
         this.state = {
             active: 'services'
         }
@@ -39,19 +40,7 @@ class Services extends Component {
                     </ul>
                 </div>
                 <br/>
-                <div>
-                    <h4>Why Choose Cordial Healthcare Providers</h4>
-                    <ul>
-                        <li>Our team consists of highly trained and qualified Board-certified Doctors, Nurse Practitioners, and Physician Assistants.</li>
-                        <li>Our Medical Providers are available 7 days a week.</li>
-                        <li>Fast and easy appointment scheduling.</li>
-                        <li>Appointments are available within 24 to 48 hours. We even offer same-day appointments if the schedule permits. </li>
-                        <li>Home Health Referrals are submitted within 24 to 48 business hours.</li>
-                        <li>We take the time to get to know our patients and address all of their medical needs.</li>
-                        <li>We strive to provide the best quality healthcare wherever you may be.</li>
-                    </ul>
-                </div>
-                <br/>
+                
                 <div>
                 <h4>We Care for Patients in the following home settings</h4>
                     <ul>
@@ -61,6 +50,9 @@ class Services extends Component {
                         <li>Adult Foster Care Homes (AFC)</li>
                     </ul>
                     
+                </div>
+                <div className="services-img">
+                    <img src={img}></img>
                 </div>
             </div>
         );
@@ -74,7 +66,6 @@ class Services extends Component {
                     <p className="page-title-p">OUR SERVICES</p>
                 </div>
                 {this.displayPageBody()}
-                <Counties/>
             </div>
         );
     }

@@ -7,6 +7,7 @@ import MovingComponent from 'react-moving-text';
 class Career extends Component {
     constructor(props){
         super(props);
+        document.title = "CAREER - Cordial Health Providers";
         this.state = {
             active: 'career'
         }
@@ -34,7 +35,7 @@ class Career extends Component {
         return(
             <div className="body" id="career-body">
                 <div className="page-title">
-                    <p className="page-title-p">Career</p>
+                    <p className="page-title-p">CAREER</p>
                 </div>
                 {this.displayPageBody()}
                 <div>

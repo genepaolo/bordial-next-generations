@@ -8,6 +8,7 @@ import'bootstrap/dist/js/bootstrap.bundle.min';
 class ContactUs extends Component {
     constructor(props){
         super(props);
+        document.title = "CONTACT US - Cordial Health Providers";
         this.state = {
             active: 'contact-us',
             name:'',
@@ -36,48 +37,53 @@ class ContactUs extends Component {
     displayPageBody(){
         return(
             <div className="page-body" id="contactus-page-body">
-                <br></br>
-                <p>Cordial Healthcare Providers</p>
-                <p>Email: <a href ="mailto: info@cordialmd.com">info@cordialmd.com</a></p>
-                <br/>
-                <p>127 S. Brand Blvd</p>
-                <p>Suite 333</p>
-                <p>Glendale, CA 91204</p>
-                <br></br>
-                <p>Thank you for choosing our services. For service inquiries and other concerns, you may visit our office, leave us a message using the form below, or send us an email directly. One of our team members will be in contact as soon as possible.</p>
-                <br></br>
-                <form onSubmit={this.sendEmail}>
-                    <div class="form-row">
-                        <div class="col-12">
-                        <label >Name <span class="required">*</span></label>
-                        <input type="text" ref={(c) => this.name = c} class="form-control" name="from_name"id="cu-name" required/>
-                        {/* <input type="text" value={this.state.name} onChange={this.handleChangeName} class="form-control" id="cu-name" required/> */}
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="col-12">
-                        <label >Email <span class="required">*</span></label>
-                        <input type="text"ref={(c) => this.email = c} class="form-control" name="from_email"id="cu-email" required/>
-                        {/* <input type="text" value={this.state.email} onChange={this.handleChangeEmail} class="form-control" id="cu-email" required/> */}
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="col-12">
-                        <label >Subject <span class="required">*</span></label>
-                        <input type="text" ref={(c) => this.subject = c} class="form-control" name="subject"id="cu-subject" required/>
-                        {/* <input type="text" value={this.state.subject} onChange={this.handleChangeSubject} class="form-control" id="cu-subject" required/> */}
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="col-12">
-                        <label >Message <span class="required">*</span></label>
-                        <textarea type="text"  ref={(c) => this.msg = c} class="form-control" name="message"id="cu-msg" required/>
-                        {/* <textarea type="text" value={this.state.msg} onChange={this.handleChangeMsg} class="form-control" id="cu-msg" required/> */}
-                        </div>
-                    </div>
+                <div className="col-sm-12 col-md-6">
+                    <br></br>
+                    <p>Cordial Healthcare Providers</p>
                     <br/>
-                        <button id="cu-button"class="btn" type="submit">Submit Message</button>
+                    <p>127 S. Brand Blvd., Suite 333</p>
+                    <p>Glendale, CA 91204</p>
+                    <p>Phone: <a href ="tel:8182399293"> (818) 239-9293</a></p>
+                    <p>Fax:<a href="tel:8182394525"> (818) 239-4525</a></p>
+                    <p>Email:<a href ="mailto: info@cordialmd.com"> info@cordialmd.com</a></p>
+                    <br></br>
+                    <p>Office hours:</p>
+                    <p>Monday through Friday from 09:00 am to 6:00 pm</p>
+                    <p>Saturday- 09:00 am to 3:00 pm</p>
+                    <br/>
+                    <p>Call or email us directly for an immediate response. You may also send us a message through the form below and we will respond to your inquiry as soon as possible. We look forward to hearing from you.</p>
+                    <br/>
+                </div>
+                <div className="col-sm-12 col-md-6">
+                    <br></br>
+                    <form onSubmit={this.sendEmail}>
+                        <div class="form-row">
+                            <div class="col-12">
+                            {/* <label >Name <span class="required">*</span></label> */}
+                            <input placeholder="Enter Name" type="text" ref={(c) => this.name = c} class="form-control" name="from_name"id="cu-name" required/>
+                            </div>
+                        </div>
+                        <br/>
+                        <div class="form-row">
+                            <div class="col-12">
+                            {/* <label >Email <span class="required">*</span></label> */}
+                            <input placeholder="Enter Email" type="text"ref={(c) => this.email = c} class="form-control" name="from_email"id="cu-email" required/>
+                            </div>
+                        </div>
+                        <br/>
+                        <div class="form-row">
+                            <div class="col-12">
+                            {/* <label >Message <span class="required">*</span></label> */}
+                            <textarea placeholder="Enter Message" type="text"  ref={(c) => this.msg = c} class="form-control" name="message"id="cu-msg" required/>
+                            </div>
+                        </div>
+                        <br/>
+                        <div class="g-recaptcha" data-sitekey="6LcasYEbAAAAAD9mVqZGsorhxMnx5OBojDmy68w1"></div>
+                        <br/>
+                            <button id="cu-button"class="cu-btn" type="submit">SUBMIT</button>
                     </form>
+                </div>
+                
 
             </div>
         );

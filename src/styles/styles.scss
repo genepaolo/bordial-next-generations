@@ -1,19 +1,110 @@
-// This applies for screen over 1000px
+// This applies for screen over 900px
 @media (min-width:900px){
     
+
 //Navbar
 .navbar-body{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
     width: 100%;
     overflow-x: hidden;
     padding: 0px 75px 0px 75px;
     overflow: visible;
     margin: 20px 0px;
 }
+.navbar-link-div{
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right:auto;
+}
+.navbar-link-menu-item{
+    padding-left: 30px;
+    padding-right: 30px;
+
+}
  
 //Body ******************
+
+.page-body{
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right:auto;
+}
+
+//Home
+.slide-div-info{
+    border: 1px solid grey;
+    background-color:rgba(255, 255, 255, 0.7);
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    bottom : 400px;
+    text-align: center;
+    width: 550px!important;
+}
+
+.slide-div-info a{
+    color: black;
+    opacity: 0.7;
+    display: inline-block;
+    margin: 10px 0px;
+}
+
+#slide-div-button{
+    text-align: center;
+    font-size: 18px;
+    font-family: Barlow-Medium;
+    background-color:rgba(255, 150, 138, 1); //salmon pink
+    padding: 5px 30px;
+    display: inline-block;
+    margin-top: 20px;
+    border-color: #ff968a;
+    border-radius: 1.5em;
+    color: darkblue;
+    height: 40px;
+    border: 2px transparent solid;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    transition: 0.3s;
+}
+
+#slide-div-button:hover{
+    text-decoration: none;
+    border: 2px darkblue solid;
+    background-color:transparent
+}
+
+
+.slide-div-info a:hover{
+    color: #ff968a;
+    text-decoration: none;
+}
+
+.slide-div-info-title{
+    color: #ff968a;
+    font-size: 30px;
+    font-family: Barlow-Medium;
+    font-weight: bolder;
+}
+
+.slide-div-info-info{
+    color: black;
+    font-size: 20px;
+    font-family: Barlow-Medium;
+    margin-top:auto;
+    margin-bottom:auto;
+}
+
+
+.slide-container{
+    position: relative;
+}
+
+#counties-img{
+    height: 300px;
+    width: auto!important;
+}
 
 //Counties Component
 #counties-img{

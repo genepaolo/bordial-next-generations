@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-
-
+import phone from "../resources/Icons/telephone.svg"
+import email from "../resources/Icons/envelope-open.svg"
 class TopInfo extends Component {
 
     constructor(props) {
@@ -19,9 +19,8 @@ class TopInfo extends Component {
         
         return (
             <div className="topinfo-body">
-                <p><span>Office:</span> <a> 818.441.1137</a></p>
-                <p><span>Fax:</span> <a> 818.239.4525</a></p>
-                
+                <span><img src={phone} alt="Phone:" className="topinfo-icons"></img><a href="tel:8184411137">&ensp;818.441.1137</a></span>
+                <span>&emsp;|&emsp;<img src={email} alt="Email:"className="topinfo-icons"></img><a href="info@cordial.com">&ensp;info@cordial.com</a></span>
             </div>
 
         );

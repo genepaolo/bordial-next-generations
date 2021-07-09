@@ -23,7 +23,7 @@ class Footer extends Component {
 
                 </div>
                 <div className="footer-container-collumns">
-                    <p className="footer-container-collumn-titles">OFFICE HOURS</p>
+                    <p className="footer-container-collumn-titles">OFFICE HOURS:</p>
                     <p>Monday: 9:00am-6:00pm</p>
                     <p>Tuesday: 9:00am-6:00pm</p>
                     <p>Wednesday: 9:00am-6:00pm</p>
@@ -32,16 +32,26 @@ class Footer extends Component {
                     <p>Saturday: 9:00am-3:00pm</p>
                 </div>
                 <div className="footer-container-collumns">
+                    <p className="footer-container-collumn-titles">AREAS SERVED:</p>
+                    <p>LA County</p>
+                    <p>Orange County</p>
+                    <p>San Bernardino County</p>
+                    <p>Riverside County</p>
+                    <p>Ventura County</p>
+                    <p>Kern County</p>
+
+                </div>
+                <div className="footer-container-collumns">
                     <p className="footer-container-collumn-titles">NAVIGATION</p>
                     <li class="footer-item active">
                         <a class="footer-link" href="/">Home <span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="footer-item">
+                    {/* <li class="footer-item">
                         <a class="footer-link" href="/mission-statement">Mission</a>
                     </li>
                     <li class="footer-item">
                         <a class="footer-link" href="/about-us">About Us</a>
-                    </li>
+                    </li> */}
                     <li class="footer-item">
                         <a class="footer-link" href="/services">Services</a>
                     </li>
@@ -50,6 +60,9 @@ class Footer extends Component {
                     </li>
                     <li class="footer-item">
                         <a class="footer-link" href="/intake-requests">Intake Form</a>
+                    </li>
+                    <li class="footer-item">
+                        <a class="footer-link" href="/career">Careers</a>
                     </li>
                     <div>
                         <img src={img} alt="logo" id="footer-img"></img>

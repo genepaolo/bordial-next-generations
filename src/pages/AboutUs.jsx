@@ -7,6 +7,7 @@ import Counties from "../components/Counties";
 class AboutUs extends Component {
     constructor(props){
         super(props);
+        document.title = "ABOUT US - Cordial Health Providers";
         this.state = {
             active: 'benefits'
         }
