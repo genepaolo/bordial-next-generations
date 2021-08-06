@@ -229,7 +229,7 @@ html, body{
     margin: 10px 0px;
 }
 
-#slide-div-button{
+.slide-div-button{
     text-align: center;
     font-size: 18px;
     font-family: Barlow-Medium;
@@ -248,9 +248,9 @@ html, body{
     transition: 0.3s;
 }
 
-#slide-div-button:hover{
+.slide-div-button:hover{
     text-decoration: none;
-    border: 2px darkblue solid;
+    border: 2px #ff968a solid;
     background-color:transparent
 }
 
@@ -357,7 +357,7 @@ html, body{
 }
 
 .career-img{
-    height: 400px;
+    width: 100%;
     margin-bottom: 50px;
     border-radius: 10px;
 }

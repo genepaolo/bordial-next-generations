@@ -26,7 +26,10 @@ class CovidUpdate extends Component {
                 iteration="1"
                 fillMode="none">
                     <p>
-                    At Cordial Healthcare Providers, your health and safety are our top priority. Rest assured that we are taking every safety precaution possible to protect you and our medical provider during in-home visit. Our medical providers have the required personal protective equipment (PPE) to conduct in-home visits safely. Social distancing is strictly being observed. For even more added convenience, we offer telehealth to reduce the need for home or office visits.
+                    Stay Home. We will visit you.
+                    </p>
+                    <p>
+                    At Cordial Healthcare Providers, your health and safety are our top priority. Rest assured that we are taking every safety precaution possible to protect you and our medical provider during in-home visit. Our medical providers are fully vaccinated and have the required personal protective equipment (PPE) if needed to conduct in-home visits safely. For even more added convenience, we offer telehealth to reduce the need for home or office visits.
                     </p>
                     <p>
                     To stay up to date with the ongoing COVID-19 situation, use the following links from the CDC and LA County Department of Public Health

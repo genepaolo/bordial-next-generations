@@ -122,14 +122,14 @@ class Home extends Component {
                             iteration="1"
                             fillMode="none">
                                 <p className="slide-div-info-title">
-                                Bringing Medical Care To Your Home
+                                Medical Services Right To Your Home
                                 </p>
                                 <div className="slide-div-info-info">
                                     <p >
                                     We bring Primary Care directly in the comfort of your own home, at the convenience of your schedule,  making it easier for you to get the care you need. 
                                     </p>
                                 </div>
-                                <a id="slide-div-button" href="/services">
+                                <a class="slide-div-button" href="/services">
                                     See Services
                                 </a>
                         </MovingComponent>
@@ -149,13 +149,16 @@ class Home extends Component {
                         iteration="1"
                         fillMode="none">
                             <p className="slide-div-info-title">
-                                We Only Offer The Best
+                            Quality Healthcare Wherever You May Be
                             </p>
                             <div className="slide-div-info-info">
                                 <p >
                                     We make quality health care more accessible to patients. With our well-trained and passionate team of Doctors, Nurse Practitioners, and Physician Assistants, you will attain healthcare at its best. 
                                 </p>
                             </div>
+                            <a class="slide-div-button" href="/intake-requests">
+                                    Request a Visit
+                            </a>
                             
                         </MovingComponent>
                     </div>

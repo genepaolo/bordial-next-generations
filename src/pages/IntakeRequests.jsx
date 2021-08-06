@@ -30,7 +30,9 @@ class IntakeRequests extends Component {
     displayPageBody(){
         return(
             <div className="page-body" id="intake-page-body">
-                <p>Complete the form below to submit a new patient referral.</p>
+                <p>
+                    Complete the form below to submit a new patient referral, so we can schedule a visit as soon as possible.
+                </p>
                 <br></br>
                 <form onSubmit={this.sendEmail} class="intake-page-body-form">
                     <fieldset class="form-section">
@@ -65,34 +67,19 @@ class IntakeRequests extends Component {
                         </div>
                         <div class="form-row">
                             <div class="col-12 col-md-4">
-                                <label >Contact Person<span class="required">*</span></label>
+                                <label >Phone No.<span class="required">*</span></label>
                             </div>
                             <div class="form-text-box col-12 col-md-8">
-                                <input type="text" class="form-control" name="contact-name" placeholder="..." required/>
+                                <input type="text" class="form-control" name="phone-no" placeholder="..." required/>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="col-12 col-md-4">
-                                <label >Contact Email<span class="required">*</span></label>
+                                <label >Address<span class="required">*</span></label>
                             </div>
-                            <div class="form-text-box col-12 col-md-8">
-                                <input type="text" class="form-control" name="contact-email" placeholder="..." required/>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="col-12 col-md-4">
-                                <label >Contact Phone No.<span class="required">*</span></label>
-                            </div>
-                            <div class="form-text-box col-12 col-md-8">
-                                <input type="text" class="form-control" name="contact-number" placeholder="..." required/>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="col-12 col-md-4">
-                                <label >Relationship with Patient</label>
-                            </div>
-                            <div class="form-text-box col-12 col-md-8">
-                                <input type="text" class="form-control" name="contact-relationship" placeholder="..."/>
+                            <div class="col-12 col-md-8">
+                                <textarea type="text" placeholder="..."  class="form-control" name="address" required/>
+
                             </div>
                         </div>
                     </fieldset>
@@ -162,12 +149,21 @@ class IntakeRequests extends Component {
                                 <option value="Russian">Russian</option>
                                 <option value="Spanish">Spanish</option>
                                 <option value="Tagalog">Tagalog</option>
+                                <option value="Tagalog">Other</option>
                             </select>
                             </div>
                         </div>
                         <div class="form-row">
+                                <div class="col-12 col-md-4">
+                                    <label >Only if other language selected</label>
+                                </div>
+                                <div class="form-text-box col-12 col-md-8">
+                                    <input type="text" class="form-control" name="other-language" placeholder="..."/>
+                                </div>
+                            </div>
+                        <div class="form-row">
                             <div class="col-12 col-md-4">
-                                <label >Interpreter Needed?<span class="required">*</span></label>
+                                <label >Interpreter Needed?</label>
                             </div>
                             <div class="form-text-box col-12 col-md-8 radiobuttons">
                                 <div class="form-check col-sm-2">
@@ -184,6 +180,38 @@ class IntakeRequests extends Component {
                                 </div>
                             </div>
                         </div>
+                            <div class="form-row">
+                                <div class="col-12 col-md-4">
+                                    <label >Contact Person<span class="required">*</span></label>
+                                </div>
+                                <div class="form-text-box col-12 col-md-8">
+                                    <input type="text" class="form-control" name="contact-name" placeholder="..." required/>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-12 col-md-4">
+                                    <label >Contact Email<span class="required">*</span></label>
+                                </div>
+                                <div class="form-text-box col-12 col-md-8">
+                                    <input type="text" class="form-control" name="contact-email" placeholder="..." required/>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-12 col-md-4">
+                                    <label >Contact Phone No.<span class="required">*</span></label>
+                                </div>
+                                <div class="form-text-box col-12 col-md-8">
+                                    <input type="text" class="form-control" name="contact-number" placeholder="..." required/>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-12 col-md-4">
+                                    <label >Relationship with Patient<span class="required">*</span></label>
+                                </div>
+                                <div class="form-text-box col-12 col-md-8">
+                                    <input type="text" class="form-control" name="contact-relationship" placeholder="..."required/>
+                                </div>
+                            </div>
                     </fieldset>
                     <fieldset class="form-section">
                         <legend>Referral Information</legend>

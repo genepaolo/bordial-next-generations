@@ -11,15 +11,14 @@ class Footer extends Component {
         return(
             <div className="footer-container">
                 <div className="footer-container-collumns">
-                    <p className="footer-container-collumn-titles">CONTACT US</p>
+                    <p className="footer-container-collumn-titles">CONTACT US:</p>
                     <p>Cordial Healthcare Providers</p>
-                    {/* <p>Office:</p> */}
-                    {/* <p>Fax:</p> */}
-                    <p>Email: <a href ="mailto: info@cordialmd.com">info@cordialmd.com</a></p>
                     <br/>
-                    <p>127 S. Brand Blvd</p>
-                    <p>Suite 333</p>
+                    <p>127 S. Brand Blvd., Suite 333</p>
                     <p>Glendale, CA 91204</p>
+                    <p>Phone: <a href ="tel:8182399293"> (818) 239-9293</a></p>
+                    <p>Fax:<a href="tel:8182394525"> (818) 239-4525</a></p>
+                    <p>Email:<a href ="mailto: info@cordialmd.com"> info@cordialmd.com</a></p>
 
                 </div>
                 <div className="footer-container-collumns">
