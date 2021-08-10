@@ -19,7 +19,7 @@ class TopInfo extends Component {
         
         return (
             <div className="topinfo-body">
-                <span><img src={phone} alt="Phone:" className="topinfo-icons"></img><a href="tel:8184411137">&ensp;818.441.1137</a></span>
+                <span><img src={phone} alt="Phone:" className="topinfo-icons"></img><a href="tel:8182399293">&ensp;(818) 239-9293</a></span>
                 <span>&emsp;|&emsp;<img src={email} alt="Email:"className="topinfo-icons"></img><a href="info@cordial.com">&ensp;info@cordial.com</a></span>
             </div>
 
