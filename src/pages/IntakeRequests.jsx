@@ -149,7 +149,7 @@ class IntakeRequests extends Component {
                                 <option value="Russian">Russian</option>
                                 <option value="Spanish">Spanish</option>
                                 <option value="Tagalog">Tagalog</option>
-                                <option value="Tagalog">Other</option>
+                                <option value="Tagalog">Other Language</option>
                             </select>
                             </div>
                         </div>
@@ -224,7 +224,7 @@ class IntakeRequests extends Component {
                                 <option value=""  selected>-- Choose Option --</option>
                                 <option value="Referral to Home Health">Referral to Home Health</option>
                                 <option value="Wound Care">Wound Care</option>
-                                <option value="Discharged from Hospital">Discharge from Hospital</option>
+                                <option value="Discharged from Hospital">Discharged from Hospital</option>
                                 <option value="Discharged from Hospital">Referral to Hospice</option>
                                 <option value="Others">Other Reason</option>
                             </select>
@@ -330,7 +330,7 @@ class IntakeRequests extends Component {
                                 <input type="text" class="form-control" name="prim_name" placeholder="Insurance Name" required/>
                             </div>
                             <div class="form-text-box col-12 col-md-4">
-                                <input type="text" class="form-control" name="prim_num" placeholder="Medicare ID" required/>
+                                <input type="text" class="form-control" name="prim_num" placeholder="Medical ID Number" required/>
                             </div>
                         </div>
                         
@@ -380,7 +380,7 @@ class IntakeRequests extends Component {
         return(
             <div className="body" id="intake-requests-body">
                 <div className="page-title">
-                    <p className="page-title-p">INTAKE FORM</p>
+                    <p className="page-title-p">REQUEST VISIT</p>
                 </div>
                 {this.displayPageBody()}
             </div>

@@ -91,7 +91,7 @@ class Home extends Component {
                     COUNTIES SERVED
                 </div>
                 <div className="page-counties-body">
-                    Proudly serving LA County, Orange County and Ventura County. <a href="/contact-us">Contact us for an appointment today!</a>
+                    Proudly serving LA County, Orange County and Ventura County. <a href="/contact-us">Contact us for an appointment today.</a>
                 </div>
             </div>
         );
@@ -130,7 +130,7 @@ class Home extends Component {
                                     </p>
                                 </div>
                                 <a class="slide-div-button" href="/services">
-                                    See Services
+                                    View Full Services
                                 </a>
                         </MovingComponent>
                     </div>
@@ -181,7 +181,7 @@ class Home extends Component {
                             </p>
                             <div className="slide-div-info-info">
                                 <p >
-                                    Stay home! We will visit you!
+                                    Stay home. We will visit you.
                                 </p>
                                 <p>
                                     <a href="/covid-update">Click here for more information.</a>

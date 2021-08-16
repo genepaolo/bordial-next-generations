@@ -13,9 +13,9 @@ class Footer extends Component {
                 <div className="footer-container-collumns">
                     <p className="footer-container-collumn-titles">CONTACT US:</p>
                     <p>Cordial Healthcare Providers</p>
-                    <br/>
                     <p>127 S. Brand Blvd., Suite 333</p>
-                    <p>Glendale, CA 91204</p>
+                    <p>Glendale, CA, 91204</p>
+                    <br/>
                     <p>Phone: <a href ="tel:8182399293"> (818) 239-9293</a></p>
                     <p>Fax:<a href="tel:8182394525"> (818) 239-4525</a></p>
                     <p>Email:<a href ="mailto: info@cordialmd.com"> info@cordialmd.com</a></p>
@@ -58,7 +58,7 @@ class Footer extends Component {
                         <a class="footer-link" href="/contact-us">Contact Us</a>
                     </li>
                     <li class="footer-item">
-                        <a class="footer-link" href="/intake-requests">Intake Form</a>
+                        <a class="footer-link" href="/intake-requests">Request Visit</a>
                     </li>
                     <li class="footer-item">
                         <a class="footer-link" href="/career">Careers</a>
@@ -74,7 +74,7 @@ class Footer extends Component {
     displayRightsReserved(){
         return(
             <div className="footer-rights-reserved">
-                <p>Copyright © 2021. Cordial Health Providers. All rights reserved.</p>
+                <p>Copyright © 2021. Cordial Healthcare Providers. All rights reserved.</p>
             </div>
         );
     }

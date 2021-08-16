@@ -427,6 +427,11 @@ html, body{
 #services-body{
     font-size: 16px;
 }
+
+#services-body p{
+    margin-bottom: 0px;
+}
+
 .services-img{
     width: 100%;
     margin-left: auto;
@@ -437,6 +442,7 @@ html, body{
     width: 100%;
     max-width: 500px;
 }
+
 
 //Intake Page
 .radiobuttons{

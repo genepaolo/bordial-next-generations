@@ -40,9 +40,9 @@ class ContactUs extends Component {
                 <div className="col-sm-12 col-md-6">
                     <br></br>
                     <p>Cordial Healthcare Providers</p>
-                    <br/>
                     <p>127 S. Brand Blvd., Suite 333</p>
-                    <p>Glendale, CA 91204</p>
+                    <p>Glendale, CA, 91204</p>
+                    <br></br>
                     <p>Phone: <a href ="tel:8182399293"> (818) 239-9293</a></p>
                     <p>Fax:<a href="tel:8182394525"> (818) 239-4525</a></p>
                     <p>Email:<a href ="mailto: info@cordialmd.com"> info@cordialmd.com</a></p>

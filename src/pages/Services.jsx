@@ -21,7 +21,10 @@ class Services extends Component {
                     <ul>
                         <li>Primary Care</li>
                         <li>Acute and Chronic Disease Management</li>
-                        <li>Home Health Coordination- Referrals for Skilled Nursing, Physical and Occupational Therapy, Wound Care, Speech Therapy, and other services needed</li>
+                        <li>
+                            Home Health Coordination - Referrals for Skilled Nursing, Physical Therapy,
+                            <p>Occupational Therapy, Wound Care, Speech Therapy, and other services needed.</p>
+                        </li>
                         <li>Coordination of Social Services</li>
                         <li>Preventitive Care</li>
                         <li>Physical Exam and Annual Wellness Visit</li>

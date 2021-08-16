@@ -56,7 +56,7 @@ class NavBar extends Component {
             <li className="navbar-link-items" id="navbar-menu-6">
                 <a href="/intake-requests">
                     <div className="navbar-link-menu-item">
-                        INTAKE FORM
+                        REQUEST VISIT
                     </div>
                 </a>
             </li>
@@ -99,7 +99,7 @@ class NavBar extends Component {
                             <a class="nav-link" href="/contact-us">Contact Us</a>
                         </li>
                         <li class="dropdown-item">
-                            <a class="nav-link" href="/intake-requests">Intake Form</a>
+                            <a class="nav-link" href="/intake-requests">Request Visit</a>
                         </li>
                         <li className="dropdown-item" id="navbar-menu-7">
                             <a class="nav-link" href="/career">Career</a>
