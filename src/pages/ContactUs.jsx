@@ -59,21 +59,18 @@ class ContactUs extends Component {
                     <form onSubmit={this.sendEmail}>
                         <div class="form-row">
                             <div class="col-12">
-                            {/* <label >Name <span class="required">*</span></label> */}
                             <input placeholder="Enter Name" type="text" ref={(c) => this.name = c} class="form-control" name="from_name"id="cu-name" required/>
                             </div>
                         </div>
                         <br/>
                         <div class="form-row">
                             <div class="col-12">
-                            {/* <label >Email <span class="required">*</span></label> */}
                             <input placeholder="Enter Email" type="text"ref={(c) => this.email = c} class="form-control" name="from_email"id="cu-email" required/>
                             </div>
                         </div>
                         <br/>
                         <div class="form-row">
                             <div class="col-12">
-                            {/* <label >Message <span class="required">*</span></label> */}
                             <textarea placeholder="Enter Message" type="text"  ref={(c) => this.msg = c} class="form-control" name="message"id="cu-msg" required/>
                             </div>
                         </div>

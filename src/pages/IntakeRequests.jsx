@@ -220,7 +220,7 @@ class IntakeRequests extends Component {
                                 <label >Reason for visit<span class="required">*</span></label>
                             </div>
                             <div class="form-text-box col-12 col-md-8">
-                            <select class="custom-select" name="referral_reason" >
+                            <select class="custom-select" name="referral-reason" required>
                                 <option value=""  selected>-- Choose Option --</option>
                                 <option value="Referral to Home Health">Referral to Home Health</option>
                                 <option value="Wound Care">Wound Care</option>
@@ -272,7 +272,7 @@ class IntakeRequests extends Component {
                                 <label >Type of Visit<span class="required">*</span></label>
                             </div>
                             <div class="form-text-box col-12 col-md-8">
-                            <select class="custom-select" name="visit_type" required>
+                            <select class="custom-select" name="visit-type" required>
                                 <option value="" selected>-- Choose Type --</option>
                                 <option value="1">Home Visit</option>
                                 <option value="2">Telehealth</option>
@@ -315,7 +315,7 @@ class IntakeRequests extends Component {
                                 <label >Phone No.</label>
                             </div>
                             <div class="form-text-box col-12 col-md-8">
-                                <input type="text" class="form-control" name="hha_phone" placeholder="..."/>
+                                <input type="text" class="form-control" name="hha-phone" placeholder="..."/>
                             </div>
                         </div>
                         
@@ -327,10 +327,10 @@ class IntakeRequests extends Component {
                                 <label >Primary Insurance<span class="required">*</span></label>
                             </div>
                             <div class="form-text-box col-12 col-md-4">
-                                <input type="text" class="form-control" name="prim_name" placeholder="Insurance Name" required/>
+                                <input type="text" class="form-control" name="prim-name" placeholder="Insurance Name" required/>
                             </div>
                             <div class="form-text-box col-12 col-md-4">
-                                <input type="text" class="form-control" name="prim_num" placeholder="Medical ID Number" required/>
+                                <input type="text" class="form-control" name="prim-num" placeholder="Medical ID Number" required/>
                             </div>
                         </div>
                         
