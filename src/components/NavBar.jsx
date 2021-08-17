@@ -89,20 +89,20 @@ class NavBar extends Component {
                 <div class="dropdown-menu" id="navbarToggler">
                     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                         <li class="dropdown-item">
-                            <a class="nav-link" href="/">Home </a>
+                            <a class="nav-link" href="/">HOME </a>
                         </li>
                         <li class="dropdown-item">
-                            <a class="nav-link" href="/services">Services</a>
+                            <a class="nav-link" href="/services">SERVICES</a>
                         </li>
                         
                         <li class="dropdown-item">
-                            <a class="nav-link" href="/contact-us">Contact Us</a>
+                            <a class="nav-link" href="/contact-us">CONTACT US</a>
                         </li>
                         <li class="dropdown-item">
-                            <a class="nav-link" href="/intake-requests">Request Visit</a>
+                            <a class="nav-link" href="/intake-requests">REQUEST VISIT</a>
                         </li>
                         <li className="dropdown-item" id="navbar-menu-7">
-                            <a class="nav-link" href="/career">Career</a>
+                            <a class="nav-link" href="/career">CAREER</a>
                         </li>
                     </ul>
                 </div>

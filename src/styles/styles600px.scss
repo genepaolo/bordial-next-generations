@@ -41,7 +41,6 @@
     width: 100%;
     padding: 0px 10px 0px 10px;
     font-family: Barlow;
-    font-weight:bold;
 }
 
 .navbar{
@@ -90,12 +89,14 @@
     border-bottom: 1px solid #e5e5e5!important;
     z-index: 10;
     overflow: visible;
-    font-family: Barlow-Medium;
+    font-family: Barlow-SemiBold;
 }
 
 .nav-link{
     color: black!important;
-    font-weight:normal;
+    //Navbar links when menu shrunk
+    //
+    font-weight:bold;
 }
 
 .navbar-link-menu-item{
@@ -117,8 +118,9 @@
     position:absolute;
 }
 .navbar-link-items a:link, .navbar-link-items a:visited{
-    font-family:Barlow-Medium;
-    font-weight: normal;
+    font-family:Barlow-SemiBold;
+    //font-weight: normal;
+    font-weight: 600px!important;
     text-decoration: none;
     color: black;
     font-size: 18px;
@@ -146,7 +148,11 @@
 @font-face{
     font-family:Barlow;
     src: url(../resources/Extra/Barlow/Barlow-Thin.ttf);
-    
+}
+
+@font-face{
+    font-family:Barlow-SemiBold;
+    src: url(../resources/Extra/Barlow/Barlow-SemiBold.ttf);
 
 }
 
@@ -232,7 +238,7 @@ html, body{
 .slide-div-button{
     text-align: center;
     font-size: 18px;
-    font-family: Barlow-Medium;
+    font-family: Barlow-SemiBold;
     background-color:rgba(255, 150, 138, 1); //salmon pink
     padding: 5px 30px;
     display: inline-block;
@@ -246,6 +252,8 @@ html, body{
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     transition: 0.3s;
+    //
+    font-weight: bolder;
 }
 
 .slide-div-button:hover{
@@ -270,11 +278,13 @@ html, body{
 .slide-div-info-info{
     color: black;
     font-size: 18px;
-    font-family: Barlow-Medium;
+    font-family: Barlow-SemiBold;
     margin-top:auto;
     margin-bottom:auto;
     padding-left: 15px;
     padding-right: 15px;
+    //
+    font-weight: bolder;
 }
 
 
@@ -304,7 +314,8 @@ html, body{
     color:black;
 }
 .page-counties-body{
-    font-weight: bolder;
+    font-family: Barlow-SemiBold;
+    font-weight: normal;
     font-size: 20px;
     color:black;
     display:flex;
@@ -354,6 +365,7 @@ html, body{
 //Career Page
 #career-body{
     text-align: center;
+    font-family: Barlow-SemiBold;
 }
 
 .career-img{
@@ -388,6 +400,7 @@ html, body{
     border-radius: 0;
 }
 #contactus-page-body{
+    font-family: Barlow-SemiBold;
     font-size: 16px;
     display:flex;
     flex-direction:row;
@@ -425,6 +438,7 @@ html, body{
     font-weight:bold
 }
 #services-body{
+    font-family: Barlow-SemiBold;
     font-size: 16px;
 }
 
@@ -444,7 +458,7 @@ html, body{
 }
 
 
-//Intake Page
+//Request Visit
 .radiobuttons{
     display:flex;
     flex-direction: row;
@@ -483,6 +497,7 @@ legend {
 }
 
 #intake-page-body p, #intake-page-body{
+    font-family: Barlow-SemiBold;
     margin-bottom: 0px;
 }
 
@@ -542,7 +557,7 @@ legend {
 // Footer ********************************************************
 .footer-body{
     height:100%;
-    font-family: Barlow;
+    font-family: Barlow-SemiBold;
     font-weight: bolder;
 }
 .footer-container{
@@ -600,8 +615,10 @@ legend {
     display: flex;
     flex-wrap: wrap;
     font-size: 18px;
-    font-weight: normal;
-    font-family: Barlow-Medium;
+    // font-weight: normal;
+    font-weight: 600px;
+    font-family: Barlow-SemiBold;
+
 }
 .home-section-imgs {
     text-align: center;
@@ -613,6 +630,9 @@ legend {
 .home-section-title{
     color: rgba(255, 150, 138, 1);
     font-size: 30px;
+    // Who We Are
+    font-weight: 400px;
+    font-family: Barlow-Medium;
 }
 
 .home-body-intro{
@@ -628,7 +648,9 @@ legend {
     font-size: 40px;
     padding: 0px;
     font-family: Barlow-Medium;
-    font-weight: normal;
+    // font-weight: normal;
+    // Cordial Healthcare Providers
+    font-weight: 600px;
 }
 
 .home-welcome p{
@@ -637,8 +659,14 @@ legend {
 
 #home-welcome-welcome{
     font-family: Barlow-Medium;
-    font-weight: normal;
+    //font-weight: normal;
+    // Welcome to
+    font-weight: 600px;
     font-size: 30px;
+}
+
+.col-lg-6{
+    padding: 0px!important;
 }
 
 
