@@ -21,7 +21,7 @@ class IntakeRequests extends Component {
         emailjs.sendForm('gmail', 'template_tpbxcoh', e.target, 'user_fysxm9swVB9DFCDMGbTB3')
           .then((result) => {
               window.location.reload();  //This is if you still want the page to reload (since e.preventDefault() cancelled that behavior)
-              alert("Successfully submitted.");
+              alert("Successfully submitted, a confirmation email was sent.");
           }, (error) => {
             alert("There was an issue processing your form submission. Please try again. Do not submit documents that exceed 500 KB. If the issue occurs again, please contact us.");
           });
@@ -290,7 +290,7 @@ class IntakeRequests extends Component {
                                 <label >Primary Insurance</label>
                             </div>
                             <div class="form-text-box col-12 col-md-4">
-                                <input type="text" class="form-control" name="prim-num" placeholder="Medical ID Number"/>
+                                <input type="text" class="form-control" name="prim-num" placeholder="Medicare ID Number"/>
                             </div>
                             <div class="form-text-box col-12 col-md-4">
                                 <input type="text" class="form-control" name="prim-name" placeholder="Insurance Name"/>
