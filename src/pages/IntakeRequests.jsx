@@ -70,7 +70,7 @@ class IntakeRequests extends Component {
                                 <label >Phone No.<span class="required">*</span></label>
                             </div>
                             <div class="form-text-box col-12 col-md-8">
-                                <input type="text" class="form-control" name="phone-no" placeholder="..." required/>
+                                <input type="tel" class="form-control" name="phone-no" placeholder="..." required/>
                             </div>
                         </div>
                     </fieldset>
@@ -229,9 +229,9 @@ class IntakeRequests extends Component {
                             <div class="form-text-box col-12 col-md-8">
                             <select class="custom-select" name="visit-type" required>
                                 <option value="" selected>-- Choose Type --</option>
-                                <option value="1">Home Visit</option>
-                                <option value="2">Telehealth</option>
-                                <option value="3">Either</option>
+                                <option value="Home Visit">Home Visit</option>
+                                <option value="Telehealth">Telehealth</option>
+                                <option value="Either">Either</option>
                             </select>
                             </div>
                         </div>
@@ -270,7 +270,7 @@ class IntakeRequests extends Component {
                                 <label >Phone No.</label>
                             </div>
                             <div class="form-text-box col-12 col-md-8">
-                                <input type="text" class="form-control" name="hha-phone" placeholder="..."/>
+                                <input type="tel" class="form-control" name="hha-phone" placeholder="..."/>
                             </div>
                         </div>
                         <div class="form-row">
@@ -278,7 +278,7 @@ class IntakeRequests extends Component {
                                 <label >Fax No.</label>
                             </div>
                             <div class="form-text-box col-12 col-md-8">
-                                <input type="text" class="form-control" name="hha-fax" placeholder="..."/>
+                                <input type="tel" class="form-control" name="hha-fax" placeholder="..."/>
                             </div>
                         </div>
                         
