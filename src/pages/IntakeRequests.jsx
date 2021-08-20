@@ -215,7 +215,7 @@ class IntakeRequests extends Component {
                         </div>
                         <div class="form-row">
                             <div class="col-12 col-md-4">
-                                <label >Other reason or comments</label>
+                                <label >Other reason or additional comments</label>
                             </div>
                             <div class="col-12 col-md-8">
                                 <textarea type="text" placeholder="..."  class="form-control" name="other-reason"/>
