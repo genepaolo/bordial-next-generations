@@ -21,7 +21,7 @@ class IntakeRequests extends Component {
         emailjs.sendForm('gmail', 'template_tpbxcoh', e.target, 'user_fysxm9swVB9DFCDMGbTB3')
           .then((result) => {
               window.location.reload();  //This is if you still want the page to reload (since e.preventDefault() cancelled that behavior)
-              alert("Thank you for filling out the form. We will get back to you shortly.");
+              alert("Successfully submitted.");
           }, (error) => {
             alert("There was an issue processing your form submission. Please try again. Do not submit documents that exceed 500 KB. If the issue occurs again, please contact us.");
           });
@@ -273,6 +273,14 @@ class IntakeRequests extends Component {
                                 <input type="text" class="form-control" name="hha-phone" placeholder="..."/>
                             </div>
                         </div>
+                        <div class="form-row">
+                            <div class="col-12 col-md-4">
+                                <label >Fax No.</label>
+                            </div>
+                            <div class="form-text-box col-12 col-md-8">
+                                <input type="text" class="form-control" name="hha-fax" placeholder="..."/>
+                            </div>
+                        </div>
                         
                     </fieldset>
                     <fieldset class="form-section">
@@ -306,9 +314,9 @@ class IntakeRequests extends Component {
                         </div>
                     </fieldset>
                     <div class="form-row">
-                            <div class="col-12 ">
+                            {/* <div class="col-12 ">
                                 <label ></label>
-                            </div>
+                            </div> */}
                         </div>
                         <button id="cu-button"class="cu-btn" type="submit">SUBMIT</button>
                     </form>
@@ -321,7 +329,7 @@ class IntakeRequests extends Component {
         return(
             <div className="body" id="intake-requests-body">
                 <div className="page-title">
-                    <p className="page-title-p">REQUEST VISIT</p>
+                    <p className="page-title-p">REQUEST A VISIT</p>
                 </div>
                 {this.displayPageBody()}
             </div>

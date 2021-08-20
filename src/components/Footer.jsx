@@ -58,7 +58,7 @@ class Footer extends Component {
                         <a class="footer-link" href="/contact-us">Contact Us</a>
                     </li>
                     <li class="footer-item">
-                        <a class="footer-link" href="/intake-requests">Request Visit</a>
+                        <a class="footer-link" href="/intake-requests">Request A Visit</a>
                     </li>
                     <li class="footer-item">
                         <a class="footer-link" href="/career">Careers</a>

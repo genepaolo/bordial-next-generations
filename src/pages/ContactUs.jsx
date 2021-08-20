@@ -75,7 +75,6 @@ class ContactUs extends Component {
                             </div>
                         </div>
                         <br/>
-                        <div class="g-recaptcha" data-sitekey="6LcasYEbAAAAAD9mVqZGsorhxMnx5OBojDmy68w1"></div>
                         <br/>
                             <button id="cu-button"class="cu-btn" type="submit">SUBMIT</button>
                     </form>
