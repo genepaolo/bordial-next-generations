@@ -21,7 +21,7 @@ class IntakeRequests extends Component {
         emailjs.sendForm('gmail', 'template_tpbxcoh', e.target, 'user_fysxm9swVB9DFCDMGbTB3')
           .then((result) => {
               window.location.reload();  //This is if you still want the page to reload (since e.preventDefault() cancelled that behavior)
-              alert("Thank you for filling out the form. The email you have provided should receive a confirmation and you should have a response within 24-48 hours. If there is not confirmation email, please contact us.");
+              alert("Thank you for filling out the form. We will get back to you shortly.");
           }, (error) => {
             alert("There was an issue processing your form submission. Please try again. Do not submit documents that exceed 500 KB. If the issue occurs again, please contact us.");
           });
@@ -71,15 +71,6 @@ class IntakeRequests extends Component {
                             </div>
                             <div class="form-text-box col-12 col-md-8">
                                 <input type="text" class="form-control" name="phone-no" placeholder="..." required/>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="col-12 col-md-4">
-                                <label >Address<span class="required">*</span></label>
-                            </div>
-                            <div class="col-12 col-md-8">
-                                <textarea type="text" placeholder="..."  class="form-control" name="address" required/>
-
                             </div>
                         </div>
                     </fieldset>
@@ -190,14 +181,6 @@ class IntakeRequests extends Component {
                             </div>
                             <div class="form-row">
                                 <div class="col-12 col-md-4">
-                                    <label >Contact Email<span class="required">*</span></label>
-                                </div>
-                                <div class="form-text-box col-12 col-md-8">
-                                    <input type="text" class="form-control" name="contact-email" placeholder="..." required/>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="col-12 col-md-4">
                                     <label >Contact Phone No.<span class="required">*</span></label>
                                 </div>
                                 <div class="form-text-box col-12 col-md-8">
@@ -206,7 +189,7 @@ class IntakeRequests extends Component {
                             </div>
                             <div class="form-row">
                                 <div class="col-12 col-md-4">
-                                    <label >Relationship with Patient<span class="required">*</span></label>
+                                    <label >Relationship to Patient<span class="required">*</span></label>
                                 </div>
                                 <div class="form-text-box col-12 col-md-8">
                                     <input type="text" class="form-control" name="contact-relationship" placeholder="..."required/>
@@ -232,39 +215,11 @@ class IntakeRequests extends Component {
                         </div>
                         <div class="form-row">
                             <div class="col-12 col-md-4">
-                                <label >Answer if "Other Reason"</label>
+                                <label >Other reason or comments</label>
                             </div>
                             <div class="col-12 col-md-8">
                                 <textarea type="text" placeholder="..."  class="form-control" name="other-reason"/>
 
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="col-12 col-md-4">
-                                <label >Additional Comments</label>
-                            </div>
-                            <div class="col-12 col-md-8">
-                                <textarea type="text" placeholder="..."  class="form-control" name="add-comments"/>
-
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="col-12">
-                                <label >Was the patient in an inpatient facility within the last 14 days? <span class="required">*</span></label>
-                            </div>
-                            <div class="form-text-box col-12 radiobuttons">
-                                <div class="form-check col-sm-1">
-                                    <label class="form-check-label">
-                                        <input class="form-check-input" type="radio" name="quarantine" value="Yes" />
-                                        Yes
-                                    </label>
-                                </div>
-                                    <div class="form-check col-sm-1">
-                                    <label class="form-check-label">
-                                        <input class="form-check-input" type="radio" name="quarantine" value="No" checked/>
-                                        No
-                                    </label>
-                                </div>
                             </div>
                         </div>
                         <div class="form-row">
@@ -324,14 +279,15 @@ class IntakeRequests extends Component {
                         <legend>Insurance Information</legend>
                         <div class="form-row">
                             <div class="col-12 col-md-4">
-                                <label >Primary Insurance<span class="required">*</span></label>
+                                <label >Primary Insurance</label>
                             </div>
                             <div class="form-text-box col-12 col-md-4">
-                                <input type="text" class="form-control" name="prim-name" placeholder="Insurance Name" required/>
+                                <input type="text" class="form-control" name="prim-num" placeholder="Medical ID Number"/>
                             </div>
                             <div class="form-text-box col-12 col-md-4">
-                                <input type="text" class="form-control" name="prim-num" placeholder="Medical ID Number" required/>
+                                <input type="text" class="form-control" name="prim-name" placeholder="Insurance Name"/>
                             </div>
+                            
                         </div>
                         
                     </fieldset>
@@ -349,26 +305,11 @@ class IntakeRequests extends Component {
                             <p>Total document size must not exceed 500 KB. If you wish to send documents that exceed this limit, please email separately.</p>
                         </div>
                     </fieldset>
-                    <fieldset class="form-section">
-                        <legend>Comment</legend>
-                        <div class="form-row">
-                            <div class="col-12 col-md-4">
-                                <label >Comment</label>
-                            </div>
-                            <div class="col-12 col-md-8">
-                                <textarea type="text" placeholder="..."  class="form-control" name="comment"/>
-
-                            </div>
-                        </div>
-                    </fieldset>
                     <div class="form-row">
                             <div class="col-12 ">
-                                <label >The person entering referral should receive a confirmation email after submission. If no confirmation has been received more than 1 hour after submission, please email us regarding this issue.</label>
+                                <label ></label>
                             </div>
                         </div>
-                    <br/>
-                        <div class="g-recaptcha" data-sitekey="6LcasYEbAAAAAD9mVqZGsorhxMnx5OBojDmy68w1"></div>
-                    <br/>
                         <button id="cu-button"class="cu-btn" type="submit">SUBMIT</button>
                     </form>
 
