@@ -1,0 +1,35 @@
+{
+  "paths": [
+    {
+      "name": "/cmdSaveInfo-dev",
+      "lambdaFunction": "cmdSaveInfo",
+      "privacy": {
+        "open": true
+      },
+      "policyResourceName": "/cmdSaveInfo-dev"
+    }
+  ],
+  "resourceName": "cmdRestApi",
+  "apiName": "cmdRestApi",
+  "functionArns": [
+    {
+      "lambdaFunction": "cmdSaveInfo"
+    }
+  ],
+  "privacy": {
+    "auth": 0,
+    "unauth": 0,
+    "authRoleName": "amplify-cordialmd-dev-141506-authRole",
+    "unAuthRoleName": "amplify-cordialmd-dev-141506-unauthRole"
+  },
+  "dependsOn": [
+    {
+      "category": "function",
+      "resourceName": "cmdSaveInfo",
+      "attributes": [
+        "Name",
+        "Arn"
+      ]
+    }
+  ]
+}
