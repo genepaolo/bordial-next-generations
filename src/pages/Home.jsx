@@ -73,20 +73,27 @@ class Home extends Component {
                                 The Mission of Cordial Healthcare Providers is to provide compassionate patient-centered care to the homebound patients with excellence in quality and service. Our goal is to improve the patient’s overall health, prevent complications and exacerbations of diseases, reduce the risk of hospitalization, avoid visits to the emergency room, and build long-term relationships with the patients we serve. We strive to keep our patients happier, healthier and safer while avoiding unnecessary hospital visits. We are committed to empowering our patients with better understanding of their health condition and keep them involved in their treatment plan. We work with you and your family closely to ensure you will get the best care possible.
                             </p>
                             <br/>
-                            <ul>
-                                <li>Our team consists of highly trained and qualified Board-certified Doctors, Nurse Practitioners, and Physician Assistants.</li>
-                                <li>Our Medical Providers are available 7 days a week.</li>
-                                <li>Fast and easy appointment scheduling.</li>
-                                <li>Appointments are available within 24 to 48 hours. We even offer same-day appointments if the schedule permits. </li>
-                                <li>Fast processing of documentation to ensure compliance. Home Health Referrals are submitted within 48 hours.</li>
-                                <li>Our team utilizes best practices, innovative equipment, and an advanced electronic medical record system to attain best patient outcomes.</li>
-                                <li>For even more added convenience, we offer both in-home and telehealth options.</li>
-                                <li>We strive to provide the best quality healthcare wherever you may be. We are very proud of the exceptional services that we provide to every patient each time we visit because we believe our patients deserve the best. We ensure that all our patients receive the utmost attention and compassionate care they deserve.</li>
-                                <li>We work with you and your loved ones to develop a treatment plan designed for you. </li>
-                                <li>We take the time to get to know our patients and address all of their medical needs.</li>
-                                
-                            </ul>
                         </div>
+                    </div>
+                    <div>
+                        <p className="home-section-title">
+                            Why Choose Us
+                        </p>
+                    </div>
+                    <div className="home-section-cols">
+                        <ul>
+                            <li>Our team consists of highly trained and qualified Board-certified Doctors, Nurse Practitioners, and Physician Assistants.</li>
+                            <li>Our Medical Providers are available 7 days a week.</li>
+                            <li>Fast and easy appointment scheduling.</li>
+                            <li>Appointments are available within 24 to 48 hours. We even offer same-day appointments if the schedule permits. </li>
+                            <li>Fast processing of documentation to ensure compliance. Home Health Referrals are submitted within 48 hours.</li>
+                            <li>Our team utilizes best practices, innovative equipment, and an advanced electronic medical record system to attain best patient outcomes.</li>
+                            <li>For even more added convenience, we offer both in-home and telehealth options.</li>
+                            <li>We strive to provide the best quality healthcare wherever you may be. We are very proud of the exceptional services that we provide to every patient each time we visit because we believe our patients deserve the best. We ensure that all our patients receive the utmost attention and compassionate care they deserve.</li>
+                            <li>We work with you and your loved ones to develop a treatment plan designed for you. </li>
+                            <li>We take the time to get to know our patients and address all of their medical needs.</li>   
+                        </ul>
+                    </div>
                         
                         <div className="home-section-imgs col-12">
                             <img src={wimg} ></img>
@@ -96,7 +103,6 @@ class Home extends Component {
                     
                 </div>
                 
-            </div>
         );
     }
 
