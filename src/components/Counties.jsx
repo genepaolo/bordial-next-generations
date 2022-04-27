@@ -1,6 +1,4 @@
 import React, { Component} from "react";
-import "../styles/styles.scss";
-import "../styles/styles600px.scss";
 import img from "../resources/StockImages/GoogleMap.png";
 
 class Counties extends Component {

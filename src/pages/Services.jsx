@@ -1,7 +1,4 @@
 import React, { Component} from "react";
-import "../styles/styles.scss";
-import "../styles/styles600px.scss";
-import Counties from "../components/Counties";
 import img from "../resources/StockImages/shutterstock_1932198155.jpg";
 class Services extends Component {
     constructor(props){
@@ -55,7 +52,7 @@ class Services extends Component {
                     
                 </div>
                 <div className="services-img">
-                    <img src={img}></img>
+                    <img src={img} alt="health care"></img>
                 </div>
             </div>
         );

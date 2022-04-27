@@ -1,4 +1,4 @@
-// This applies for screen between 0px to 600px
+// This applies for screen between 0rem to 60rem
 // Ex. Smartphones
 
 @media (min-width:0px){
@@ -8,10 +8,10 @@
 //Top Info *******************************************************
 
 .topinfo-body{
-    padding: 5px 50px 5px 0px;
-    font-size: 14px;
+    padding: .5rem 5rem .5rem 0rem;
+    font-size: 1.4rem;
     text-align: right;
-    background-color: #ad343e;
+    background-color: $color-header;
 }
 .topinfo-body p{
     margin-top: auto;
@@ -22,12 +22,12 @@
 }
 .topinfo-body a:link, .topinfo-body a:visited{
     text-decoration: none;
-    color: black;
-    font-size: 15px;
+    color: $color-black;
+    font-size: 1.5rem;
 }
 .topinfo-body  a:hover{
     text-decoration: none;
-    color: white;
+    color: $color-white;
 }
 
 .topinfo-icons{
@@ -39,7 +39,7 @@
 
 .navbar-body{
     width: 100%;
-    padding: 0px 10px 0px 10px;
+    padding: 0rem 1rem 0rem 1rem;
     font-family: Barlow;
 }
 
@@ -52,12 +52,12 @@
 }
 
 .navbar-logo1{
-    height: 50px;
+    height: 5rem;
     margin-top:auto;
     margin-bottom:auto;
 }
 .navbar-logo2{
-    height: 80px;
+    height: 8rem;
 }
 
 .navbar-link-div{
@@ -80,11 +80,11 @@
 }
 
 .dropdown-item{
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 20px;
-    font-size: 18px;
-    border: 0px;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 2rem;
+    font-size: 1.8rem;
+    border: 0rem;
 
     border-bottom: 1px solid #e5e5e5!important;
     z-index: 10;
@@ -100,18 +100,18 @@
 }
 
 .navbar-link-menu-item{
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
 
 }
 .navbar-toggler{
-    border: 0px;
+    border: 0rem;
 }
 #navbarToggler{
     width: 100%;
-    margin-top: 0px;
+    margin-top: 0rem;
     border-top: 2px solid #3E62AE;
     overflow: visible;
     z-index:  10;
@@ -120,10 +120,10 @@
 .navbar-link-items a:link, .navbar-link-items a:visited{
     font-family:Barlow-SemiBold;
     //font-weight: normal;
-    font-weight: 600px!important;
+    font-weight: 600!important;
     text-decoration: none;
     color: black;
-    font-size: 18px;
+    font-size: 1.8rem;
     transition: 0.3s;
 }
 .navbar-link-items a:hover{
@@ -157,7 +157,7 @@
 }
 
 .page-title{
-    padding: 25px 0px 25px 0px;
+    padding: 2.5rem 0rem 2.5rem 0rem;
     background-color: #ffaea5;
     display: flex;
     flex-wrap: wrap;
@@ -168,7 +168,7 @@
     font-family: Barlow-Medium;
     margin-top:auto;
     margin-bottom:auto;
-    font-size: 30px;
+    font-size: 3rem;
     font-weight: bolder;
     text-align:center;
     width: 100%;
@@ -186,8 +186,8 @@
 }
 
 .page-body{
-    padding: 0px 25px 50px 25px;
-    font-size: 20px;
+    padding: 0rem 2.5rem 5rem 2.5rem;
+    font-size: 2rem;
     font-weight: bolder;
 }
 
@@ -201,28 +201,18 @@ html, body{
 }
 .image-container{
     width: 100%;
-    max-height: 800px;
+    max-height: 80rem;
 }
 .image-container-image{
     width: 100%;
 }
-// .slide-div-info{
-//     border: 1px solid grey;
-//     background-color: white;
-//     opacity: .7;
-//     position:absolute;
-//     left:100px;
-//     top: 100px;
-//     padding: 15px 15px;
-// }
-
 
 .slide-div-info{
     border: 1px solid grey;
-    background-color:rgba(255, 255, 255, 0.7);
+    background-color:rgba($color-white, 0.7);
     position: relative;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     text-align: center;
     width: 100%;
     z-index: 2;
@@ -232,21 +222,21 @@ html, body{
     color: black;
     opacity: 0.7;
     display: inline-block;
-    margin: 10px 0px;
+    margin: 1rem 0rem;
 }
 
 .slide-div-button{
     text-align: center;
-    font-size: 18px;
+    font-size: 1.8rem;
     font-family: Barlow-SemiBold;
     background-color:rgba(255, 150, 138, 1); //salmon pink
-    padding: 5px 30px;
+    padding: .5rem 3rem;
     display: inline-block;
-    margin-top: 20px;
+    margin-top: 2rem;
     border-color: #ff968a;
     border-radius: 1.5em;
     color: darkblue;
-    height: 40px;
+    height: 4rem;
     border: 2px transparent solid;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -270,19 +260,19 @@ html, body{
 
 .slide-div-info-title{
     color: #ff968a;
-    font-size: 30px;
+    font-size: 3rem;
     font-family: Barlow-Medium;
     font-weight: bolder;
 }
 
 .slide-div-info-info{
     color: black;
-    font-size: 18px;
+    font-size: 1.8rem;
     font-family: Barlow-SemiBold;
     margin-top:auto;
     margin-bottom:auto;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
     //
     font-weight: bolder;
 }
@@ -302,21 +292,21 @@ html, body{
 
 .page-counties{
     background-color: #cae9ff;
-    padding: 50px 75px;
+    padding: 5rem 7.5rem;
 }
 .page-counties-header{
     text-align:left;
 }
 
 .page-counties-header{
-    padding-bottom: 25px;
-    font-size: 40px;
+    padding-bottom: 2.5rem;
+    font-size: 4rem;
     color:black;
 }
 .page-counties-body{
     font-family: Barlow-SemiBold;
     font-weight: normal;
-    font-size: 20px;
+    font-size: 2rem;
     color:black;
     display:flex;
     flex-direction:row;
@@ -340,25 +330,25 @@ html, body{
 
 //Mission Page
 #page-body-mission{
-    margin-top: 40px;
+    margin-top: 4rem;
     text-align: center;
 }
 
 #mission-img{
-    width: 600px;
-    padding: 25px;
-    border-radius: 40px;
+    width: 60rem;
+    padding: 2.5rem;
+    border-radius: 4rem;
 }
 
 //About Us Page
 
 #page-body-about{
-    margin-top: 40px;
+    margin-top: 4rem;
 }
 
 #about-us-img{
-    width: 350px;
-    padding: 25px;
+    width: 35rem;
+    padding: 2.5rem;
     float:right;
 }
 
@@ -370,12 +360,12 @@ html, body{
 
 .career-img{
     width: 100%;
-    margin-bottom: 50px;
-    border-radius: 10px;
+    margin-bottom: 5rem;
+    border-radius: 1rem;
 }
 
 #career-page-body{
-    margin-top: 50px;
+    margin-top: 5rem;
 }
 
 //Contact Us Page
@@ -384,7 +374,7 @@ html, body{
     color:red;
 }
 .cu-btn{
-    padding: 5px 25px;
+    padding: .5rem 2.5rem;
     background-color: #ff968a;
     border: 1px solid #ff968a;
     float:left;
@@ -401,17 +391,17 @@ html, body{
 }
 #contactus-page-body{
     font-family: Barlow-SemiBold;
-    font-size: 16px;
+    font-size: 1.6rem;
     display:flex;
     flex-direction:row;
     flex-wrap: wrap;
 }
 #contactus-page-body p, #contactus-page-body label{
-    margin-bottom: 0px;
+    margin-bottom: 0rem;
 }
 
 #contactus-page-body label{
-    margin-top: 15px;
+    margin-top: 1.5rem;
 }
 
 #cu-name, #cu-email, #cu-msg{
@@ -439,11 +429,11 @@ html, body{
 }
 #services-body{
     font-family: Barlow-SemiBold;
-    font-size: 16px;
+    font-size: 1.6rem;
 }
 
 #services-body p{
-    margin-bottom: 0px;
+    margin-bottom: 0rem;
 }
 
 .services-img{
@@ -454,7 +444,7 @@ html, body{
 }
 .services-img img{
     width: 100%;
-    max-width: 500px;
+    max-width: 50rem;
 }
 
 
@@ -473,19 +463,19 @@ input, select, .custom-select{
     font-weight: 1000!important;
 }
 #intake-page-body{
-    font-size: 16px;
+    font-size: 1.6rem;
 }
 .form-section{
     border: 1px solid grey;
-    padding: 20px 20px;
-    margin-bottom: 15px;
+    padding: 2rem 2rem;
+    margin-bottom: 1.5rem;
 }
 .form-row{
-    padding-bottom: 15px;
+    padding-bottom: 1.5rem;
 }
 legend {
     display: inline!important;
-    font-size:16px!important;
+    font-size:1.6rem!important;
     text-align:left;
     width: initial!important;
 }
@@ -493,12 +483,12 @@ legend {
 .form-section input, .form-section textarea, .form-section select{
     margin-top:auto;
     margin-bottom:auto;
-    border-radius: 0px;
+    border-radius: 0rem;
 }
 
 #intake-page-body p, #intake-page-body{
     font-family: Barlow-SemiBold;
-    margin-bottom: 0px;
+    margin-bottom: 0rem;
 }
 
 .intake-page-body-form{
@@ -515,22 +505,22 @@ legend {
     margin-bottom:auto;
 }
 .hha_form{
-    margin-bottom: 15px;
+    margin-bottom: 1.5rem;
 }
 
 /* Modal Header */
 .modal-header {
-    padding: 2px 16px;
+    padding: 0.2rem 1.6rem;
     background-color: #5cb85c;
     color: white;
   }
   
   /* Modal Body */
-  .modal-body {padding: 2px 16px;}
+  .modal-body {padding: .2rem 1.6rem;}
   
   /* Modal Footer */
   .modal-footer {
-    padding: 2px 16px;
+    padding: 0.2rem 1.6rem;
     background-color: #5cb85c;
     color: white;
   }
@@ -543,14 +533,14 @@ legend {
     padding: 0;
     border: 1px solid #888;
     width: 80%;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    box-shadow: 0 .4rem .8rem 0 rgba($color-black,0.2),0 .6rem .2rem 0 rgba($color-black,0.19);
     animation-name: animatetop;
     animation-duration: 0.4s
   }
   
   /* Add Animation */
   @keyframes animatetop {
-    from {top: -300px; opacity: 0}
+    from {top: -30rem; opacity: 0}
     to {top: 0; opacity: 1}
   }
 
@@ -566,19 +556,19 @@ legend {
     flex-wrap: wrap;
     flex-direction:row;
     background-color: #1d3557;
-    padding: 50px 75px 50px 75px;
+    padding: 5rem 7.5rem 5rem 7.5rem;
 }
 
 .footer-container-collumns{
-    width: 250px;
+    width: 25rem;
     color:white;
-    padding-bottom: 75px;
-    font-size: 15px;
+    padding-bottom: 7.5rem;
+    font-size: 1.5rem;
 }
 .footer-container-collumns a:link, .footer-container-collumns a:visited{
     text-decoration: none;
     color: white;
-    font-size: 15px;
+    font-size: 1.5rem;
 }
 
 .footer-container-collumns a:hover{
@@ -589,23 +579,23 @@ legend {
 .footer-link:link, .footer-link:visited{
     text-decoration: none;
     color: white;
-    font-size: 15px;
+    font-size: 1.5rem;
 }
 
 
 
 .footer-rights-reserved{
-    padding: 10px 0px 10px 0px;
+    padding: 1rem 0rem 1rem 0rem;
     text-align: center;
     background-color:white;
     color:black;
-    height: 40px;
-    font-size: 10px;
+    height: 4rem;
+    font-size: 1rem;
 }
 
 #footer-img{
-    padding:25px;
-    width: 200px;
+    padding:2.5rem;
+    width: 20rem;
     filter: grayscale(100%);
 }
 
@@ -614,9 +604,9 @@ legend {
 .home-section-cols{
     display: flex;
     flex-wrap: wrap;
-    font-size: 18px;
+    font-size: 1.8rem;
     // font-weight: normal;
-    font-weight: 600px;
+    font-weight: 60rem;
     font-family: Barlow-SemiBold;
 
 }
@@ -629,9 +619,9 @@ legend {
 }
 .home-section-title{
     color: rgba(255, 150, 138, 1);
-    font-size: 30px;
+    font-size: 3rem;
     // Who We Are
-    font-weight: 400px;
+    font-weight: 40rem;
     font-family: Barlow-Medium;
 }
 
@@ -641,32 +631,32 @@ legend {
 }
 
 #cordial-md-span-home{
-    font-size: 30px;
+    font-size: 3rem;
 }
 
 .home-welcome{
-    font-size: 40px;
-    padding: 0px;
+    font-size: 4rem;
+    padding: 0rem;
     font-family: Barlow-Medium;
     // font-weight: normal;
     // Cordial Healthcare Providers
-    font-weight: 600px;
+    font-weight: 60rem;
 }
 
 .home-welcome p{
-    padding-bottom: 0px;
+    padding-bottom: 0rem;
 }
 
 #home-welcome-welcome{
     font-family: Barlow-Medium;
     //font-weight: normal;
     // Welcome to
-    font-weight: 600px;
-    font-size: 30px;
+    font-weight: 60rem;
+    font-size: 3rem;
 }
 
 .col-lg-6{
-    padding: 0px!important;
+    padding: 0rem!important;
 }
 
 // Covid Page

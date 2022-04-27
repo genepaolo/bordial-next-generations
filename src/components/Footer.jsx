@@ -42,26 +42,20 @@ class Footer extends Component {
                 </div>
                 <div className="footer-container-collumns">
                     <p className="footer-container-collumn-titles">NAVIGATION</p>
-                    <li class="footer-item active">
-                        <a class="footer-link" href="/">Home <span class="sr-only">(current)</span></a>
+                    <li className="footer-item active">
+                        <a className="footer-link" href="/">Home <span className="sr-only">(current)</span></a>
                     </li>
-                    {/* <li class="footer-item">
-                        <a class="footer-link" href="/mission-statement">Mission</a>
+                    <li className="footer-item">
+                        <a className="footer-link" href="/services">Services</a>
                     </li>
-                    <li class="footer-item">
-                        <a class="footer-link" href="/about-us">About Us</a>
-                    </li> */}
-                    <li class="footer-item">
-                        <a class="footer-link" href="/services">Services</a>
+                    <li className="footer-item">
+                        <a className="footer-link" href="/contact-us">Contact Us</a>
                     </li>
-                    <li class="footer-item">
-                        <a class="footer-link" href="/contact-us">Contact Us</a>
+                    <li className="footer-item">
+                        <a className="footer-link" href="/intake-requests">Request A Visit</a>
                     </li>
-                    <li class="footer-item">
-                        <a class="footer-link" href="/intake-requests">Request A Visit</a>
-                    </li>
-                    <li class="footer-item">
-                        <a class="footer-link" href="/career">Careers</a>
+                    <li className="footer-item">
+                        <a className="footer-link" href="/career">Careers</a>
                     </li>
                     <div>
                         <img src={img} alt="logo" id="footer-img"></img>

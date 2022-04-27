@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-import "../styles/styles.scss";
-import "../styles/styles600px.scss";
 import MovingComponent from 'react-moving-text';
 import img from "../resources/StockImages/shutterstock_206476099.jpg";
 import Counties from "../components/Counties";

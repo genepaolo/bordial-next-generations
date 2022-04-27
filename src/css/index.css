@@ -1,0 +1,814 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 900px) {
+  .navbar-body {
+    width: 100%;
+    overflow-x: hidden;
+    padding: 0rem 7.5rem 0rem 7.5rem;
+    overflow: visible;
+    margin: 2rem 0rem;
+  }
+
+  .navbar-link-div {
+    max-width: 130rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .navbar-link-menu-item {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  .page-body {
+    max-width: 100rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .react-slideshow-fade-wrapper {
+    max-height: 140rem;
+  }
+
+  .slide-div-info {
+    border: 1 solid grey;
+    background-color: rgba(255, 255, 255, 0.7);
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    bottom: 40rem;
+    text-align: center;
+    width: 55rem !important;
+  }
+
+  .slide-div-info a {
+    color: black;
+    opacity: 0.7;
+    display: inline-block;
+    margin: 1rem 0rem;
+  }
+
+  .slide-div-button {
+    text-align: center;
+    font-size: 1.8rem;
+    font-family: Barlow-Medium;
+    background-color: #ff968a;
+    padding: 0.5rem 3rem;
+    display: inline-block;
+    margin-top: 2rem;
+    border-color: #ff968a;
+    border-radius: 1.5em;
+    color: darkblue;
+    height: 4rem;
+    border: 2px transparent solid;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    transition: 0.3s;
+  }
+
+  .slide-div-button:hover {
+    text-decoration: none;
+    border: 2px #ff968a solid;
+    background-color: transparent;
+  }
+
+  .slide-div-info a:hover {
+    color: #ff968a;
+    text-decoration: none;
+  }
+
+  .slide-div-info-title {
+    color: #ff968a;
+    font-size: 3rem;
+    font-family: Barlow-Medium;
+    font-weight: bolder;
+  }
+
+  .slide-div-info-info {
+    color: black;
+    font-size: 2rem;
+    font-family: Barlow-Medium;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  .slide-container {
+    position: relative;
+  }
+
+  #counties-img {
+    height: 30rem;
+    width: auto !important;
+  }
+
+  #counties-img {
+    width: 50rem !important;
+  }
+
+  #career-page-body {
+    width: 70rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .career-img {
+    max-width: 70rem;
+    margin-bottom: 5rem;
+    border-radius: 1rem;
+  }
+
+  #contactus-page-body {
+    width: 120rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #intake-page-body {
+    width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .intake-page-body-form {
+    width: 60rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  h4 {
+    font-family: Barlow-Medium;
+    font-weight: bold;
+  }
+}
+@media (min-width: 0px) {
+  .topinfo-body {
+    padding: 0.5rem 5rem 0.5rem 0rem;
+    font-size: 1.4rem;
+    text-align: right;
+    background-color: #ad343e;
+  }
+
+  .topinfo-body p {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  .topinfo-body span {
+    font-weight: bold;
+  }
+
+  .topinfo-body a:link, .topinfo-body a:visited {
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
+  }
+
+  .topinfo-body a:hover {
+    text-decoration: none;
+    color: white;
+  }
+
+  .topinfo-icons {
+    position: relative;
+    top: -3px;
+  }
+
+  .navbar-body {
+    width: 100%;
+    padding: 0rem 1rem 0rem 1rem;
+    font-family: Barlow;
+  }
+
+  .navbar {
+    width: 100%;
+  }
+
+  .navbar-logo-div1 {
+    text-align: center;
+  }
+
+  .navbar-logo1 {
+    height: 5rem;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  .navbar-logo2 {
+    height: 8rem;
+  }
+
+  .navbar-link-div {
+    width: 100%;
+    height: 100%;
+    margin-top: auto;
+    margin-bottom: auto;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .navbar-link-ul {
+    height: 100%;
+    width: 75%;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: auto;
+  }
+
+  .dropdown-item {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 2rem;
+    font-size: 1.8rem;
+    border: 0rem;
+    border-bottom: 1px solid #e5e5e5 !important;
+    z-index: 10;
+    overflow: visible;
+    font-family: Barlow-SemiBold;
+  }
+
+  .nav-link {
+    color: black !important;
+    font-weight: bold;
+  }
+
+  .navbar-link-menu-item {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .navbar-toggler {
+    border: 0rem;
+  }
+
+  #navbarToggler {
+    width: 100%;
+    margin-top: 0rem;
+    border-top: 2px solid #3E62AE;
+    overflow: visible;
+    z-index: 10;
+    position: absolute;
+  }
+
+  .navbar-link-items a:link, .navbar-link-items a:visited {
+    font-family: Barlow-SemiBold;
+    font-weight: 600 !important;
+    text-decoration: none;
+    color: black;
+    font-size: 1.8rem;
+    transition: 0.3s;
+  }
+
+  .navbar-link-items a:hover {
+    color: #ff968a;
+  }
+
+  .body {
+    width: 100%;
+    background-color: white;
+    z-index: 1;
+    font-family: Barlow;
+  }
+
+  @font-face {
+    font-family: Barlow-Medium;
+    src: url(../resources/Extra/Barlow/Barlow-Medium.ttf);
+  }
+  @font-face {
+    font-family: Barlow;
+    src: url(../resources/Extra/Barlow/Barlow-Thin.ttf);
+  }
+  @font-face {
+    font-family: Barlow-SemiBold;
+    src: url(../resources/Extra/Barlow/Barlow-SemiBold.ttf);
+  }
+  .page-title {
+    padding: 2.5rem 0rem 2.5rem 0rem;
+    background-color: #ffaea5;
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: center;
+  }
+
+  .page-title-p {
+    font-family: Barlow-Medium;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 3rem;
+    font-weight: bolder;
+    text-align: center;
+    width: 100%;
+    font-weight: bolder;
+  }
+
+  .page-body a:link, .page-body a:visited {
+    text-decoration: none;
+    color: black;
+  }
+
+  .page-body a:hover {
+    text-decoration: underline;
+    color: blue;
+  }
+
+  .page-body {
+    padding: 0rem 2.5rem 5rem 2.5rem;
+    font-size: 2rem;
+    font-weight: bolder;
+  }
+
+  #root, .main-body {
+    height: 50%;
+  }
+
+  html, body {
+    height: 100%;
+  }
+
+  .image-container {
+    width: 100%;
+    max-height: 80rem;
+  }
+
+  .image-container-image {
+    width: 100%;
+  }
+
+  .slide-div-info {
+    border: 1px solid grey;
+    background-color: rgba(255, 255, 255, 0.7);
+    position: relative;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    text-align: center;
+    width: 100%;
+    z-index: 2;
+  }
+
+  .slide-div-info a {
+    color: black;
+    opacity: 0.7;
+    display: inline-block;
+    margin: 1rem 0rem;
+  }
+
+  .slide-div-button {
+    text-align: center;
+    font-size: 1.8rem;
+    font-family: Barlow-SemiBold;
+    background-color: rgb(255, 150, 138);
+    padding: 0.5rem 3rem;
+    display: inline-block;
+    margin-top: 2rem;
+    border-color: #ff968a;
+    border-radius: 1.5em;
+    color: darkblue;
+    height: 4rem;
+    border: 2px transparent solid;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    transition: 0.3s;
+    font-weight: bolder;
+  }
+
+  .slide-div-button:hover {
+    text-decoration: none;
+    border: 2px #ff968a solid;
+    background-color: transparent;
+  }
+
+  .slide-div-info a:hover {
+    color: #ff968a;
+    text-decoration: none;
+  }
+
+  .slide-div-info-title {
+    color: #ff968a;
+    font-size: 3rem;
+    font-family: Barlow-Medium;
+    font-weight: bolder;
+  }
+
+  .slide-div-info-info {
+    color: black;
+    font-size: 1.8rem;
+    font-family: Barlow-SemiBold;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    font-weight: bolder;
+  }
+
+  .slide-container {
+    position: relative;
+  }
+
+  #counties-img {
+    width: 100%;
+  }
+
+  .page-counties-body-col {
+    margin: auto;
+  }
+
+  .page-counties {
+    background-color: #cae9ff;
+    padding: 5rem 7.5rem;
+  }
+
+  .page-counties-header {
+    text-align: left;
+  }
+
+  .page-counties-header {
+    padding-bottom: 2.5rem;
+    font-size: 4rem;
+    color: black;
+  }
+
+  .page-counties-body {
+    font-family: Barlow-SemiBold;
+    font-weight: normal;
+    font-size: 2rem;
+    color: black;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .page-counties-body a {
+    text-decoration: none;
+    color: black;
+  }
+
+  .page-counties-body a:hover {
+    text-decoration: none;
+    color: blue;
+  }
+
+  .page-counties-body ul {
+    list-style-image: url("../resources/Extra/checkmark.png");
+  }
+
+  #page-body-mission {
+    margin-top: 4rem;
+    text-align: center;
+  }
+
+  #mission-img {
+    width: 60rem;
+    padding: 2.5rem;
+    border-radius: 4rem;
+  }
+
+  #page-body-about {
+    margin-top: 4rem;
+  }
+
+  #about-us-img {
+    width: 35rem;
+    padding: 2.5rem;
+    float: right;
+  }
+
+  #career-body {
+    text-align: center;
+    font-family: Barlow-SemiBold;
+  }
+
+  .career-img {
+    width: 100%;
+    margin-bottom: 5rem;
+    border-radius: 1rem;
+  }
+
+  #career-page-body {
+    margin-top: 5rem;
+  }
+
+  .required {
+    color: red;
+  }
+
+  .cu-btn {
+    padding: 0.5rem 2.5rem;
+    background-color: #ff968a;
+    border: 1px solid #ff968a;
+    float: left;
+    border-radius: 0;
+    transition: 0.3s;
+    color: black;
+    font-weight: bolder;
+  }
+
+  .cu-btn:hover {
+    background-color: inherit;
+    border: 1px solid #ff968a;
+    color: #ff968a;
+    border-radius: 0;
+  }
+
+  #contactus-page-body {
+    font-family: Barlow-SemiBold;
+    font-size: 1.6rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  #contactus-page-body p, #contactus-page-body label {
+    margin-bottom: 0rem;
+  }
+
+  #contactus-page-body label {
+    margin-top: 1.5rem;
+  }
+
+  #cu-name, #cu-email, #cu-msg {
+    border-radius: 0;
+    font-weight: bold;
+  }
+
+  ::-webkit-input-placeholder {
+    font-style: italic;
+  }
+
+  :-moz-placeholder {
+    font-style: italic;
+  }
+
+  ::-moz-placeholder {
+    font-style: italic;
+  }
+
+  :-ms-input-placeholder {
+    font-style: italic;
+  }
+
+  #services-body h4 {
+    font-weight: bold;
+  }
+
+  #services-body {
+    font-family: Barlow-SemiBold;
+    font-size: 1.6rem;
+  }
+
+  #services-body p {
+    margin-bottom: 0rem;
+  }
+
+  .services-img {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  .services-img img {
+    width: 100%;
+    max-width: 50rem;
+  }
+
+  .radiobuttons {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .radiobuttons .form-check {
+    padding-top: auto;
+    padding-bottom: auto;
+  }
+
+  input, select, .custom-select {
+    font-weight: 1000 !important;
+  }
+
+  #intake-page-body {
+    font-size: 1.6rem;
+  }
+
+  .form-section {
+    border: 1px solid grey;
+    padding: 2rem 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .form-row {
+    padding-bottom: 1.5rem;
+  }
+
+  legend {
+    display: inline !important;
+    font-size: 1.6rem !important;
+    text-align: left;
+    width: initial !important;
+  }
+
+  .form-section input, .form-section textarea, .form-section select {
+    margin-top: auto;
+    margin-bottom: auto;
+    border-radius: 0rem;
+  }
+
+  #intake-page-body p, #intake-page-body {
+    font-family: Barlow-SemiBold;
+    margin-bottom: 0rem;
+  }
+
+  .intake-page-body-form {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .form-text-box {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  .intake-page-body-form label {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  .hha_form {
+    margin-bottom: 1.5rem;
+  }
+
+  /* Modal Header */
+  .modal-header {
+    padding: 0.2rem 1.6rem;
+    background-color: #5cb85c;
+    color: white;
+  }
+
+  /* Modal Body */
+  .modal-body {
+    padding: 0.2rem 1.6rem;
+  }
+
+  /* Modal Footer */
+  .modal-footer {
+    padding: 0.2rem 1.6rem;
+    background-color: #5cb85c;
+    color: white;
+  }
+
+  /* Modal Content */
+  .modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 0.4rem 0.8rem 0 rgba(0, 0, 0, 0.2), 0 0.6rem 0.2rem 0 rgba(0, 0, 0, 0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+  }
+
+  /* Add Animation */
+  @keyframes animatetop {
+    from {
+      top: -30rem;
+      opacity: 0;
+    }
+    to {
+      top: 0;
+      opacity: 1;
+    }
+  }
+  .footer-body {
+    height: 100%;
+    font-family: Barlow-SemiBold;
+    font-weight: bolder;
+  }
+
+  .footer-container {
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    background-color: #1d3557;
+    padding: 5rem 7.5rem 5rem 7.5rem;
+  }
+
+  .footer-container-collumns {
+    width: 25rem;
+    color: white;
+    padding-bottom: 7.5rem;
+    font-size: 1.5rem;
+  }
+
+  .footer-container-collumns a:link, .footer-container-collumns a:visited {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+  }
+
+  .footer-container-collumns a:hover {
+    text-decoration: underline;
+    color: rgb(115, 115, 255);
+  }
+
+  .footer-link:link, .footer-link:visited {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+  }
+
+  .footer-rights-reserved {
+    padding: 1rem 0rem 1rem 0rem;
+    text-align: center;
+    background-color: white;
+    color: black;
+    height: 4rem;
+    font-size: 1rem;
+  }
+
+  #footer-img {
+    padding: 2.5rem;
+    width: 20rem;
+    filter: grayscale(100%);
+  }
+
+  .home-section-cols {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 1.8rem;
+    font-weight: 60rem;
+    font-family: Barlow-SemiBold;
+  }
+
+  .home-section-imgs {
+    text-align: center;
+    margin: auto;
+  }
+
+  .home-section-imgs img {
+    width: 100%;
+  }
+
+  .home-section-title {
+    color: rgb(255, 150, 138);
+    font-size: 3rem;
+    font-weight: 40rem;
+    font-family: Barlow-Medium;
+  }
+
+  .home-body-intro {
+    justify-content: center;
+    width: 80%;
+  }
+
+  #cordial-md-span-home {
+    font-size: 3rem;
+  }
+
+  .home-welcome {
+    font-size: 4rem;
+    padding: 0rem;
+    font-family: Barlow-Medium;
+    font-weight: 60rem;
+  }
+
+  .home-welcome p {
+    padding-bottom: 0rem;
+  }
+
+  #home-welcome-welcome {
+    font-family: Barlow-Medium;
+    font-weight: 60rem;
+    font-size: 3rem;
+  }
+
+  .col-lg-6 {
+    padding: 0rem !important;
+  }
+
+  #page-body-covid {
+    font-family: Barlow-SemiBold;
+  }
+}
+html {
+  font-size: 62.5%;
+}
+
+/*# sourceMappingURL=index.css.map */

@@ -1,16 +1,11 @@
 import React, { Component} from "react";
-import "../styles/styles.scss";
-import "../styles/styles600px.scss";
 import { Fade } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css'
 import si1 from "../resources/StockImages/shutterstock_1403885852.jpg";
 import si2 from "../resources/StockImages/shutterstock_342312542.jpg";
 import si3 from "../resources/StockImages/shutterstock_1667840344.jpg";
 import aui from "../resources/StockImages/shutterstock_1015449343.jpg"
-import aimg from "../resources/StockImages/pexels-kampus-production-7551629.jpg";
 import wimg from "../resources/StockImages/shutterstock_1657685833.jpg";
-import mimg from "../resources/StockImages/shutterstock_206476099.jpg";
-
 
 import MovingComponent from 'react-moving-text';
 import Counties from "../components/Counties";
@@ -57,7 +52,7 @@ class Home extends Component {
                             </p>
                         </div>
                         <div className="home-section-imgs col-lg-6 col-12">
-                            <img src={aui} ></img>
+                            <img src={aui} alt="health care" ></img>
                         </div>
                     </div>
                 </div>
@@ -96,7 +91,7 @@ class Home extends Component {
                     </div>
                         
                         <div className="home-section-imgs col-12">
-                            <img src={wimg} ></img>
+                            <img src={wimg} alt="health care"></img>
                         </div>
                         
                     </div>

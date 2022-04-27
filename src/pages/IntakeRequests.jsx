@@ -1,7 +1,4 @@
 import React, { Component } from "react";
-import emailjs from 'emailjs-com';
-import "../styles/styles.scss";
-import "../styles/styles600px.scss";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import'bootstrap/dist/js/bootstrap.bundle.min';
 
@@ -17,24 +14,23 @@ class IntakeRequests extends Component {
 
     sendEmail(e) {
         e.preventDefault();    //This is important, i'm not sure why, but the email won't send without it
-    
-        emailjs.sendForm('gmail', 'template_tpbxcoh', e.target, 'user_fysxm9swVB9DFCDMGbTB3')
-        .then((result) => {
-              window.location.reload();  //This is if you still want the page to reload (since e.preventDefault() cancelled that behavior)
-              alert("Successfully submitted, a confirmation email was sent to you.");
-          }, (error) => {
-            alert("There was an issue processing your form submission. Please try again. Do not submit documents that exceed 500 KB. If the issue occurs again, please contact us.");
-          });
+        // emailjs.sendForm('gmail', 'template_tpbxcoh', e.target, 'user_fysxm9swVB9DFCDMGbTB3')
+        // .then((result) => {
+        //       window.location.reload();  //This is if you still want the page to reload (since e.preventDefault() cancelled that behavior)
+        //       alert("Successfully submitted, a confirmation email was sent to you.");
+        //   }, (error) => {
+        //     alert("There was an issue processing your form submission. Please try again. Do not submit documents that exceed 500 KB. If the issue occurs again, please contact us.");
+        //   });
     }
     sendPDF(e){
         e.preventDefault();
-        emailjs.sendForm('gmail', 'template_2p9ntpg', e.target, 'user_fysxm9swVB9DFCDMGbTB3')
-          .then((result) => {
-              window.location.reload();  //This is if you still want the page to reload (since e.preventDefault() cancelled that behavior)
-              alert("Successfully submitted, a confirmation email was sent to you.");
-          }, (error) => {
-            alert("There was an issue processing your form submission. Please try again. Do not submit documents that exceed 500 KB. If the issue occurs again, please contact us.");
-          });
+        // emailjs.sendForm('gmail', 'template_2p9ntpg', e.target, 'user_fysxm9swVB9DFCDMGbTB3')
+        //   .then((result) => {
+        //       window.location.reload();  //This is if you still want the page to reload (since e.preventDefault() cancelled that behavior)
+        //       alert("Successfully submitted, a confirmation email was sent to you.");
+        //   }, (error) => {
+        //     alert("There was an issue processing your form submission. Please try again. Do not submit documents that exceed 500 KB. If the issue occurs again, please contact us.");
+        //   });
     }
 
     displayPageBody(){
@@ -44,28 +40,28 @@ class IntakeRequests extends Component {
                     <p>
                         If you have a PDF for patient referral, submit here to avoid filling out the form.
                     </p>
-                    <form onSubmit={this.sendPDF} class="intake-page-body-form">
-                        <fieldset class="form-section">
+                    <form onSubmit={this.sendPDF} className="intake-page-body-form">
+                        <fieldset className="form-section">
                             <div className="form-row">
 
                             </div>
-                            <div class="form-row">
-                                <div class="col-12 col-md-4">
-                                    <label >Contact Email<span class="required">*</span></label>
+                            <div className="form-row">
+                                <div className="col-12 col-md-4">
+                                    <label >Contact Email<span className="required">*</span></label>
                                 </div>
-                                <div class="form-text-box col-12 col-md-8">
-                                    <input type="text" class="form-control" name="pdf-email" placeholder="..." required/>
+                                <div className="form-text-box col-12 col-md-8">
+                                    <input type="text" className="form-control" name="pdf-email" placeholder="..." required/>
                                 </div>
                             </div>
-                            <div class="form-row">
-                                <div class="col-12 col-md-4">
-                                    <label >Upload Patient Referral Form<span class="required">*</span></label>
+                            <div className="form-row">
+                                <div className="col-12 col-md-4">
+                                    <label >Upload Patient Referral Form<span className="required">*</span></label>
                                 </div>
-                                <div class="col-12 col-md-8">
+                                <div className="col-12 col-md-8">
                                     <input type="file"  name="pdf-file" accept="application/pdf"required/>
                                 </div>
                             </div>
-                            <button class="cu-btn" type="submit">SUBMIT PDF</button>
+                            <button className="cu-btn" type="submit">SUBMIT PDF</button>
                         </fieldset>
                     </form>
                 </div>
@@ -73,87 +69,87 @@ class IntakeRequests extends Component {
                     Complete the form below to submit a new patient referral so we can schedule a visit as soon as possible.
                 </p>
                 <br></br>
-                <form onSubmit={this.sendEmail} class="intake-page-body-form">
-                    <fieldset class="form-section">
+                <form onSubmit={this.sendEmail} className="intake-page-body-form">
+                    <fieldset className="form-section">
                         <legend>Patient Information</legend>
-                        <div class="form-row">
-                            <div class="col-12 col-md-4">
-                                <label >Patient Name <span class="required">*</span></label>
+                        <div className="form-row">
+                            <div className="col-12 col-md-4">
+                                <label >Patient Name <span className="required">*</span></label>
                             </div>
-                            <div class="form-text-box col-12 col-md-8">
-                                <input type="text" class="form-control" name="name" placeholder="..." required/>
+                            <div className="form-text-box col-12 col-md-8">
+                                <input type="text" className="form-control" name="name" placeholder="..." required/>
                             </div>
                         </div>
-                        <div class="form-row">
-                            <div class="col-12 col-md-4">
-                                <label >Gender <span class="required">*</span></label>
+                        <div className="form-row">
+                            <div className="col-12 col-md-4">
+                                <label >Gender <span className="required">*</span></label>
                             </div>
-                            <div class="form-text-box col-12 col-md-8">
-                            <select class="custom-select" name="gender" required>
+                            <div className="form-text-box col-12 col-md-8">
+                            <select className="custom-select" name="gender" required>
                                 <option value="" selected>--- PLEASE CHOOSE ---</option>
                                 <option value="Male">Male</option>
                                 <option value="Female">Female</option>
                             </select>
                             </div>
                         </div>
-                        <div class="form-row">
-                            <div class="col-12 col-md-4">
-                                <label >Date of Birth <span class="required">*</span></label>
+                        <div className="form-row">
+                            <div className="col-12 col-md-4">
+                                <label >Date of Birth <span className="required">*</span></label>
                             </div>
-                            <div class="form-text-box col-12 col-md-8">
-                            <input class="form-control" type="date" name="birth-date" required/>
+                            <div className="form-text-box col-12 col-md-8">
+                            <input className="form-control" type="date" name="birth-date" required/>
                             </div>
                         </div>
-                        <div class="form-row">
-                            <div class="col-12 col-md-4">
-                                <label >Phone No.<span class="required">*</span></label>
+                        <div className="form-row">
+                            <div className="col-12 col-md-4">
+                                <label >Phone No.<span className="required">*</span></label>
                             </div>
-                            <div class="form-text-box col-12 col-md-8">
-                                <input type="tel" class="form-control" name="phone-no" placeholder="..." required/>
+                            <div className="form-text-box col-12 col-md-8">
+                                <input type="tel" className="form-control" name="phone-no" placeholder="..." required/>
                             </div>
                         </div>
                     </fieldset>
-                    <fieldset class="form-section">
+                    <fieldset className="form-section">
                         <legend>Address</legend>
-                        <div class="form-row">
-                            <div class="col-12 col-md-4">
-                                <label >Street <span class="required">*</span></label>
+                        <div className="form-row">
+                            <div className="col-12 col-md-4">
+                                <label >Street <span className="required">*</span></label>
                             </div>
-                            <div class="form-text-box col-12 col-md-8">
-                                <input type="text" class="form-control" name="street" placeholder="..." required/>
+                            <div className="form-text-box col-12 col-md-8">
+                                <input type="text" className="form-control" name="street" placeholder="..." required/>
                             </div>
                         </div>
 
-                        <div class="form-row">
-                            <div class="col-12 col-md-4">
-                                <label >City <span class="required">*</span></label>
+                        <div className="form-row">
+                            <div className="col-12 col-md-4">
+                                <label >City <span className="required">*</span></label>
                             </div>
-                            <div class="form-text-box col-12 col-md-8">
-                                <input type="text" class="form-control" name="city" placeholder="..." required/>
+                            <div className="form-text-box col-12 col-md-8">
+                                <input type="text" className="form-control" name="city" placeholder="..." required/>
                             </div>
                         </div>
-                        <div class="form-row">
-                            <div class="col-12 col-md-4">
+                        <div className="form-row">
+                            <div className="col-12 col-md-4">
                                 <label >Apt #</label>
                             </div>
-                            <div class="form-text-box col-12 col-md-8">
-                                <input type="text" class="form-control" name="apt" placeholder="..."/>
+                            <div className="form-text-box col-12 col-md-8">
+                                <input type="text" className="form-control" name="apt" placeholder="..."/>
                             </div>
                         </div>
-                        <div class="form-row">
-                            <div class="col-12 col-md-4">
-                                <label >Zip Code<span class="required">*</span></label>
+                        <div className="form-row">
+                            <div className="col-12 col-md-4">
+                                <label >Zip Code<span className="required">*</span></label>
                             </div>
-                            <div class="form-text-box col-12 col-md-8">
-                                <input type="text" class="form-control" name="zip" placeholder="..." required/>
+                            <div className="form-text-box col-12 col-md-8">
+                                <input type="text" className="form-control" name="zip" placeholder="..." required/>
                             </div>
                         </div>
-                        <div class="form-row">
-                            <div class="col-12 col-md-4">
-                                <label >Residence Type<span class="required">*</span></label>
+                        <div className="form-row">
+                            <div className="col-12 col-md-4">
+                                <label >Residence Type<span className="required">*</span></label>
                             </div>
-                            <div class="form-text-box col-12 col-md-8">
-                            <select class="custom-select" name="residence" required>
+                            <div className="form-text-box col-12 col-md-8">
+                            <select className="custom-select" name="residence" required>
                                 <option value=""  selected>--- Choose Type ---</option>
                                 <option value="Home">Home</option>
                                 <option value="Group Home">Group Home</option>
@@ -163,14 +159,14 @@ class IntakeRequests extends Component {
                             </div>
                         </div>
                     </fieldset>
-                    <fieldset class="form-section">
+                    <fieldset className="form-section">
                         <legend>Demographics</legend>
-                        <div class="form-row">
-                            <div class="col-12 col-md-4">
+                        <div className="form-row">
+                            <div className="col-12 col-md-4">
                                 <label >Preferred Language</label>
                             </div>
-                            <div class="form-text-box col-12 col-md-8">
-                            <select class="custom-select" name="language">
+                            <div className="form-text-box col-12 col-md-8">
+                            <select className="custom-select" name="language">
                                 <option value=""  selected></option>
                                 <option value="Armenian">Arabic</option>
                                 <option value="Armenian">Armenian</option>
@@ -183,66 +179,66 @@ class IntakeRequests extends Component {
                             </select>
                             </div>
                         </div>
-                        <div class="form-row">
-                                <div class="col-12 col-md-4">
+                        <div className="form-row">
+                                <div className="col-12 col-md-4">
                                     <label >Only if other language selected</label>
                                 </div>
-                                <div class="form-text-box col-12 col-md-8">
-                                    <input type="text" class="form-control" name="other-language" placeholder="..."/>
+                                <div className="form-text-box col-12 col-md-8">
+                                    <input type="text" className="form-control" name="other-language" placeholder="..."/>
                                 </div>
                             </div>
-                        <div class="form-row">
-                            <div class="col-12 col-md-4">
+                        <div className="form-row">
+                            <div className="col-12 col-md-4">
                                 <label >Interpreter Needed?</label>
                             </div>
-                            <div class="form-text-box col-12 col-md-8 radiobuttons">
-                                <div class="form-check col-sm-2">
-                                    <label class="form-check-label">
-                                        <input class="form-check-input" type="radio" name="interpreter" value="Yes" />
+                            <div className="form-text-box col-12 col-md-8 radiobuttons">
+                                <div className="form-check col-sm-2">
+                                    <label className="form-check-label">
+                                        <input className="form-check-input" type="radio" name="interpreter" value="Yes" />
                                         Yes
                                     </label>
                                 </div>
-                                    <div class="form-check col-sm-2">
-                                    <label class="form-check-label">
-                                        <input class="form-check-input" type="radio" name="interpreter" value="No" checked/>
+                                    <div className="form-check col-sm-2">
+                                    <label className="form-check-label">
+                                        <input className="form-check-input" type="radio" name="interpreter" value="No" checked/>
                                         No
                                     </label>
                                 </div>
                             </div>
                         </div>
-                            <div class="form-row">
-                                <div class="col-12 col-md-4">
-                                    <label >Contact Person<span class="required">*</span></label>
+                            <div className="form-row">
+                                <div className="col-12 col-md-4">
+                                    <label >Contact Person<span className="required">*</span></label>
                                 </div>
-                                <div class="form-text-box col-12 col-md-8">
-                                    <input type="text" class="form-control" name="contact-name" placeholder="..." required/>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="col-12 col-md-4">
-                                    <label >Contact Phone No.<span class="required">*</span></label>
-                                </div>
-                                <div class="form-text-box col-12 col-md-8">
-                                    <input type="text" class="form-control" name="contact-number" placeholder="..." required/>
+                                <div className="form-text-box col-12 col-md-8">
+                                    <input type="text" className="form-control" name="contact-name" placeholder="..." required/>
                                 </div>
                             </div>
-                            <div class="form-row">
-                                <div class="col-12 col-md-4">
-                                    <label >Relationship to Patient<span class="required">*</span></label>
+                            <div className="form-row">
+                                <div className="col-12 col-md-4">
+                                    <label >Contact Phone No.<span className="required">*</span></label>
                                 </div>
-                                <div class="form-text-box col-12 col-md-8">
-                                    <input type="text" class="form-control" name="contact-relationship" placeholder="..."required/>
+                                <div className="form-text-box col-12 col-md-8">
+                                    <input type="text" className="form-control" name="contact-number" placeholder="..." required/>
+                                </div>
+                            </div>
+                            <div className="form-row">
+                                <div className="col-12 col-md-4">
+                                    <label >Relationship to Patient<span className="required">*</span></label>
+                                </div>
+                                <div className="form-text-box col-12 col-md-8">
+                                    <input type="text" className="form-control" name="contact-relationship" placeholder="..."required/>
                                 </div>
                             </div>
                     </fieldset>
-                    <fieldset class="form-section">
+                    <fieldset className="form-section">
                         <legend>Referral Information</legend>
-                        <div class="form-row">
-                            <div class="col-12 col-md-4">
-                                <label >Reason for visit<span class="required">*</span></label>
+                        <div className="form-row">
+                            <div className="col-12 col-md-4">
+                                <label >Reason for visit<span className="required">*</span></label>
                             </div>
-                            <div class="form-text-box col-12 col-md-8">
-                            <select class="custom-select" name="referral-reason" required>
+                            <div className="form-text-box col-12 col-md-8">
+                            <select className="custom-select" name="referral-reason" required>
                                 <option value=""  selected>-- Choose Option --</option>
                                 <option value="Referral to Home Health">Referral to Home Health</option>
                                 <option value="Wound Care">Wound Care</option>
@@ -252,21 +248,21 @@ class IntakeRequests extends Component {
                             </select>
                             </div>
                         </div>
-                        <div class="form-row">
-                            <div class="col-12 col-md-4">
+                        <div className="form-row">
+                            <div className="col-12 col-md-4">
                                 <label >Other reason or additional comments</label>
                             </div>
-                            <div class="col-12 col-md-8">
-                                <textarea type="text" placeholder="..."  class="form-control" name="other-reason"/>
+                            <div className="col-12 col-md-8">
+                                <textarea type="text" placeholder="..."  className="form-control" name="other-reason"/>
 
                             </div>
                         </div>
-                        <div class="form-row">
-                            <div class="col-12 col-md-4">
-                                <label >Type of Visit<span class="required">*</span></label>
+                        <div className="form-row">
+                            <div className="col-12 col-md-4">
+                                <label >Type of Visit<span className="required">*</span></label>
                             </div>
-                            <div class="form-text-box col-12 col-md-8">
-                            <select class="custom-select" name="visit-type" required>
+                            <div className="form-text-box col-12 col-md-8">
+                            <select className="custom-select" name="visit-type" required>
                                 <option value="" selected>-- Choose Type --</option>
                                 <option value="Home Visit">Home Visit</option>
                                 <option value="Telehealth">Telehealth</option>
@@ -274,77 +270,77 @@ class IntakeRequests extends Component {
                             </select>
                             </div>
                         </div>
-                        <div class="form-row">
-                            <div class="col-12">
+                        <div className="form-row">
+                            <div className="col-12">
                                     <label >If you have a preferred home health agency, please fill information below</label>
                             </div>
                         </div>
                         <br/>
-                        <div class="form-row">
-                            <div class="col-12 col-md-4">
+                        <div className="form-row">
+                            <div className="col-12 col-md-4">
                                 <label >Home Health Agency</label>
                             </div>
-                            <div class="form-text-box col-12 col-md-8">
-                                <input type="text" class="form-control" name="hha-name" placeholder="..." />
+                            <div className="form-text-box col-12 col-md-8">
+                                <input type="text" className="form-control" name="hha-name" placeholder="..." />
                             </div>
                         </div>
-                        <div class="form-row">
-                            <div class="col-12 col-md-4">
+                        <div className="form-row">
+                            <div className="col-12 col-md-4">
                                 <label >Contact Person</label>
                             </div>
-                            <div class="form-text-box col-12 col-md-8">
-                                <input type="text" class="form-control" name="hha-cp" placeholder="..." />
+                            <div className="form-text-box col-12 col-md-8">
+                                <input type="text" className="form-control" name="hha-cp" placeholder="..." />
                             </div>
                         </div>
-                        <div class="form-row">
-                            <div class="col-12 col-md-4">
+                        <div className="form-row">
+                            <div className="col-12 col-md-4">
                                 <label >Email</label>
                             </div>
-                            <div class="form-text-box col-12 col-md-8">
-                                <input type="text" class="form-control" name="hha-email" placeholder="..." />
+                            <div className="form-text-box col-12 col-md-8">
+                                <input type="text" className="form-control" name="hha-email" placeholder="..." />
                             </div>
                         </div>
-                        <div class="form-row">
-                            <div class="col-12 col-md-4">
+                        <div className="form-row">
+                            <div className="col-12 col-md-4">
                                 <label >Phone No.</label>
                             </div>
-                            <div class="form-text-box col-12 col-md-8">
-                                <input type="tel" class="form-control" name="hha-phone" placeholder="..."/>
+                            <div className="form-text-box col-12 col-md-8">
+                                <input type="tel" className="form-control" name="hha-phone" placeholder="..."/>
                             </div>
                         </div>
-                        <div class="form-row">
-                            <div class="col-12 col-md-4">
+                        <div className="form-row">
+                            <div className="col-12 col-md-4">
                                 <label >Fax No.</label>
                             </div>
-                            <div class="form-text-box col-12 col-md-8">
-                                <input type="tel" class="form-control" name="hha-fax" placeholder="..."/>
+                            <div className="form-text-box col-12 col-md-8">
+                                <input type="tel" className="form-control" name="hha-fax" placeholder="..."/>
                             </div>
                         </div>
                         
                     </fieldset>
-                    <fieldset class="form-section">
+                    <fieldset className="form-section">
                         <legend>Insurance Information</legend>
-                        <div class="form-row">
-                            <div class="col-12 col-md-4">
+                        <div className="form-row">
+                            <div className="col-12 col-md-4">
                                 <label >Primary Insurance</label>
                             </div>
-                            <div class="form-text-box col-12 col-md-4">
-                                <input type="text" class="form-control" name="prim-num" placeholder="Medicare ID Number"/>
+                            <div className="form-text-box col-12 col-md-4">
+                                <input type="text" className="form-control" name="prim-num" placeholder="Medicare ID Number"/>
                             </div>
-                            <div class="form-text-box col-12 col-md-4">
-                                <input type="text" class="form-control" name="prim-name" placeholder="Insurance Name"/>
+                            <div className="form-text-box col-12 col-md-4">
+                                <input type="text" className="form-control" name="prim-name" placeholder="Insurance Name"/>
                             </div>
                             
                         </div>
                         
                     </fieldset>
-                    <fieldset class="form-section">
+                    <fieldset className="form-section">
                         <legend>Document</legend>
-                        <div class="form-row">
-                            <div class="col-12 col-md-4">
+                        <div className="form-row">
+                            <div className="col-12 col-md-4">
                                 <label >Upload Additional Documents</label>
                             </div>
-                            <div class="col-12 col-md-8">
+                            <div className="col-12 col-md-8">
                                 <input type="file"  name="files"  multiple/>
                             </div>
                             <br/>
@@ -352,12 +348,9 @@ class IntakeRequests extends Component {
                             <p>Total document size must not exceed 500 KB. If you wish to send documents that exceed this limit, please email separately.</p>
                         </div>
                     </fieldset>
-                    <div class="form-row">
-                            {/* <div class="col-12 ">
-                                <label ></label>
-                            </div> */}
+                    <div className="form-row">
                         </div>
-                        <button id="cu-button"class="cu-btn" type="submit">SUBMIT</button>
+                        <button id="cu-button"className="cu-btn" type="submit">SUBMIT</button>
                     </form>
 
             </div>

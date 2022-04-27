@@ -1,7 +1,5 @@
 import React, { Component} from "react";
 import emailjs from 'emailjs-com';
-import "../styles/styles.scss";
-import "../styles/styles600px.scss";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import'bootstrap/dist/js/bootstrap.bundle.min';
 
@@ -57,26 +55,26 @@ class ContactUs extends Component {
                 <div className="col-sm-12 col-md-6">
                     <br></br>
                     <form onSubmit={this.sendEmail}>
-                        <div class="form-row">
-                            <div class="col-12">
-                            <input placeholder="Enter Name" type="text" ref={(c) => this.name = c} class="form-control" name="from_name"id="cu-name" required/>
+                        <div className="form-row">
+                            <div className="col-12">
+                            <input placeholder="Enter Name" type="text" ref={(c) => this.name = c} className="form-control" name="from_name"id="cu-name" required/>
                             </div>
                         </div>
                         <br/>
-                        <div class="form-row">
-                            <div class="col-12">
-                            <input placeholder="Enter Email" type="text"ref={(c) => this.email = c} class="form-control" name="from_email"id="cu-email" required/>
+                        <div className="form-row">
+                            <div className="col-12">
+                            <input placeholder="Enter Email" type="text"ref={(c) => this.email = c} className="form-control" name="from_email"id="cu-email" required/>
                             </div>
                         </div>
                         <br/>
-                        <div class="form-row">
-                            <div class="col-12">
-                            <textarea placeholder="Enter Message" type="text"  ref={(c) => this.msg = c} class="form-control" name="message"id="cu-msg" required/>
+                        <div className="form-row">
+                            <div className="col-12">
+                            <textarea placeholder="Enter Message" type="text"  ref={(c) => this.msg = c} className="form-control" name="message"id="cu-msg" required/>
                             </div>
                         </div>
                         <br/>
                         <br/>
-                            <button id="cu-button"class="cu-btn" type="submit">SUBMIT</button>
+                            <button id="cu-button"className="cu-btn" type="submit">SUBMIT</button>
                     </form>
                 </div>
                 

@@ -2,7 +2,6 @@ import React, { Component} from "react";
 import Media from 'react-media';
 import logo1 from "../resources/Logos/Cordial-Healthcare-Providers-Name.png";
 import logo2 from "../resources/Logos/Cordial-Healthcare-Providers-Pic.png";
-import '../styles/styles600px.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import'bootstrap/dist/js/bootstrap.bundle.min';
 
@@ -76,33 +75,33 @@ class NavBar extends Component {
     displayNavbar2(){
         return(
             <nav className="navbar-link-div">
-                <nav class="navbar navbar-fixed-top navbar-light bg-white static-top">
+                <nav className="navbar navbar-fixed-top navbar-light bg-white static-top">
                 <a className="navbar-logo-div2 col-11" href="/">
                     <img src={logo2} alt="logo" className="navbar-logo2" />
                     <img src={logo1} alt="CordialMD" className="navbar-logo1" />
                 </a>
 
 
-                <button class="btn col-1" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <span class="navbar-toggler-icon"></span>
+                <button className="btn col-1" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span className="navbar-toggler-icon"></span>
                 </button>
-                <div class="dropdown-menu" id="navbarToggler">
-                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                        <li class="dropdown-item">
-                            <a class="nav-link" href="/">HOME </a>
+                <div className="dropdown-menu" id="navbarToggler">
+                    <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
+                        <li className="dropdown-item">
+                            <a className="nav-link" href="/">HOME </a>
                         </li>
-                        <li class="dropdown-item">
-                            <a class="nav-link" href="/services">SERVICES</a>
+                        <li className="dropdown-item">
+                            <a className="nav-link" href="/services">SERVICES</a>
                         </li>
                         
-                        <li class="dropdown-item">
-                            <a class="nav-link" href="/contact-us">CONTACT US</a>
+                        <li className="dropdown-item">
+                            <a className="nav-link" href="/contact-us">CONTACT US</a>
                         </li>
-                        <li class="dropdown-item">
-                            <a class="nav-link" href="/intake-requests">REQUEST A VISIT</a>
+                        <li className="dropdown-item">
+                            <a className="nav-link" href="/intake-requests">REQUEST A VISIT</a>
                         </li>
                         <li className="dropdown-item" id="navbar-menu-7">
-                            <a class="nav-link" href="/career">CAREER</a>
+                            <a className="nav-link" href="/career">CAREER</a>
                         </li>
                     </ul>
                 </div>
