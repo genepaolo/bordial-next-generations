@@ -1,37 +1,32 @@
-import React, { Component } from "react";
-import img from "../resources/Logos/Cordial-Healthcare-Providers-Pic.png";
-class Footer extends Component {
+import React from "react";
 
-    constructor(props) {
-        super(props);
-        this.state = { active: 'Home'};
-    }
+function Footer(){
 
-    displayContactInfo(){
+    function displayContactInfo(){
         return(
-            <div className="footer-container">
-                <div className="footer-container-collumns">
-                    <p className="footer-container-collumn-titles">CONTACT US:</p>
-                    <p>Cordial Healthcare Providers</p>
-                    <p>127 S. Brand Blvd., Suite 333</p>
-                    <p>Glendale, CA, 91204</p>
+            <div className="footer container-fluid">
+                <div className="footer__collumn">
+                    <p className="footer__collumn__titles">CONTACT US:</p>
+                    <p>Bordial Next Generations</p>
+                    <p>University Park Campus, USC</p>
+                    <p>Syracuse, NY, 90007</p>
                     <br/>
-                    <p>Phone: <a href ="tel:8182399293"> (818) 239-9293</a></p>
-                    <p>Fax:<a href="tel:8182394525"> (818) 239-4525</a></p>
-                    <p>Email:<a href ="mailto: info@cordialmd.com"> info@cordialmd.com</a></p>
+                    <p>Phone: <a href ="/"> (XXX) XXX-XXXX</a></p>
+                    <p>Fax:<a href="/"> (XXX) XXX-XXXX</a></p>
+                    <p>Email:<a href ="mailto:paolo.gene@gmail.com"> paolo.gene@gmail.com</a></p>
 
                 </div>
-                <div className="footer-container-collumns">
-                    <p className="footer-container-collumn-titles">OFFICE HOURS:</p>
-                    <p>Monday: 9:00am-6:00pm</p>
-                    <p>Tuesday: 9:00am-6:00pm</p>
-                    <p>Wednesday: 9:00am-6:00pm</p>
-                    <p>Thursday: 9:00am-6:00pm</p>
-                    <p>Friday: 9:00am-6:00pm</p>
-                    <p>Saturday: 9:00am-3:00pm</p>
+                <div className="footer__collumn">
+                    <p className="footer__collumn__titles">OFFICE HOURS:</p>
+                    <p>Monday: 9:00am-5:00pm</p>
+                    <p>Tuesday: 9:00am-5:00pm</p>
+                    <p>Wednesday: 9:00am-5:00pm</p>
+                    <p>Thursday: 9:00am-5:00pm</p>
+                    <p>Friday: 9:00am-5:00pm</p>
+                    <p>Saturday: 9:00am-2:00pm</p>
                 </div>
-                <div className="footer-container-collumns">
-                    <p className="footer-container-collumn-titles">AREAS SERVED:</p>
+                <div className="footer__collumn">
+                    <p className="footer__collumn__titles">AREAS SERVED:</p>
                     <p>LA County</p>
                     <p>Orange County</p>
                     <p>San Bernardino County</p>
@@ -40,10 +35,10 @@ class Footer extends Component {
                     <p>Kern County</p>
 
                 </div>
-                <div className="footer-container-collumns">
-                    <p className="footer-container-collumn-titles">NAVIGATION</p>
-                    <li className="footer-item active">
-                        <a className="footer-link" href="/">Home <span className="sr-only">(current)</span></a>
+                <div className="footer__collumn">
+                    <p className="footer__collumn__titles">NAVIGATION</p>
+                    <li className="footer-item">
+                        <a className="footer-link" href="/">Home</a>
                     </li>
                     <li className="footer-item">
                         <a className="footer-link" href="/services">Services</a>
@@ -57,34 +52,29 @@ class Footer extends Component {
                     <li className="footer-item">
                         <a className="footer-link" href="/career">Careers</a>
                     </li>
-                    <div>
-                        <img src={img} alt="logo" id="footer-img"></img>
-                    </div>
                 </div>
             </div>
         );
-    }
+    };
 
-    displayRightsReserved(){
+    function displayRightsReserved(){
         return(
-            <div className="footer-rights-reserved">
-                <p>Copyright © 2021. Cordial Healthcare Providers. All rights reserved.</p>
+            <div className="footer--rights-reserved container-fluid">
+                <p>Not Copyright © 2022. Bordial Next Generations. This is a fake company</p>
             </div>
         );
-    }
+    };
 
     
 
-    render() {
-        
-        return (
-            <div className="footer-body">
-                {this.displayContactInfo()}
-                {this.displayRightsReserved()}
-            </div>
+    return (
+        <section id="footer">
+            {displayContactInfo()}
+            {displayRightsReserved()}
+        </section>
 
-        );
-    }
+    );
+    
 }
 
 export default Footer;

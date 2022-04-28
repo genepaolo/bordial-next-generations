@@ -1,138 +1,54 @@
-import React, { Component} from "react";
-import Media from 'react-media';
-import logo1 from "../resources/Logos/Cordial-Healthcare-Providers-Name.png";
-import logo2 from "../resources/Logos/Cordial-Healthcare-Providers-Pic.png";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import'bootstrap/dist/js/bootstrap.bundle.min';
-
-class NavBar extends Component {
-
-    constructor(props) {
-        super(props);
-        this.state = { active: 'Home'};
-    }
-
-    onClick = (newActive) => {
-        console.log("NEW ACTIVE: " + newActive);
-        this.setState({
-            active: newActive,
-        });
-    };
-
-    displayNavbar1(){
-        return(
-        <div>
-            <div className="navbar-logo-div1">
-                <a href="/">
-                    <img src={logo2} alt="logo" className="navbar-logo2" />
-                    <img src={logo1} alt="CordialMD" className="navbar-logo1" />
-                </a>
-            </div>
-            
-            <nav className="navbar-link-div">
-            <ul className="navbar-link-ul">
-            <li className="active navbar-link-items" id="navbar-menu-1">
-                <a href="/">
-                    <div className="navbar-link-menu-item">
-                        HOME
-                    </div>
-                </a>
-            </li>
-            <li className="navbar-link-items" id="navbar-menu-3">
-                <a href="/services">
-                    <div className="navbar-link-menu-item">
-                        SERVICES
-                    </div>
-                </a>
-            </li>
-            <li className="navbar-link-items" id="navbar-menu-5">
-                <a href="/contact-us">
-                    <div className="navbar-link-menu-item">
-                        CONTACT US
-                    </div>
-                </a>
-            </li>
-            <li className="navbar-link-items" id="navbar-menu-6">
-                <a href="/intake-requests">
-                    <div className="navbar-link-menu-item">
-                        REQUEST A VISIT
-                    </div>
-                </a>
-            </li>
-            <li className="navbar-link-items" id="navbar-menu-7">
-                <a href="/career">
-                    <div className="navbar-link-menu-item">
-                        CAREER
-                    </div>
-                </a>
-            </li>
-            </ul>
-            </nav>
-        </div>
-        );
-
-    }
-    displayNavbar2(){
-        return(
-            <nav className="navbar-link-div">
-                <nav className="navbar navbar-fixed-top navbar-light bg-white static-top">
-                <a className="navbar-logo-div2 col-11" href="/">
-                    <img src={logo2} alt="logo" className="navbar-logo2" />
-                    <img src={logo1} alt="CordialMD" className="navbar-logo1" />
-                </a>
+import React, {useState} from "react";
+import logo from "../resources/Logos/Cordial-Healthcare-Providers-Name.png";
 
 
-                <button className="btn col-1" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <span className="navbar-toggler-icon"></span>
-                </button>
-                <div className="dropdown-menu" id="navbarToggler">
-                    <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
-                        <li className="dropdown-item">
-                            <a className="nav-link" href="/">HOME </a>
-                        </li>
-                        <li className="dropdown-item">
-                            <a className="nav-link" href="/services">SERVICES</a>
-                        </li>
-                        
-                        <li className="dropdown-item">
-                            <a className="nav-link" href="/contact-us">CONTACT US</a>
-                        </li>
-                        <li className="dropdown-item">
-                            <a className="nav-link" href="/intake-requests">REQUEST A VISIT</a>
-                        </li>
-                        <li className="dropdown-item" id="navbar-menu-7">
-                            <a className="nav-link" href="/career">CAREER</a>
-                        </li>
-                    </ul>
-                </div>
-                </nav>
-                
-            </nav>
-        );
+function NavBar(){
+        const [toggled, setToggled] = useState(false);
 
-    }
-
-    render() {
-
-        const navbar1 = this.displayNavbar1();
-        const navbar2 = this.displayNavbar2();
+        function handleToggle(e){
+            const icon = document.querySelector(".navbar-toggler__icon");
+            icon.classList.toggle("toggled");
+            setToggled(!toggled);
+        }
 
         return (
-            <div className="navbar-body">
-                <Media queries={{ small: "(min-width: 900px)" }}>
-                    {matches =>
-                    matches.small ? (
-                        navbar1
-                    ) : (
-                        navbar2
-                    )
-                    }
-                </Media>
-                
-            </div>
+            <section id="navbar">
+                <div className="container-fluid">
+                    <nav className="navbar navbar-expand-lg navbar-light">
+                    <a className="navbar-brand" href="/">
+                        <h1>Bordial NG</h1>
+                    </a>
+                    <button onClick={handleToggle}className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <div className="navbar-toggler__icon"></div>
+                    </button>
+                    <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul className="navbar-nav ml-auto">
+                            <li className="nav-item active">
+                                <a className="nav-link" href="/">HOME </a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link" href="/services">SERVICES</a>
+                            </li>
+                            
+                            <li className="nav-item">
+                                <a className="nav-link" href="/contact-us">CONTACT US</a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link" href="/intake-requests">REQUEST A VISIT</a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link" href="/career">CAREER</a>
+                            </li>
+                        </ul>
+                    </div>
+                        
+                    </nav>
+                    
+                </div>
+            </section>
 
         );
+    
     }
-}
 
 export default NavBar;

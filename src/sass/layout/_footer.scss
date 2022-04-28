@@ -1,0 +1,41 @@
+// Footer ********************************************************
+#footer{
+    font-family: Barlow-SemiBold;
+    font-weight: bolder;
+}
+.footer{
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction:row;
+    background-color: $color-footer;
+    .footer__collumn{
+        width: 25rem;
+        color:white;
+        padding-bottom: 7.5rem;
+        font-size: 1.5rem;
+        & a:link, & a:visited{
+            text-decoration: none;
+            color: white;
+            font-size: 1.5rem;
+        }
+        & a:hover{
+            text-decoration: underline;
+            color: $color-primary;
+        }
+    }
+    
+}
+.footer-link:link, .footer-link:visited{
+    text-decoration: none;
+    color: $color-white;
+    font-size: $font-med;
+}
+
+.footer--rights-reserved{
+    text-align: center;
+    background-color:$color-black2;
+    color: $color-white;
+    height: 4rem;
+    font-size: $font-small;
+}

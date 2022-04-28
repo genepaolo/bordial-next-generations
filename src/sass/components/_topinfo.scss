@@ -1,0 +1,26 @@
+//Top Info *******************************************************
+    
+.topinfo{
+    padding: .5rem 5rem .5rem 0rem;
+    display: flex;
+    justify-content: right;
+    flex-direction: row;
+    align-content: center;
+    font-size: $font-small;
+    text-align: right;
+    background-color: $color-header;
+    font-weight: bold;
+    & p{
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+    & a:link, & a:visited{
+        color: $color-black;
+        text-decoration: none;
+        transition: all 0.2s ease;
+    }
+    & a:hover{
+        color: $color-white;
+    }
+}
+

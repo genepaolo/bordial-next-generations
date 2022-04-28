@@ -7,26 +7,11 @@ html {
   padding: 0;
 }
 
+.container-fluid {
+  padding: 3% 7%;
+}
+
 @media (min-width: 900px) {
-  .navbar-body {
-    width: 100%;
-    overflow-x: hidden;
-    padding: 0rem 7.5rem 0rem 7.5rem;
-    overflow: visible;
-    margin: 2rem 0rem;
-  }
-
-  .navbar-link-div {
-    max-width: 130rem;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .navbar-link-menu-item {
-    padding-left: 3rem;
-    padding-right: 3rem;
-  }
-
   .page-body {
     max-width: 100rem;
     margin-left: auto;
@@ -61,11 +46,11 @@ html {
     text-align: center;
     font-size: 1.8rem;
     font-family: Barlow-Medium;
-    background-color: #ff968a;
+    background-color: #aafac8;
     padding: 0.5rem 3rem;
     display: inline-block;
     margin-top: 2rem;
-    border-color: #ff968a;
+    border-color: #aafac8;
     border-radius: 1.5em;
     color: darkblue;
     height: 4rem;
@@ -78,17 +63,17 @@ html {
 
   .slide-div-button:hover {
     text-decoration: none;
-    border: 2px #ff968a solid;
+    border: 2px #aafac8 solid;
     background-color: transparent;
   }
 
   .slide-div-info a:hover {
-    color: #ff968a;
+    color: #aafac8;
     text-decoration: none;
   }
 
   .slide-div-info-title {
-    color: #ff968a;
+    color: #aafac8;
     font-size: 3rem;
     font-family: Barlow-Medium;
     font-weight: bolder;
@@ -104,15 +89,6 @@ html {
 
   .slide-container {
     position: relative;
-  }
-
-  #counties-img {
-    height: 30rem;
-    width: auto !important;
-  }
-
-  #counties-img {
-    width: 50rem !important;
   }
 
   #career-page-body {
@@ -151,132 +127,6 @@ html {
   }
 }
 @media (min-width: 0px) {
-  .topinfo-body {
-    padding: 0.5rem 5rem 0.5rem 0rem;
-    font-size: 1.4rem;
-    text-align: right;
-    background-color: #ad343e;
-  }
-
-  .topinfo-body p {
-    margin-top: auto;
-    margin-bottom: auto;
-  }
-
-  .topinfo-body span {
-    font-weight: bold;
-  }
-
-  .topinfo-body a:link, .topinfo-body a:visited {
-    text-decoration: none;
-    color: black;
-    font-size: 1.5rem;
-  }
-
-  .topinfo-body a:hover {
-    text-decoration: none;
-    color: white;
-  }
-
-  .topinfo-icons {
-    position: relative;
-    top: -3px;
-  }
-
-  .navbar-body {
-    width: 100%;
-    padding: 0rem 1rem 0rem 1rem;
-    font-family: Barlow;
-  }
-
-  .navbar {
-    width: 100%;
-  }
-
-  .navbar-logo-div1 {
-    text-align: center;
-  }
-
-  .navbar-logo1 {
-    height: 5rem;
-    margin-top: auto;
-    margin-bottom: auto;
-  }
-
-  .navbar-logo2 {
-    height: 8rem;
-  }
-
-  .navbar-link-div {
-    width: 100%;
-    height: 100%;
-    margin-top: auto;
-    margin-bottom: auto;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .navbar-link-ul {
-    height: 100%;
-    width: 75%;
-    list-style-type: none;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: auto;
-  }
-
-  .dropdown-item {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    padding-left: 2rem;
-    font-size: 1.8rem;
-    border: 0rem;
-    border-bottom: 1px solid #e5e5e5 !important;
-    z-index: 10;
-    overflow: visible;
-    font-family: Barlow-SemiBold;
-  }
-
-  .nav-link {
-    color: black !important;
-    font-weight: bold;
-  }
-
-  .navbar-link-menu-item {
-    padding-left: 2rem;
-    padding-right: 2rem;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-  }
-
-  .navbar-toggler {
-    border: 0rem;
-  }
-
-  #navbarToggler {
-    width: 100%;
-    margin-top: 0rem;
-    border-top: 2px solid #3E62AE;
-    overflow: visible;
-    z-index: 10;
-    position: absolute;
-  }
-
-  .navbar-link-items a:link, .navbar-link-items a:visited {
-    font-family: Barlow-SemiBold;
-    font-weight: 600 !important;
-    text-decoration: none;
-    color: black;
-    font-size: 1.8rem;
-    transition: 0.3s;
-  }
-
-  .navbar-link-items a:hover {
-    color: #ff968a;
-  }
-
   .body {
     width: 100%;
     background-color: white;
@@ -329,14 +179,6 @@ html {
     padding: 0rem 2.5rem 5rem 2.5rem;
     font-size: 2rem;
     font-weight: bolder;
-  }
-
-  #root, .main-body {
-    height: 50%;
-  }
-
-  html, body {
-    height: 100%;
   }
 
   .image-container {
@@ -417,53 +259,6 @@ html {
 
   .slide-container {
     position: relative;
-  }
-
-  #counties-img {
-    width: 100%;
-  }
-
-  .page-counties-body-col {
-    margin: auto;
-  }
-
-  .page-counties {
-    background-color: #cae9ff;
-    padding: 5rem 7.5rem;
-  }
-
-  .page-counties-header {
-    text-align: left;
-  }
-
-  .page-counties-header {
-    padding-bottom: 2.5rem;
-    font-size: 4rem;
-    color: black;
-  }
-
-  .page-counties-body {
-    font-family: Barlow-SemiBold;
-    font-weight: normal;
-    font-size: 2rem;
-    color: black;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
-  .page-counties-body a {
-    text-decoration: none;
-    color: black;
-  }
-
-  .page-counties-body a:hover {
-    text-decoration: none;
-    color: blue;
-  }
-
-  .page-counties-body ul {
-    list-style-image: url("../resources/Extra/checkmark.png");
   }
 
   #page-body-mission {
@@ -695,60 +490,6 @@ html {
       opacity: 1;
     }
   }
-  .footer-body {
-    height: 100%;
-    font-family: Barlow-SemiBold;
-    font-weight: bolder;
-  }
-
-  .footer-container {
-    justify-content: space-between;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    background-color: #1d3557;
-    padding: 5rem 7.5rem 5rem 7.5rem;
-  }
-
-  .footer-container-collumns {
-    width: 25rem;
-    color: white;
-    padding-bottom: 7.5rem;
-    font-size: 1.5rem;
-  }
-
-  .footer-container-collumns a:link, .footer-container-collumns a:visited {
-    text-decoration: none;
-    color: white;
-    font-size: 1.5rem;
-  }
-
-  .footer-container-collumns a:hover {
-    text-decoration: underline;
-    color: rgb(115, 115, 255);
-  }
-
-  .footer-link:link, .footer-link:visited {
-    text-decoration: none;
-    color: white;
-    font-size: 1.5rem;
-  }
-
-  .footer-rights-reserved {
-    padding: 1rem 0rem 1rem 0rem;
-    text-align: center;
-    background-color: white;
-    color: black;
-    height: 4rem;
-    font-size: 1rem;
-  }
-
-  #footer-img {
-    padding: 2.5rem;
-    width: 20rem;
-    filter: grayscale(100%);
-  }
-
   .home-section-cols {
     display: flex;
     flex-wrap: wrap;
@@ -809,6 +550,184 @@ html {
 }
 html {
   font-size: 62.5%;
+}
+
+#counties-img {
+  width: 50rem !important;
+  height: 30rem;
+  width: auto !important;
+}
+@media (max-width: 990px) {
+  #counties-img {
+    width: 100%;
+  }
+}
+
+.page-counties {
+  background-color: #7ebc89;
+  font-family: Barlow-SemiBold;
+  font-weight: normal;
+  font-size: 2rem;
+  color: black;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.page-counties__header {
+  text-align: left;
+  padding-bottom: 2.5rem;
+  font-size: 4rem;
+  color: black;
+}
+.page-counties__body a {
+  text-decoration: none;
+  color: black;
+}
+.page-counties__body a:hover {
+  text-decoration: none;
+  color: blue;
+}
+.page-counties__body ul {
+  list-style-image: url("../resources/Extra/checkmark.png");
+}
+.page-counties div:last-child {
+  margin: auto;
+}
+
+#navbar {
+  background-color: #4f9d69;
+}
+
+.navbar-logo {
+  height: 3rem;
+}
+
+.navbar-toggler {
+  border: none;
+  width: 4rem;
+  height: 4rem;
+  position: relative;
+}
+.navbar-toggler__icon {
+  position: relative;
+  transform: translateY(-50%);
+}
+.navbar-toggler__icon, .navbar-toggler__icon::before, .navbar-toggler__icon::after {
+  display: inline-block;
+  width: 100%;
+  height: 0.3rem;
+  transition: all 0.2s ease;
+}
+.navbar-toggler__icon::before, .navbar-toggler__icon::after {
+  content: "";
+  position: absolute;
+  background-color: black;
+  border-radius: 10%;
+  left: 0;
+}
+.navbar-toggler__icon::before {
+  top: -0.4rem;
+}
+.navbar-toggler__icon::after {
+  top: 0.4rem;
+}
+.navbar-toggler__icon.toggled::before, .navbar-toggler__icon.toggled::after {
+  top: 0;
+  transform-origin: center;
+}
+.navbar-toggler__icon.toggled::before {
+  transform: rotateZ(130deg);
+}
+.navbar-toggler__icon.toggled::after {
+  transform: rotateZ(-130deg);
+}
+
+.nav-item {
+  padding-left: 4rem;
+}
+@media (max-width: 990px) {
+  .nav-item {
+    padding-left: 0;
+  }
+}
+.nav-item a {
+  color: black;
+  font-weight: 300;
+  text-decoration: none;
+}
+.nav-item a:link, .nav-item:visited {
+  font-family: Barlow-SemiBold;
+  font-size: 1.4rem;
+  transition: all 0.2s ease;
+}
+.nav-item a:hover {
+  color: #aafac8;
+}
+
+.topinfo {
+  padding: 0.5rem 5rem 0.5rem 0rem;
+  display: flex;
+  justify-content: right;
+  flex-direction: row;
+  align-content: center;
+  font-size: 1rem;
+  text-align: right;
+  background-color: #4f9d69;
+  font-weight: bold;
+}
+.topinfo p {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.topinfo a:link, .topinfo a:visited {
+  color: black;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+.topinfo a:hover {
+  color: white;
+}
+
+#footer {
+  font-family: Barlow-SemiBold;
+  font-weight: bolder;
+}
+
+.footer {
+  justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  background-color: #54422f;
+}
+.footer .footer__collumn {
+  width: 25rem;
+  color: white;
+  padding-bottom: 7.5rem;
+  font-size: 1.5rem;
+}
+.footer .footer__collumn a:link, .footer .footer__collumn a:visited {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+}
+.footer .footer__collumn a:hover {
+  text-decoration: underline;
+  color: #aafac8;
+}
+
+.footer-link:link, .footer-link:visited {
+  text-decoration: none;
+  color: white;
+  font-size: 1.4rem;
+}
+
+.footer--rights-reserved {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.85);
+  color: white;
+  height: 4rem;
+  font-size: 1rem;
 }
 
 /*# sourceMappingURL=index.css.map */

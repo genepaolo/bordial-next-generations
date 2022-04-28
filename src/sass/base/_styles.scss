@@ -1,25 +1,6 @@
 // This applies for screen over 90rem
 @media (min-width:900px){
     
-
-//Navbar
-.navbar-body{
-    width: 100%;
-    overflow-x: hidden;
-    padding: 0rem 7.5rem 0rem 7.5rem;
-    overflow: visible;
-    margin: 2rem 0rem;
-}
-.navbar-link-div{
-    max-width: 130rem;
-    margin-left: auto;
-    margin-right:auto;
-}
-.navbar-link-menu-item{
-    padding-left: 3rem;
-    padding-right: 3rem;
-
-}
  
 //Body ******************
 
@@ -105,15 +86,6 @@
     position: relative;
 }
 
-#counties-img{
-    height: 30rem;
-    width: auto!important;
-}
-
-//Counties Component
-#counties-img{
-    width: 50rem!important;
-}
 
 //career page 
 #career-page-body{

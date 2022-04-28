@@ -1,0 +1,43 @@
+
+#counties-img{
+    width: 50rem!important;
+    height: 30rem;
+    width: auto!important;
+    @include respond(tab-port){
+        width: 100%;
+    }
+    
+    
+}
+.page-counties{
+    background-color: $color-secondary;
+    font-family: Barlow-SemiBold;
+    font-weight: normal;
+    font-size: 2rem;
+    color:black;
+    display:flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    &__header{
+        text-align:left;
+        padding-bottom: 2.5rem;
+        font-size: 4rem;
+        color:black;
+    }
+    &__body{
+        & a{
+            text-decoration: none;
+            color:$color-black;
+            &:hover{
+                text-decoration: none;
+            color:blue;
+            }
+        }
+        & ul{
+            list-style-image: url("../resources/Extra/checkmark.png");
+        }
+    }
+    & div:last-child{
+        margin: auto;
+    }
+}
