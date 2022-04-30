@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import MovingComponent from 'react-moving-text';
 import img from "../resources/StockImages/shutterstock_206476099.jpg";
 import Counties from "../components/Counties";
+import PageTitle from "../components/PageTitle";
 
 class MissionStatement extends Component {
     constructor(props){
@@ -54,9 +55,7 @@ class MissionStatement extends Component {
     render(){
         return(
             <div className="body" id="mission-statement-body">
-                <div className="page-title">
-                    <p className="page-title-p">MISSION STATEMENT</p>
-                </div>
+                <PageTitle title={"mission statement"} />
                 {this.displayPageBody()}
                 <Counties/>
             </div>

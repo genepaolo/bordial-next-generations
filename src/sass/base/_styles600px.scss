@@ -4,49 +4,6 @@
 @media (min-width:0px){
 
 
-// Main ********************************************************
-// Body
-.body {
-    width: 100%;
-    background-color: white;
-    z-index: 1;
-    font-family: Barlow;
-}
-@font-face{
-    font-family:Barlow-Medium;
-    src: url(../resources/Extra/Barlow/Barlow-Medium.ttf);
-
-}
-
-@font-face{
-    font-family:Barlow;
-    src: url(../resources/Extra/Barlow/Barlow-Thin.ttf);
-}
-
-@font-face{
-    font-family:Barlow-SemiBold;
-    src: url(../resources/Extra/Barlow/Barlow-SemiBold.ttf);
-
-}
-
-.page-title{
-    padding: 2.5rem 0rem 2.5rem 0rem;
-    background-color: #ffaea5;
-    display: flex;
-    flex-wrap: wrap;
-    flex-flow: center;
-}
-
-.page-title-p{
-    font-family: Barlow-Medium;
-    margin-top:auto;
-    margin-bottom:auto;
-    font-size: 3rem;
-    font-weight: bolder;
-    text-align:center;
-    width: 100%;
-    font-weight:bolder;
-}
 
 .page-body a:link, .page-body a:visited{
     text-decoration: none;
@@ -65,101 +22,6 @@
 }
 
 
-//Main Page
-.image-container{
-    width: 100%;
-    max-height: 80rem;
-}
-.image-container-image{
-    width: 100%;
-}
-
-.slide-div-info{
-    border: 1px solid grey;
-    background-color:rgba($color-white, 0.7);
-    position: relative;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    text-align: center;
-    width: 100%;
-    z-index: 2;
-}
-
-.slide-div-info a{
-    color: black;
-    opacity: 0.7;
-    display: inline-block;
-    margin: 1rem 0rem;
-}
-
-.slide-div-button{
-    text-align: center;
-    font-size: 1.8rem;
-    font-family: Barlow-SemiBold;
-    background-color:rgba(255, 150, 138, 1); //salmon pink
-    padding: .5rem 3rem;
-    display: inline-block;
-    margin-top: 2rem;
-    border-color: #ff968a;
-    border-radius: 1.5em;
-    color: darkblue;
-    height: 4rem;
-    border: 2px transparent solid;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    transition: 0.3s;
-    //
-    font-weight: bolder;
-}
-
-.slide-div-button:hover{
-    text-decoration: none;
-    border: 2px #ff968a solid;
-    background-color:transparent
-}
-
-
-.slide-div-info a:hover{
-    color: #ff968a;
-    text-decoration: none;
-}
-
-.slide-div-info-title{
-    color: #ff968a;
-    font-size: 3rem;
-    font-family: Barlow-Medium;
-    font-weight: bolder;
-}
-
-.slide-div-info-info{
-    color: black;
-    font-size: 1.8rem;
-    font-family: Barlow-SemiBold;
-    margin-top:auto;
-    margin-bottom:auto;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    //
-    font-weight: bolder;
-}
-
-
-.slide-container{
-    position: relative;
-}
-
-//Mission Page
-#page-body-mission{
-    margin-top: 4rem;
-    text-align: center;
-}
-
-#mission-img{
-    width: 60rem;
-    padding: 2.5rem;
-    border-radius: 4rem;
-}
 
 //About Us Page
 
@@ -173,21 +35,6 @@
     float:right;
 }
 
-//Career Page
-#career-body{
-    text-align: center;
-    font-family: Barlow-SemiBold;
-}
-
-.career-img{
-    width: 100%;
-    margin-bottom: 5rem;
-    border-radius: 1rem;
-}
-
-#career-page-body{
-    margin-top: 5rem;
-}
 
 //Contact Us Page
 
@@ -211,7 +58,6 @@
     border-radius: 0;
 }
 #contactus-page-body{
-    font-family: Barlow-SemiBold;
     font-size: 1.6rem;
     display:flex;
     flex-direction:row;
@@ -243,31 +89,6 @@
  :-ms-input-placeholder {  
     font-style: italic; 
  }
-
-//Services Page
-#services-body h4{
-    font-weight:bold
-}
-#services-body{
-    font-family: Barlow-SemiBold;
-    font-size: 1.6rem;
-}
-
-#services-body p{
-    margin-bottom: 0rem;
-}
-
-.services-img{
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-}
-.services-img img{
-    width: 100%;
-    max-width: 50rem;
-}
-
 
 //Request Visit
 .radiobuttons{
@@ -307,10 +128,6 @@ legend {
     border-radius: 0rem;
 }
 
-#intake-page-body p, #intake-page-body{
-    font-family: Barlow-SemiBold;
-    margin-bottom: 0rem;
-}
 
 .intake-page-body-form{
     width: 100%;
@@ -365,69 +182,6 @@ legend {
     to {top: 0; opacity: 1}
   }
 
-// Home ***
 
-.home-section-cols{
-    display: flex;
-    flex-wrap: wrap;
-    font-size: 1.8rem;
-    // font-weight: normal;
-    font-weight: 60rem;
-    font-family: Barlow-SemiBold;
-
-}
-.home-section-imgs {
-    text-align: center;
-    margin: auto;
-}
-.home-section-imgs img{
-    width: 100%;
-}
-.home-section-title{
-    color: rgba(255, 150, 138, 1);
-    font-size: 3rem;
-    // Who We Are
-    font-weight: 40rem;
-    font-family: Barlow-Medium;
-}
-
-.home-body-intro{
-    justify-content: center;
-    width: 80%;
-}
-
-#cordial-md-span-home{
-    font-size: 3rem;
-}
-
-.home-welcome{
-    font-size: 4rem;
-    padding: 0rem;
-    font-family: Barlow-Medium;
-    // font-weight: normal;
-    // Cordial Healthcare Providers
-    font-weight: 60rem;
-}
-
-.home-welcome p{
-    padding-bottom: 0rem;
-}
-
-#home-welcome-welcome{
-    font-family: Barlow-Medium;
-    //font-weight: normal;
-    // Welcome to
-    font-weight: 60rem;
-    font-size: 3rem;
-}
-
-.col-lg-6{
-    padding: 0rem!important;
-}
-
-// Covid Page
-#page-body-covid{
-    font-family: Barlow-SemiBold;
-}
 
 }

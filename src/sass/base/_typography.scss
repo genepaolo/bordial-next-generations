@@ -1,3 +1,54 @@
 html{
     font-size: 62.5%;
 }
+
+h1{
+    font-size: $font-xlarge;
+    font-family: 'Libre Baskerville', serif;
+    font-weight: 700;
+    
+    @include respond(phone){
+        font-size: $font-large;
+    }
+}
+
+h2{
+    color: $color-black;
+    font-size: 3rem;
+    font-weight: 400;
+    font-family: 'Libre Baskerville', serif;
+}
+h3{
+    color: $color-black;
+    font-size: 2rem;
+    font-weight: 400;
+    font-family: 'Zilla Slab', serif;
+}
+
+p, li{
+    font-family: 'Zilla Slab', serif;
+    font-size: $font-large;
+    @include respond(phone){
+        font-size: $font-med;
+    }
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+a:link, a:visited{
+    font-family: 'Zilla Slab', serif;
+    font-weight: 400;
+}
+
+.nav-item{
+    & a{
+        color: black;
+        text-decoration: none;
+    }
+    & a:link, &:visited{
+        font-family: 'Zilla Slab', serif;
+        font-weight: 400;
+    }
+}

@@ -1,7 +1,17 @@
-import React, { Component} from "react";
-import img from "../resources/StockImages/GoogleMap.png";
+import React  from "react";
+import imgSmall from "../resources/StockImages/counties-small.png";
+import imgLarge from "../resources/StockImages/counties-large.jpg";
 
 function Counties(){
+    function applyBackgroundImages(){
+        return ({
+            backgroundImage: "url(" + imgSmall + ")",
+            backgroundImage: "image-set(  url(" + imgSmall + ") 1x, url(" + imgLarge + ") 2x)",
+            backgroundImage: "image-set(  url(" + imgSmall + ") 900w, url(" + imgLarge + ") 2048w)",
+            backgroundImage: "-webkit-image-set(  url(" + imgSmall + ") 1x, url(" + imgLarge + ") 2x)",
+            backgroundSize:"cover"
+        });
+    }
     return(
         <div className="page-counties container-fluid">
             <div>
@@ -19,9 +29,6 @@ function Counties(){
 
                 </ul>
                 <p><a href="/contact-us">Click here to contact us for an appointment today!</a></p>
-            </div>
-            <div>
-                <img src={img} id="counties-img" alt="County Images"></img>
             </div>
             
         </div>

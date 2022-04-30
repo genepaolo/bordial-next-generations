@@ -7,6 +7,37 @@ html{
     padding: 0;
 }
 
+h1{
+    
+}
+
+h2{
+    
+}
+
+ul, li{
+    padding: 0;
+}
+
+ul{
+    list-style-type: none;
+}
+
+li{
+    background: url('../resources/Extra/icons8-arrow-24.png')  no-repeat left top;
+    padding-left: 4rem;
+}
+
+p{
+    
+}
+
 .container-fluid{
     padding: 3% 7%;
+    @include respond(tab-port){
+        padding: 3% 3%;
+    }
+    &-small{
+        padding: 0 7%;
+    }
 }

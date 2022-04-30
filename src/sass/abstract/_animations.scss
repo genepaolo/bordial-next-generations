@@ -1,0 +1,65 @@
+@keyframes slideRight{
+    0%{
+        opacity: 0;
+        transform: translateX(-5rem);
+    }
+    75%{
+        opacity: 1;
+        transform: translateX(1rem);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+@keyframes slideLeft{
+    0%{
+        opacity: 0;
+        transform: translateX(5rem);
+    }
+    75%{
+        opacity: 1;
+        transform: translateX(-1rem);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+/* The typing effect */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    100% { border-color: $color-primary; }
+}
+
+
+.slide-right{
+    animation-name: slideRight;
+    animation-duration: 1.5s;
+}
+
+.slide-left{
+    animation-name: slideLeft;
+    animation-duration: 1.5s;
+}
+
+.typewriter{
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid $color-primary;
+    white-space: nowrap;
+    margin: 0 auto;
+    animation: 
+        typing 3.5s steps(40, end),
+        blink-caret .75s step-end 1;
+}
+
+

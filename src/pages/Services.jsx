@@ -1,15 +1,9 @@
-import React, { Component} from "react";
+import React from "react";
 import img from "../resources/StockImages/shutterstock_1932198155.jpg";
-class Services extends Component {
-    constructor(props){
-        super(props);
-        document.title = "SERVICES - Cordial Health Providers";
-        this.state = {
-            active: 'services'
-        }
-    }
+import PageTitle from "../components/PageTitle";
+function Services(){
 
-    displayPageBody(){
+    function displayPageBody(){
         return(
             <div className="page-body" id="services-body">
                 <br/>
@@ -58,17 +52,12 @@ class Services extends Component {
         );
     }
 
-
-    render(){
-        return(
-            <div className="body" id="services-body">
-                 <div className="page-title">
-                    <p className="page-title-p">OUR SERVICES</p>
-                </div>
-                {this.displayPageBody()}
-            </div>
-        );
-    }
+    return(
+        <div>
+            <PageTitle title="our services" />
+            {displayPageBody()}
+        </div>
+    );
 }
 
 export default Services;
