@@ -13,11 +13,11 @@ function Counties(){
         });
     }
     return(
-        <div className="page-counties container-fluid">
-            <div>
-                <div className="page-counties__header">
+        <div className="page-counties">
+            <div className="container-fluid">
+                <h1 className="u-center-text">
                     COUNTIES SERVED
-                </div>
+                </h1>
                 <p>Proudly serving:</p>
                 <ul>
                     <li>LA County</li>

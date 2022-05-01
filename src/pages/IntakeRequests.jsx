@@ -1,46 +1,28 @@
-import React, { Component } from "react";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import'bootstrap/dist/js/bootstrap.bundle.min';
-
-class IntakeRequests extends Component {
-    constructor(props){
-        super(props);
-        document.title = "INTAKE FORM - Cordial Health Providers";
-        this.state = {
-            active: 'intake-requests'
-        }
-    }
+import React from "react";
+import PageTitle from "../components/PageTitle";
+function IntakeRequests(){
 
 
-    sendEmail(e) {
-        e.preventDefault();    //This is important, i'm not sure why, but the email won't send without it
-        // emailjs.sendForm('gmail', 'template_tpbxcoh', e.target, 'user_fysxm9swVB9DFCDMGbTB3')
-        // .then((result) => {
-        //       window.location.reload();  //This is if you still want the page to reload (since e.preventDefault() cancelled that behavior)
-        //       alert("Successfully submitted, a confirmation email was sent to you.");
-        //   }, (error) => {
-        //     alert("There was an issue processing your form submission. Please try again. Do not submit documents that exceed 500 KB. If the issue occurs again, please contact us.");
-        //   });
-    }
-    sendPDF(e){
+    function sendEmail(e) {
         e.preventDefault();
-        // emailjs.sendForm('gmail', 'template_2p9ntpg', e.target, 'user_fysxm9swVB9DFCDMGbTB3')
-        //   .then((result) => {
-        //       window.location.reload();  //This is if you still want the page to reload (since e.preventDefault() cancelled that behavior)
-        //       alert("Successfully submitted, a confirmation email was sent to you.");
-        //   }, (error) => {
-        //     alert("There was an issue processing your form submission. Please try again. Do not submit documents that exceed 500 KB. If the issue occurs again, please contact us.");
-        //   });
+        alert("Functionality disabled on this version!");
+    }
+    function sendPDF(e){
+        e.preventDefault();
+        alert("Functionality disabled on this version!");
     }
 
-    displayPageBody(){
+    function displayPageBody(){
         return(
-            <div className="page-body" id="intake-page-body">
+            <div className="container-fluid-large">
                 <div>
+                    <p className="font-color-red">
+                        Requests filled here will not be forwarded anywhere. This is purely laid out for website demonstration.
+                    </p>
                     <p>
                         If you have a PDF for patient referral, submit here to avoid filling out the form.
                     </p>
-                    <form onSubmit={this.sendPDF} className="intake-page-body-form">
+                    <form onSubmit={sendPDF} className="intake-page-body-form">
                         <fieldset className="form-section">
                             <div className="form-row">
 
@@ -69,7 +51,7 @@ class IntakeRequests extends Component {
                     Complete the form below to submit a new patient referral so we can schedule a visit as soon as possible.
                 </p>
                 <br></br>
-                <form onSubmit={this.sendEmail} className="intake-page-body-form">
+                <form onSubmit={sendEmail} className="intake-page-body-form">
                     <fieldset className="form-section">
                         <legend>Patient Information</legend>
                         <div className="form-row">
@@ -343,9 +325,7 @@ class IntakeRequests extends Component {
                             <div className="col-12 col-md-8">
                                 <input type="file"  name="files"  multiple/>
                             </div>
-                            <br/>
-                            <br/>
-                            <p>Total document size must not exceed 500 KB. If you wish to send documents that exceed this limit, please email separately.</p>
+                           
                         </div>
                     </fieldset>
                     <div className="form-row">
@@ -357,16 +337,13 @@ class IntakeRequests extends Component {
         );
     }
 
-    render(){
-        return(
-            <div className="body" id="intake-requests-body">
-                <div className="page-title">
-                    <p className="page-title-p">REQUEST A VISIT</p>
-                </div>
-                {this.displayPageBody()}
-            </div>
-        );
-    }
+    return(
+        <div>
+            <PageTitle title="request a visit!" />
+            {displayPageBody()}
+        </div>
+    );
+    
 }
 
 export default IntakeRequests;

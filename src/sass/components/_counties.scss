@@ -1,10 +1,10 @@
 
 
 .page-counties{
-    font-family: Barlow-SemiBold;
-    font-weight: normal;
-    font-size: 2rem;
-    color:black;
+    height: 50rem;
+    @include respond(tab-port){
+        height: 40rem;
+    }
     display:flex;
     flex-direction:row;
     flex-wrap: wrap;
@@ -15,26 +15,22 @@
     background-image: -webkit-image-set(  url("../resources/StockImages/counties-small.png") 1x, url("../resources/StockImages/counties-large.jpg") 2x);
     background-size: cover;
     background-position: bottom;
-    &__header{
-        text-align:left;
-        padding-bottom: 2.5rem;
-        font-size: 4rem;
-        color:black;
-    }
-    &__body{
-        & a{
-            text-decoration: none;
-            color:$color-black;
-            &:hover{
-                text-decoration: none;
-            color:blue;
-            }
+    & div{
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(to right, rgba($green, 0.7), rgba($color-primary, 0.7));
+
+        & ul li{
+            background: url('../resources/Extra/icons8-checked-checkbox-24.png')  no-repeat left top;
         }
-        & ul{
-            list-style-image: url("../resources/Extra/checkmark.png");
-        }
+    
     }
     & div:last-child{
         margin: auto;
     }
+    // Change color white
+    & h1, & p, & a, & li{
+        color:white;
+    }
+
 }

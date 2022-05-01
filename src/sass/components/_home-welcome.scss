@@ -67,20 +67,18 @@
         display: inline-block;
         position: absolute;
         &--1{
-            top: 3rem;
-            left: 55%;
+            top: 10rem;
+            left: 50%;
         }
         &--2{
-            bottom: 3rem;
-            right: 55%;
+            bottom: 10rem;
+            right: 50%;
         }
         @include respond(tab-land){
             &--1{
-                top: 3rem;
                 left: 40%;
             }
             &--2{
-                bottom: 3rem;
                 right: 40%;
             }
         }

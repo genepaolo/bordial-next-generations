@@ -8,6 +8,7 @@ import Services from '../pages/Services';
 import ContactUs from '../pages/ContactUs';
 import Career from '../pages/Career';
 import CovidUpdate from '../pages/CovidUpdate';
+import Unavailable from "../pages/Unavailable";
 
 const Main = () => {
     return (
@@ -20,6 +21,8 @@ const Main = () => {
                 <Route exact path='/intake-requests' component={IntakeRequests} ></Route>
                 <Route exact path='/career' component={Career} ></Route>
                 <Route exact path='/covid-update' component={CovidUpdate} ></Route>
+                <Route exact path='/unavailable' component={Unavailable} ></Route>
+                <Route component={Unavailable} ></Route>
             </Switch>
         </BrowserRouter>
         

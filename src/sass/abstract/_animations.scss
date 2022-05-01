@@ -28,6 +28,37 @@
     }
 
 }
+@keyframes slideImgRight{
+    0%{
+        opacity: 0;
+        transform: translateX(calc(-5rem + -50%));
+    }
+    75%{
+        opacity: 1;
+        transform: translateX(calc(1rem + -50%));
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(-50%);
+    }
+
+}
+@keyframes slideImgLeft{
+    0%{
+        opacity: 0;
+        transform: translateX(calc(5rem + -50%));
+    }
+    75%{
+        opacity: 1;
+        transform: translateX(calc(-1rem + -50%));
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(-50%);
+    }
+
+}
+
 
 /* The typing effect */
 @keyframes typing {
@@ -49,6 +80,15 @@
 
 .slide-left{
     animation-name: slideLeft;
+    animation-duration: 1.5s;
+}
+.slide-img-right{
+    animation-name: slideImgRight;
+    animation-duration: 1.5s;
+}
+
+.slide-img-left{
+    animation-name: slideImgLeft;
     animation-duration: 1.5s;
 }
 

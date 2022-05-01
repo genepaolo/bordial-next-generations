@@ -1,20 +1,46 @@
-import React from "react";
+import React, {useEffect} from "react";
 import welcome1 from "../resources/StockImages/welcome1.png";
 import welcome2 from "../resources/StockImages/welcome2.png";
 
 function Welcome(){
+    
+
+    useEffect(()=>{
+        updateImgClass();
+    },[]);
+
+    function updateImgClass(){
+        const width = window.innerWidth;
+        const imgs = document.querySelectorAll(".sliding-imgs");
+        if(width<=990){
+            // choose slide-img-right/left
+            imgs[0].classList.add("slide-img-left");
+            imgs[0].classList.remove("slide-left");
+            imgs[1].classList.add("slide-img-right");
+            imgs[1].classList.remove("slide-right");
+        }else{
+            // choose slide-right/left
+            imgs[0].classList.remove("slide-img-left");
+            imgs[0].classList.add("slide-left");
+            imgs[1].classList.remove("slide-img-right");
+            imgs[1].classList.add("slide-right");
+        }
+    }
+    
+    
+
     return(
         <div className="home-welcome">
             <div className="home-welcome__1">
                 <div className="container-fluid">
                     <h1 className="slide-left home-welcome__h1 home-welcome__h1--1 u-center-text">Welcome to<br/>Bordial Next Generations!</h1>
-                    <img className="slide-left home-welcome__img--1" src={welcome1}></img>
+                    <img className="sliding-imgs home-welcome__img--1" src={welcome1}></img>
                 </div>
             </div>
             <div className="home-welcome__2">
                 <div className="container-fluid">
                     <h1 className="slide-right home-welcome__h1 home-welcome__h1--2 ">Your best care begins here.</h1>
-                    <img className="slide-right home-welcome__img--2" src={welcome2}></img>
+                    <img className="sliding-imgs home-welcome__img--2" src={welcome2}></img>
                 </div>
             </div>
             <div className="home-welcome__info">

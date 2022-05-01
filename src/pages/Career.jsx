@@ -1,6 +1,6 @@
 import React from "react";
 import img from "../resources/StockImages/shutterstock_473259139.jpg";
-import MovingComponent from 'react-moving-text';
+import PageTitle from "../components/PageTitle";
 
 function Career() {
 
@@ -16,9 +16,7 @@ function Career() {
     }
     return(
         <div>
-            <div className="page-title container-fluid">
-                <p className="page-title__p">CAREER</p>
-            </div>
+            <PageTitle title="career" />
             {displayPageBody()}
             <div>
                 <img src={img} alt=""className="career-img"></img>

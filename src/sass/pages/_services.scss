@@ -1,15 +1,42 @@
 
 //Services Page
-#services-body h4{
-    font-weight:bold
-}
-#services-body{
-    font-family: Barlow-SemiBold;
-    font-size: 1.6rem;
-}
 
-#services-body p{
-    margin-bottom: 0rem;
+.services__list{
+    & li{
+        background: url('../resources/Extra/icons8-arrow-24.png')  no-repeat center left;
+        height: 7rem;
+        position: relative;
+        & a{
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            &:hover{
+                color: black;
+                text-decoration: none;
+            }
+
+            cursor: pointer;
+            &::after{
+                content: "";
+                position: absolute;
+                top: 0;
+                left: calc(-100% - $padding-left - 4rem);
+                display: block;
+                height: 100%;
+                width: 100%;
+                background: rgba($color-primary, 0.3);
+                border-bottom: 1px solid grey;
+                transition: all 0.2s ease-out;
+            }
+            &:hover::after{
+                left: 0;
+            }
+        }
+        
+
+    }
+
 }
 
 .services-img{
@@ -17,8 +44,11 @@
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+
     & img{
         width: 100%;
         max-width: 50rem;
+        border-radius: 5px;
+        box-shadow: 1px 1px 10px rgba(black, 0.5);
     }
 }
