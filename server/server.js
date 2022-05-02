@@ -6,13 +6,15 @@ const nodemailer = require("nodemailer");
 const creds = require(__dirname + "/credentials.js");
 const path = require('path')
 
-app.use(express.static(path.join(__dirname,'../build')))
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cors({
     origin: '*'
 }));
+
+app.all('*',express.static(path.join(__dirname,'../build')))
+
 
 const port = process.env.NODE_ENV === 'production' ? (process.env.PORT || 80) : 5000;
 app.set('port', port);
@@ -21,11 +23,14 @@ var server = app.listen(app.get('port'), function() {
     console.log('listening');
 });
 
-app.post("/contact-us/", function(req,res){
+app.post("/api/contact-us/", function(req,res){
     console.log(req.body);
     const {name,email,msg} = req.body;
     mail(name,email,msg).catch(err => console.log(err));
 });
+
+app.use(/^\/(?!api).*/, express.static(path.join(__dirname,'../build')))
+
 
 
 // Mail
