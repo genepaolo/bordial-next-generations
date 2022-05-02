@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch, Route, BrowserRouter, HashRouter } from 'react-router-dom';
+import { Switch, Route, BrowserRouter} from 'react-router-dom';
 import Home from '../pages/Home';
 import IntakeRequests from '../pages/IntakeRequests';
 import MissionStatement from '../pages/MissionStatement';
@@ -9,6 +9,7 @@ import Career from '../pages/Career';
 import CovidUpdate from '../pages/CovidUpdate';
 import Unavailable from "../pages/Unavailable";
 import {prefix} from "../api/ports";
+import "bootstrap/dist/js/bootstrap.min.js";
 
 const Main = () => {
     return (
