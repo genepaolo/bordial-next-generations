@@ -1,7 +1,6 @@
 import React from "react";
 import aui from "../resources/StockImages/shutterstock_1015449343.jpg"
 import wimg from "../resources/StockImages/shutterstock_1657685833.jpg";
-
 function HomeBody(){
     return(
         <div className="home-section">

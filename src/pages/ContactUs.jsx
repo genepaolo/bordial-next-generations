@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import PageTitle from "../components/PageTitle";
-// import emailjs from 'emailjs-com';
+import {portsLocal, portsHeroku} from "../api/ports";
+
 function ContactUs(){
 
     const [state, setState] = useState({
@@ -16,7 +17,7 @@ function ContactUs(){
             headers: {'Content-type' : 'application/json'},
             body: JSON.stringify(state)
         }
-        fetch("http://localhost:5000/api/contact-us/", req)
+        fetch(portsLocal.contactus, req)
         .then(alert("Thank you for the email!"))
         .catch(error=>alert(error));
     }
