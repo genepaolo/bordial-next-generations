@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch, Route, BrowserRouter } from 'react-router-dom';
+import { Switch, Route, BrowserRouter, HashRouter } from 'react-router-dom';
 import Home from '../pages/Home';
 import IntakeRequests from '../pages/IntakeRequests';
 import MissionStatement from '../pages/MissionStatement';
@@ -13,7 +13,7 @@ import {prefix} from "../api/ports";
 const Main = () => {
     return (
         <BrowserRouter>
-            <Switch> {/* The Switch decides which component to show based on the current URL.*/}
+            <Switch> 
                 <Route exact path={prefix + '/'}component={Home} ></Route>
                 <Route exact path={prefix +'/mission-statement'} component={MissionStatement} ></Route>
                 <Route exact path={prefix +'/services'} component={Services} ></Route>

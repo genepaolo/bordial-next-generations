@@ -6,3 +6,4 @@ export const portsHeroku = {
 }
 
 export const prefix = process.env.PUBLIC_URL || "";
+export const postfix = "#";
