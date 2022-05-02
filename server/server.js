@@ -4,6 +4,9 @@ const app = express();
 const cors = require('cors');
 const nodemailer = require("nodemailer");
 const creds = require(__dirname + "/credentials.js");
+const path = require('path')
+
+app.use(express.static(path.join(__dirname,'../build')))
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
