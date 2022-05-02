@@ -20,7 +20,7 @@ const port = process.env.NODE_ENV === 'production' ? (process.env.PORT || 80) : 
 app.set('port', port);
 
 var server = app.listen(app.get('port'), function() {
-    console.log('listening');
+    console.log('Listening on port: ',port);
 });
 
 app.post("/api/contact-us/", function(req,res){
