@@ -17,7 +17,7 @@ function ContactUs(){
             headers: {'Content-type' : 'application/json'},
             body: JSON.stringify(state)
         }
-        fetch(portsLocal.contactus, req)
+        fetch(portsHeroku.contactus, req)
         .then(alert("Thank you for the email!"))
         .catch(error=>alert(error));
     }
