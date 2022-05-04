@@ -3,9 +3,10 @@ import PageTitle from "../components/PageTitle";
 import starFilled from "../resources/Icons/icons8-star-48.png";
 import starEmpty from "../resources/Icons/icons8-star-48-empty.png";
 import Loader from "../components/Loader";
+import { set } from "mongoose";
 
 function Testimonials(){
-    const [formhide, setFormhide] = useState(true);
+    const [submit, setSubmit] = useState(false);
     const [loading, setLoading] = useState(true);
     const [firstDate, setFirstDate] = useState(null);
     const [lastDate, setLastDate] = useState(null);
@@ -22,10 +23,19 @@ function Testimonials(){
             getFirstTestimonials();
         }
         displayLoadMoreButton();
+        if(submit){
+            clearTestimonial();
+            setSubmit(false);
+        }
         
-    },[firstDate, lastDate])
+    },[firstDate, lastDate, submit])
 
-
+    function clearTestimonial(){
+        const inputs = document.querySelectorAll("#t-name, #t-msg");
+        inputs.forEach(function(input){
+            input.value = '';
+        });
+    }
     function addTestimonialsToPage(testimonials){
         testimonials.forEach(function(testimonial){
             appendTestimonial(testimonial.name, testimonial.rating, testimonial.msg);
@@ -35,7 +45,6 @@ function Testimonials(){
     function displayLoadMoreButton(){
         if(firstDate!=null && lastDate!=null){
             const button = document.querySelector(".testimonials__btn");
-            console.log(firstDate,lastDate);
             if(firstDate==lastDate) {button.style.display = "none"}
             else {button.style.display = "block"}
         }
@@ -47,7 +56,6 @@ function Testimonials(){
         var url = base_url + "/api/testimonials/" + lastDate;
         const testimonialJson = await fetch(url);
         const testimonialArr = await testimonialJson.json();
-        console.log(testimonialArr);
         setTestimonialArray(testimonialArr);
         setLastDate(testimonialArr[testimonialArr.length-1].date);
         setLoadFirst(true);
@@ -60,7 +68,6 @@ function Testimonials(){
         var url = base_url + "/api/testimonials";
         const testimonialJson = await fetch(url);
         const testimonialArr = await testimonialJson.json();
-        console.log(testimonialArr);
         if(testimonialArr && testimonialArr[0].length){
             let array = testimonialArr[0];
             let first = testimonialArr[1][0];
@@ -68,12 +75,12 @@ function Testimonials(){
             setTestimonialArray(array);
             setFirstDate(first.date);
             setLastDate(array[array.length-1].date);
-            console.log(first.date,array[array.length-1].date);
             setLoading(false);
             addTestimonialsToPage(array);
 
         }
     }
+
 
     async function postTestimonial(e) {
         var base_url = window.location.origin;
@@ -86,8 +93,8 @@ function Testimonials(){
         }
         fetch(url, req)
         .then(function(response){
-            console.log(response);
-            prependTestimonial(testimonial.name, testimonial.rating, testimonial.msg)
+            prependTestimonial(testimonial.name, testimonial.rating, testimonial.msg);
+            setSubmit(true);
         })
         .catch(function(err){
             console.log(err);
@@ -194,11 +201,8 @@ function Testimonials(){
     }
 
     function formToggle(){
-        console.log(formhide);
         const form = document.querySelector(".testimonial__form");
-        const write = document.querySelector(".testimonial__write");
         form.classList.toggle("show");
-        setFormhide(!formhide);
     }
 
     function displayPageBody(){
