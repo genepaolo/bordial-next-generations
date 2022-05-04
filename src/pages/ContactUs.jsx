@@ -11,13 +11,14 @@ function ContactUs(){
     })
 
     async function sendEmail(e) {
+        const port = process.env.PORT===5000 ? portsLocal.contactus:portsHeroku.contactus;
         e.preventDefault();
         const req = {
             method: "POST",
             headers: {'Content-type' : 'application/json'},
             body: JSON.stringify(state)
         }
-        fetch(portsHeroku.contactus, req)
+        fetch(port, req)
         .then(alert("Thank you for the email!"))
         .catch(error=>alert(error));
     }
@@ -72,7 +73,7 @@ function ContactUs(){
                         </div>
                         <br/>
                         <br/>
-                            <button id="cu-button"className="cu-btn" type="submit">SUBMIT</button>
+                            <button className="form-btn" type="submit">SUBMIT</button>
                     </form>
                 </div>
                 

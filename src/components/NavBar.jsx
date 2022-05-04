@@ -42,12 +42,14 @@ function NavBar(){
                             <li className="nav-item">
                                 <a className="nav-link" href={prefix +"/services"}>SERVICES</a>
                             </li>
-                            
-                            <li className="nav-item">
-                                <a className="nav-link" href={prefix +"/contact-us"}>CONTACT US</a>
-                            </li>
                             <li className="nav-item">
                                 <a className="nav-link" href={prefix +"/intake-requests"}>REQUEST A VISIT</a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link" href={prefix +"/testimonials"}>TESTIMONIALS</a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link" href={prefix +"/contact-us"}>CONTACT US</a>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link" href={prefix +"/career"}>CAREER</a>

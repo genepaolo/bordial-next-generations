@@ -4,22 +4,7 @@
 .required{
     color:red;
 }
-.cu-btn{
-    padding: .5rem 2.5rem;
-    background-color: $color-primary;
-    border: 1px solid $color-primary;
-    float:left;
-    border-radius: 0;
-    transition: 0.3s;
-    color: black;
-    font-weight: bolder;
-}
-.cu-btn:hover{
-    background-color: inherit;
-    border: 1px solid $color-primary;
-    color: $green;
-    border-radius: 0;
-}
+
 #cu-msg{
     height: 30rem;
 }

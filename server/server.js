@@ -5,8 +5,48 @@ const cors = require('cors');
 const nodemailer = require("nodemailer");
 const creds = require(__dirname + "/credentials.js");
 const path = require('path')
+const mongoose = require('mongoose');
+const { isBuffer } = require("util");
+mongoose.connect("mongodb+srv://bngadmin:bngadmin@cluster0.whqkk.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
+// Schema
+const testimonialSchema = {
+  name: String,
+  rating: Number,
+  msg: String,
+  date: Date
+};
+// Model
+const Testimonial = mongoose.model("testimonial", testimonialSchema);
+const loadTestimonials = 5;
 
+// const testimonial1 = new Testimonial({
+//   name: "Gene",
+//   rating: 5,
+//   msg: "Top tier customer service! Definitely would recommend to a friend",
+//   date: new Date(2022,1,1)
+// });
+// const testimonial2 = new Testimonial({
+//   name: "Paolo",
+//   rating: 4,
+//   msg: "Okay tier customer service! Website could definitely use some improvement",
+//   date: new Date(2022,2,15)
+// });
 
+// testimonial1.save();
+// testimonial2.save();
+
+// const testimonials = {body:[
+//   {
+//     name: "Gene",
+//     rating: 5,
+//     msg: "Great business and customer service!"
+//   },
+//   {
+//     name: "Paolo",
+//     rating: 4,
+//     msg: "Okay business and customer service!"
+//   }
+// ]};
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cors({
@@ -23,6 +63,51 @@ var server = app.listen(app.get('port'), function() {
     console.log('Listening on port: ',port);
 });
 
+app.post("/api/testimonials/", function(req,res){
+  // var today = new Date().toJSON();
+  // var dd = String(today.getDate()).padStart(2,'0');
+  // var mm = String(today.getMonth()+1).padStart(2,'0');
+  // var yyyy = today.getFullYear();
+  // today = yyyy + '-' + dd
+  const testimonial = new Testimonial({
+    name: req.body.name,
+    rating: req.body.rating,
+    msg: req.body.msg,
+    date: new Date()
+  })
+  console.log(testimonial);
+  try{
+    let newTest = testimonial.save();
+    res.send(newTest);
+  }catch(err){
+    res.status(400).send(err);
+  }
+});
+
+app.get("/api/testimonials/", function(req,res){
+  Testimonial.find({}).limit(loadTestimonials).sort({'date':-1}).exec(function(err, foundTestimonials){
+    if(err) console.log(err);
+    // This always stays at 1
+    Testimonial.find({}).limit(1).sort({'date':1}).exec(function(err, first){
+      if(err) console.log(err);
+      res.send([foundTestimonials,first]);
+    });
+  });
+});
+
+app.get("/api/testimonials/:date", function(req,res){
+  const date = req.params.date;
+  console.log(req.params);
+  Testimonial.find({
+      date: {
+        $lt: Date.parse(date)
+      }
+
+  }).limit(loadTestimonials).sort({'date':-1}).exec(function(err, foundTestimonials){
+    if(err) console.log(err);
+    res.send(foundTestimonials);
+  });
+});
 app.post("/api/contact-us/", function(req,res){
     console.log(req.body);
     const {name,email,msg} = req.body;

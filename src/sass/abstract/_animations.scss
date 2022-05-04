@@ -59,7 +59,6 @@
 
 }
 
-
 /* The typing effect */
 @keyframes typing {
     from { width: 0 }
@@ -100,6 +99,21 @@
     animation: 
         typing 3.5s steps(40, end),
         blink-caret .75s step-end 1;
+}
+
+@keyframes loader{
+    0%, 100%{
+        transform: scale(0.2);
+        background-color: #30FFB7;
+    }
+    40%{
+        transform: scale(1);
+        background-color: $color-primary;
+    }
+    50%{
+        transform: scale(1);
+        background-color: $green;
+    }
 }
 
 

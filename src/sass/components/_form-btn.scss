@@ -1,0 +1,16 @@
+.form-btn{
+    padding: .5rem 2.5rem;
+    background-color: $color-primary;
+    border: 1px solid $color-primary;
+    float:left;
+    border-radius: 0;
+    transition: 0.3s;
+    color: black;
+    font-weight: bolder;
+}
+.form-btn:hover{
+    background-color: inherit;
+    border: 1px solid $color-primary;
+    color: $green;
+    border-radius: 0;
+}
