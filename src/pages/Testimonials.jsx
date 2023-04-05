@@ -3,7 +3,6 @@ import PageTitle from "../components/PageTitle";
 import starFilled from "../resources/Icons/icons8-star-48.png";
 import starEmpty from "../resources/Icons/icons8-star-48-empty.png";
 import Loader from "../components/Loader";
-import { set } from "mongoose";
 
 function Testimonials(){
     const [submit, setSubmit] = useState(false);
@@ -16,19 +15,48 @@ function Testimonials(){
         rating: 5,
         msg: ""
     });
-    const [testimonialArray, setTestimonialArray] = useState([{}]);
 
     useEffect(()=>{
+        
+        
+        async function getFirstTestimonials(){
+            var base_url = window.location.origin;
+            var url = base_url + "/api/testimonials";
+            const testimonialJson = await fetch(url);
+            const testimonialArr = await testimonialJson.json();
+            if(testimonialArr && testimonialArr[0].length){
+                let array = testimonialArr[0];
+                let first = testimonialArr[1][0];
+                setLoadFirst(true);
+                setFirstDate(first.date);
+                setLastDate(array[array.length-1].date);
+                setLoading(false);
+                addTestimonialsToPage(array);
+    
+            }
+        }
+        function displayLoadMoreButton(){
+            if(firstDate!=null && lastDate!=null){
+                const button = document.querySelector(".testimonials__btn");
+                if(firstDate===lastDate) {button.style.display = "none"}
+                else {button.style.display = "block"}
+            }
+            
+        }
+
         if(!loadFirst){
             getFirstTestimonials();
         }
+
+        
         displayLoadMoreButton();
+
         if(submit){
             clearTestimonial();
             setSubmit(false);
         }
-        
-    },[firstDate, lastDate, submit])
+     // eslint-disable-next-line 
+    },[firstDate, lastDate, submit, loadFirst])
 
     function clearTestimonial(){
         const inputs = document.querySelectorAll("#t-name, #t-msg");
@@ -36,49 +64,30 @@ function Testimonials(){
             input.value = '';
         });
     }
-    function addTestimonialsToPage(testimonials){
-        testimonials.forEach(function(testimonial){
-            appendTestimonial(testimonial.name, testimonial.rating, testimonial.msg);
-        });
+    
+    async function loadTestimonials(){
+        setLoading(true);
+        const array = await getNextTestimonials();
+        setLoading(false);
+        addTestimonialsToPage(array);
     }
-
-    function displayLoadMoreButton(){
-        if(firstDate!=null && lastDate!=null){
-            const button = document.querySelector(".testimonials__btn");
-            if(firstDate==lastDate) {button.style.display = "none"}
-            else {button.style.display = "block"}
-        }
-        
-    }
+    
 
     async function getNextTestimonials(){
         var base_url = window.location.origin;
         var url = base_url + "/api/testimonials/" + lastDate;
         const testimonialJson = await fetch(url);
         const testimonialArr = await testimonialJson.json();
-        setTestimonialArray(testimonialArr);
         setLastDate(testimonialArr[testimonialArr.length-1].date);
         setLoadFirst(true);
         return testimonialArr;
     }
     
 
-    async function getFirstTestimonials(){
-        var base_url = window.location.origin;
-        var url = base_url + "/api/testimonials";
-        const testimonialJson = await fetch(url);
-        const testimonialArr = await testimonialJson.json();
-        if(testimonialArr && testimonialArr[0].length){
-            let array = testimonialArr[0];
-            let first = testimonialArr[1][0];
-            setLoadFirst(true);
-            setTestimonialArray(array);
-            setFirstDate(first.date);
-            setLastDate(array[array.length-1].date);
-            setLoading(false);
-            addTestimonialsToPage(array);
-
-        }
+    function addTestimonialsToPage(testimonials){
+        testimonials.forEach(function(testimonial){
+            appendTestimonial(testimonial.name, testimonial.rating, testimonial.msg);
+        });
     }
 
 
@@ -183,12 +192,7 @@ function Testimonials(){
         testSection.append(test);
     }
 
-    async function loadTestimonials(){
-        setLoading(true);
-        const array = await getNextTestimonials();
-        setLoading(false);
-        addTestimonialsToPage(array);
-    }
+    
 
     function updateRating(e){
         const val = e.target.value
@@ -234,15 +238,6 @@ function Testimonials(){
                 <br/>
                 <br/>
                 <div className="col-12 testimonials">
-                    {/* <div className="testimonial">
-                        <div className="testimonial__left">
-                            <h4>Name</h4>
-                            {stars(5)}
-                        </div>
-                        <div className="testimonial__right">
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda, possimus voluptates repudiandae amet ut officiis ea earum? Exercitationem repellendus pariatur veniam dolorum distinctio ducimus porro, minima eligendi facere eaque officia!</p>
-                        </div>
-                    </div> */}
                 </div>
                 {loading ? <Loader />: <div></div>}
                 <br/>

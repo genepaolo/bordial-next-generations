@@ -1,1 +1,1 @@
-# bordial-next-generations-be
+# bordial-next-generations backend
