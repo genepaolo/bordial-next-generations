@@ -40,7 +40,7 @@ function Welcome(){
             <div className="home-welcome__2">
                 <div className="container-fluid">
                     <h1 className="slide-right home-welcome__h1 home-welcome__h1--2 ">Your best care begins here.</h1>
-                    <img alt="hw1" className="sliding-imgs home-welcome__img--2" src={welcome2}></img>
+                    <img loading="lazy" alt="hw1" className="sliding-imgs home-welcome__img--2" src={welcome2}></img>
                 </div>
             </div>
             <div className="home-welcome__info">

@@ -1,6 +1,7 @@
 import React from "react";
 import aui from "../resources/StockImages/shutterstock_1015449343.jpg"
 import wimg from "../resources/StockImages/shutterstock_1657685833.jpg";
+
 function HomeBody(){
     return(
         <div className="home-section">
@@ -17,7 +18,7 @@ function HomeBody(){
                     
                 </div>
                 <div className="home-section-imgs col-lg-6">
-                    <img src={aui} alt="health care" ></img>
+                    <img loading="lazy" src={aui} alt="health care" ></img>
                 </div>
             </div>
 
@@ -48,7 +49,7 @@ function HomeBody(){
                     
                 </div>
                 <div className="home-section-imgs col-12 col-lg-6">
-                    <img src={wimg} alt="health care"></img>
+                    <img loading="lazy" src={wimg} alt="health care"></img>
                 </div>
             </div>   
     </div>

@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 import {prefix} from "../api/ports";
 function NavBar(){
         const [toggled, setToggled] = useState(false);
+        
         function handleToggle(e){
             const icon = document.querySelector(".navbar-toggler__icon");
             icon.classList.toggle("toggled");
@@ -9,20 +10,21 @@ function NavBar(){
         }
 
         useEffect(()=>{
+            function updateActive(){
+                const items = document.querySelectorAll(".nav-item");
+                items.forEach(function(item){
+                    item.classList.remove("active");
+                    const link = item.querySelector(".nav-link");
+                    if(link.pathname === window.location.pathname){
+                        item.classList.add("active");
+                    }
+                });
+                
+            }
             updateActive();
         },[])
 
-        function updateActive(){
-            const items = document.querySelectorAll(".nav-item");
-            items.forEach(function(item){
-                item.classList.remove("active");
-                const link = item.querySelector(".nav-link");
-                if(link.pathname === window.location.pathname){
-                    item.classList.add("active");
-                }
-            });
-            
-        }
+        
 
         return (
             <section id="navbar">
