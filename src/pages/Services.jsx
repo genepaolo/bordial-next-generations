@@ -1,5 +1,5 @@
 import React from "react";
-import img from "../resources/StockImages/shutterstock_1932198155.jpg";
+import img from "../resources/StockImages/shutterstock_1932198155-min-20.jpg";
 import PageTitle from "../components/PageTitle";
 import {serviceList, insuranceList, homeList} from "../resources/Data/data";
 

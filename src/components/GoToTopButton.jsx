@@ -25,7 +25,7 @@ function GoToTopButton(){
 
     return(
         <button onClick={topFunction} id="myBtn" title="Go to top">
-            Top&nbsp;&nbsp;<i class="arrow up"></i>
+            Top&nbsp;&nbsp;<i className="arrow up"></i>
         </button>
     );
 };
