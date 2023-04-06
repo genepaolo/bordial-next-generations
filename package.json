@@ -43,7 +43,7 @@
     "compile:sass": "sass ./src/sass/main.scss ./public/css/index.css",
     "build:sass": "sass ./src/sass/main.scss ./build/css/index.css",
     "server": "cd server && node server.js",
-    "works" : "npm run compile:sass && npm run build:sass && npm run build && npm run server"
+    "works": "npm run compile:sass && npm run build:sass && npm run build && npm run server"
   },
   "eslintConfig": {
     "extends": [

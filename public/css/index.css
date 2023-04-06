@@ -788,7 +788,7 @@ h2 + p, h2 + ul > li {
     padding-top: 1rem;
   }
 }
-@media (max-width: 990px) {
+@media (max-width: 600px) {
   .home-section-row div p, .home-section-row div ul li {
     font-size: 1.4rem;
     line-height: 200%;
@@ -798,6 +798,7 @@ h2 + p, h2 + ul > li {
   text-align: center;
   padding-bottom: 2rem;
 }
+
 .home-section-imgs img {
   width: 100%;
   border-radius: 3px;

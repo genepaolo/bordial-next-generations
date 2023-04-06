@@ -2,7 +2,6 @@ import React from 'react';
 import { Switch, Route, BrowserRouter} from 'react-router-dom';
 import Home from '../pages/Home';
 import IntakeRequests from '../pages/IntakeRequests';
-import MissionStatement from '../pages/MissionStatement';
 import Services from '../pages/Services';
 import ContactUs from '../pages/ContactUs';
 import Career from '../pages/Career';
@@ -17,7 +16,6 @@ const Main = () => {
         <BrowserRouter>
             <Switch> 
                 <Route exact path={prefix + '/'}component={Home} ></Route>
-                <Route exact path={prefix +'/mission-statement'} component={MissionStatement} ></Route>
                 <Route exact path={prefix +'/services'} component={Services} ></Route>
                 <Route exact path={prefix +'/contact-us'} component={ContactUs} ></Route>
                 <Route exact path={prefix +'/intake-requests'} component={IntakeRequests} ></Route>

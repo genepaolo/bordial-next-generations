@@ -12,7 +12,7 @@ function HomeBody(){
                             About us
                         </h2>
                         <p>
-                            Cordial Healthcare Providers is a team of Board-certified Doctors, Nurse Practitioners, and Physician Assistants who provide primary care to medically complex, chronically ill, and homebound patients. It was created to improve access to quality health care for patients who are unable to leave their homes or who have difficulty going to a doctor’s office.
+                            Bordial Healthcare Providers is a team of Board-certified Doctors, Nurse Practitioners, and Physician Assistants who provide primary care to medically complex, chronically ill, and homebound patients. It was created to improve access to quality health care for patients who are unable to leave their homes or who have difficulty going to a doctor’s office.
                         </p>
                     </div>
                     
@@ -28,7 +28,7 @@ function HomeBody(){
                         Our Mission
                     </h2>
                     <p className="u-center-text">
-                        The Mission of Cordial Healthcare Providers is to provide compassionate patient-centered care to the homebound patients with excellence in quality and service. Our goal is to improve the patient’s overall health, prevent complications and exacerbations of diseases, reduce the risk of hospitalization, avoid visits to the emergency room, and build long-term relationships with the patients we serve. We strive to keep our patients happier, healthier and safer while avoiding unnecessary hospital visits. We are committed to empowering our patients with better understanding of their health condition and keep them involved in their treatment plan. We work with you and your family closely to ensure you will get the best care possible.
+                        The Mission of Bordial Healthcare Providers is to provide compassionate patient-centered care to the homebound patients with excellence in quality and service. Our goal is to improve the patient’s overall health, prevent complications and exacerbations of diseases, reduce the risk of hospitalization, avoid visits to the emergency room, and build long-term relationships with the patients we serve. We strive to keep our patients happier, healthier and safer while avoiding unnecessary hospital visits. We are committed to empowering our patients with better understanding of their health condition and keep them involved in their treatment plan. We work with you and your family closely to ensure you will get the best care possible.
                     </p>
                     <br/>
                 </div>
