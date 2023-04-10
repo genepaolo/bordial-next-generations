@@ -7,7 +7,10 @@ const creds = require(__dirname + "/credentials.js");
 const path = require('path')
 const mongoose = require('mongoose');
 const { isBuffer } = require("util");
-mongoose.connect("mongodb+srv://bngadmin:bngadmin@cluster0.whqkk.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
+require('dotenv').config({path:'../.env'});
+const MONGODB_URI = process.env.MONGODB_URI;
+mongoose.connect(MONGODB_URI);
+
 // Schema
 const testimonialSchema = {
   name: String,
@@ -19,34 +22,6 @@ const testimonialSchema = {
 const Testimonial = mongoose.model("testimonial", testimonialSchema);
 const loadTestimonials = 5;
 
-// const testimonial1 = new Testimonial({
-//   name: "Gene",
-//   rating: 5,
-//   msg: "Top tier customer service! Definitely would recommend to a friend",
-//   date: new Date(2022,1,1)
-// });
-// const testimonial2 = new Testimonial({
-//   name: "Paolo",
-//   rating: 4,
-//   msg: "Okay tier customer service! Website could definitely use some improvement",
-//   date: new Date(2022,2,15)
-// });
-
-// testimonial1.save();
-// testimonial2.save();
-
-// const testimonials = {body:[
-//   {
-//     name: "Gene",
-//     rating: 5,
-//     msg: "Great business and customer service!"
-//   },
-//   {
-//     name: "Paolo",
-//     rating: 4,
-//     msg: "Okay business and customer service!"
-//   }
-// ]};
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cors({
@@ -85,6 +60,7 @@ app.post("/api/testimonials/", function(req,res){
 });
 
 app.get("/api/testimonials/", function(req,res){
+  console.log("Retrieving Testimonials")
   Testimonial.find({}).limit(loadTestimonials).sort({'date':-1}).exec(function(err, foundTestimonials){
     if(err) console.log(err);
     // This always stays at 1
@@ -97,7 +73,6 @@ app.get("/api/testimonials/", function(req,res){
 
 app.get("/api/testimonials/:date", function(req,res){
   const date = req.params.date;
-  console.log(req.params);
   Testimonial.find({
       date: {
         $lt: Date.parse(date)
@@ -127,7 +102,8 @@ async function mail(name, sender, msg) {
 
   // create reusable transporter object using the default SMTP transport
   let transporter = nodemailer.createTransport({
-    host: " mtp.gmail.com",
+    service: 'gmail',
+    host: " smtp.gmail.com",
     port: 465,
     secure: true, // true for 465, false for other ports
     auth: {

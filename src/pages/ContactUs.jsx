@@ -11,13 +11,14 @@ function ContactUs(){
     })
 
     async function sendEmail(e) {
-        const port = process.env.PORT===5000 ? portsLocal.contactus:portsHeroku.contactus;
+        const port = window.location.hostname === "localhost" ? portsLocal.contactus:portsHeroku.contactus;
         e.preventDefault();
         const req = {
             method: "POST",
             headers: {'Content-type' : 'application/json'},
             body: JSON.stringify(state)
         }
+        console.log(port);
         fetch(port, req)
         .then(alert("Thank you for the email!"))
         .catch(error=>alert(error));
@@ -73,7 +74,8 @@ function ContactUs(){
                         </div>
                         <br/>
                         <br/>
-                            <button className="form-btn" type="submit">SUBMIT</button>
+                            <button disabled className="form-btn" type="submit">SUBMIT</button> 
+                            {/* Disabled for now, until email fixed */}
                     </form>
                 </div>
                 
