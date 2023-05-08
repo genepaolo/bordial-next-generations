@@ -25,8 +25,8 @@ function Testimonials(){
             const testimonialJson = await fetch(url);
             const testimonialArr = await testimonialJson.json();
             if(testimonialArr && testimonialArr[0].length){
-                let array = testimonialArr[0];
-                let first = testimonialArr[1][0];
+                const array = testimonialArr[0];
+                const first = testimonialArr[1][0];
                 setLoadFirst(true);
                 setFirstDate(first.date);
                 setLastDate(array[array.length-1].date);

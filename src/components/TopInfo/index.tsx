@@ -1,7 +1,9 @@
 import React from "react";
-import phone from "../resources/Icons/telephone.svg"
-import email from "../resources/Icons/envelope-open.svg"
-import {prefix} from "../api/ports"
+import {prefix} from "../../api/ports"
+
+import phone from "../../resources/Icons/telephone.svg";
+import email from "../../resources/Icons/envelope-open.svg";
+
 function TopInfo(){
     return (
         <div className="topinfo">

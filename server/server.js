@@ -3,13 +3,13 @@ const bodyParser = require('body-parser');
 const app = express();
 const cors = require('cors');
 const nodemailer = require("nodemailer");
-const creds = require(__dirname + "/credentials.js");
 const path = require('path')
 const mongoose = require('mongoose');
 const { isBuffer } = require("util");
 require('dotenv').config({path:'../.env'});
 const MONGODB_URI = process.env.MONGODB_URI;
 mongoose.connect(MONGODB_URI);
+mongoose.set('strictQuery', true)
 
 // Schema
 const testimonialSchema = {
@@ -52,7 +52,7 @@ app.post("/api/testimonials/", function(req,res){
   })
   console.log(testimonial);
   try{
-    let newTest = testimonial.save();
+    const newTest = testimonial.save();
     res.send(newTest);
   }catch(err){
     res.status(400).send(err);
@@ -98,10 +98,10 @@ app.use(/^\/(?!api).*/, express.static(path.join(__dirname,'../build')))
 async function mail(name, sender, msg) {
   // Generate test SMTP service account from ethereal.email
   // Only needed if you don't have a real mail account for testing
-  let testAccount = await nodemailer.createTestAccount();
+  const testAccount = await nodemailer.createTestAccount();
 
   // create reusable transporter object using the default SMTP transport
-  let transporter = nodemailer.createTransport({
+  const transporter = nodemailer.createTransport({
     service: 'gmail',
     host: " smtp.gmail.com",
     port: 465,
@@ -113,9 +113,9 @@ async function mail(name, sender, msg) {
   });
 
   // send mail with defined transport object
-  let info = await transporter.sendMail({
+  const info = await transporter.sendMail({
     from: sender, // sender address
-    to: creds.email, // list of receivers
+    to: process.env.EMAIL, // list of receivers
     subject: `BNG Contact Us -${name}`, // Subject line
     text: msg, // plain text body
   });

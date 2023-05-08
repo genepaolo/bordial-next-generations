@@ -1,6 +1,6 @@
 import React from "react";
 
-function PageTitle(props){
+function PageTitle(props: any){
 
     return(
         <div className="page-title container-fluid">

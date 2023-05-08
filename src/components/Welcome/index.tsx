@@ -1,6 +1,6 @@
 import React, {useEffect} from "react";
-import welcome1 from "../resources/StockImages/welcome1.png";
-import welcome2 from "../resources/StockImages/welcome2.png";
+import welcome1 from "../../resources/StockImages/welcome1.png";
+import welcome2 from "../../resources/StockImages/welcome2.png";
 
 function Welcome(){
     

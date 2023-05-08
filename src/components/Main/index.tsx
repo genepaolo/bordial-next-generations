@@ -1,14 +1,14 @@
 import React from 'react';
 import { Switch, Route, BrowserRouter} from 'react-router-dom';
-import Home from '../pages/Home';
-import IntakeRequests from '../pages/IntakeRequests';
-import Services from '../pages/Services';
-import ContactUs from '../pages/ContactUs';
-import Career from '../pages/Career';
-import CovidUpdate from '../pages/CovidUpdate';
-import Testimonials from "../pages/Testimonials";
-import Unavailable from "../pages/Unavailable";
-import {prefix} from "../api/ports";
+import Home from '../../pages/Home';
+import IntakeRequests from '../../pages/IntakeRequests';
+import Services from '../../pages/Services';
+import ContactUs from '../../pages/ContactUs';
+import Career from '../../pages/Career';
+import CovidUpdate from '../../pages/CovidUpdate';
+import Testimonials from "../../pages/Testimonials";
+import Unavailable from "../../pages/Unavailable";
+import {prefix} from "../../api/ports";
 import "bootstrap/dist/js/bootstrap.min.js";
 
 const Main = () => {

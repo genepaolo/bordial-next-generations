@@ -1,7 +1,7 @@
 import React  from "react";
-import {prefix} from "../api/ports";
-function Counties(){
-    return(
+import {prefix} from "../../api/ports";
+const Counties = () => {
+    
         <div className="page-counties">
             <div className="container-fluid">
                 <h1 className="u-center-text">
@@ -21,7 +21,7 @@ function Counties(){
             </div>
             
         </div>
-    );
+    
     
 };
 
