@@ -1,5 +1,5 @@
 import React, {useEffect} from "react";
-import PageTitle from "../components/PageTitle";
+import PageTitle from "@/components/PageTitle";
 
 function Unavailable() {
 

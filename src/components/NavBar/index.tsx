@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import {prefix} from "../../api/ports";
+import {prefix} from "@/api/ports";
 function NavBar(){
         const [toggled, setToggled] = useState(false);
         

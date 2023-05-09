@@ -1,7 +1,7 @@
 import React, { Component} from "react";
 import MovingComponent from 'react-moving-text';
 // import img from "../resources/StockImages/georg-arthur-pflueger-eO_JhqabBY0-unsplash.jpg";
-import { Counties } from "../components";
+import Counties  from "@/components/Counties";
 
 class CovidUpdate extends Component {
     constructor(props){

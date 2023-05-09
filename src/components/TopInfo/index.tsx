@@ -1,8 +1,8 @@
 import React from "react";
 import {prefix} from "../../api/ports"
 
-import phone from "../../resources/Icons/telephone.svg";
-import email from "../../resources/Icons/envelope-open.svg";
+import phone from "@/resources/Icons/telephone.svg";
+import email from "@/resources/Icons/envelope-open.svg";
 
 function TopInfo(){
     return (

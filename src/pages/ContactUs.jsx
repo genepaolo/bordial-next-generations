@@ -1,6 +1,6 @@
 import React, {useState} from "react";
-import PageTitle from "../components/PageTitle";
-import {portsLocal, portsHeroku} from "../api/ports";
+import PageTitle from "@/components/PageTitle";
+import {portsLocal, portsHeroku} from "@/api/ports";
 
 function ContactUs(){
 

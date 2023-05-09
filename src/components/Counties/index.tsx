@@ -1,5 +1,5 @@
 import React  from "react";
-import {prefix} from "../../api/ports";
+import {prefix} from "@/api/ports";
 const Counties = () => {
     
         <div className="page-counties">

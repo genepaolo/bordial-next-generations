@@ -1,6 +1,6 @@
 import React from "react";
-import info from "../../resources/Icons/icons8-info.svg";
-import {prefix} from "../../api/ports";
+import info from "@/resources/Icons/icons8-info.svg";
+import {prefix} from "@/api/ports";
 function CovidInfo(){
     return (
         <div className="covidinfo u-center-text">

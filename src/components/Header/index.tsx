@@ -1,7 +1,7 @@
 import React from "react";
-import NavBar from "../NavBar";
-import TopInfo from "../TopInfo";
-import CovidInfo from "../CovidInfo";
+import NavBar from "@/components/NavBar";
+import TopInfo from "@/components/TopInfo";
+import CovidInfo from "@/components/CovidInfo";
 
 function Header(){
     return (

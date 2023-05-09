@@ -10,7 +10,8 @@
       "moduleResolution": "node",
       "allowSyntheticDefaultImports": true,
       "paths": {
-        "@/*": ["./src/*"]
+        "@/*": ["./src/*"],
+        "@Resources/*": ["./src/resources/*"]
       }
     },
     "include": ["src/components", "src/custom.d.ts"],

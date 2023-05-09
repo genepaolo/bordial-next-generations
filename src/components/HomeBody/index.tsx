@@ -1,6 +1,6 @@
 import React from "react";
-import aui from "../../resources/StockImages/shutterstock_1015449343-min-20.jpg"
-import wimg from "../../resources/StockImages/shutterstock_1657685833-min-20.jpg";
+import aui from "@/resources/StockImages/shutterstock_1015449343-min-20.jpg"
+import wimg from "@/resources/StockImages/shutterstock_1657685833-min-20.jpg";
 
 function HomeBody(){
     return(

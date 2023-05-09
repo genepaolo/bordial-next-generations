@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from "react";
-import PageTitle from "../components/PageTitle";
-import starFilled from "../resources/Icons/icons8-star-48.png";
-import starEmpty from "../resources/Icons/icons8-star-48-empty.png";
-import Loader from "../components/Loader";
+import PageTitle from "@/components/PageTitle";
+import starFilled from "@/resources/Icons/icons8-star-48.png";
+import starEmpty from "@/resources/Icons/icons8-star-48-empty.png";
+import Loader from "@/components/Loader";
 
 function Testimonials(){
     const [submit, setSubmit] = useState(false);

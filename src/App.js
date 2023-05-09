@@ -1,8 +1,8 @@
 import React from "react";
-import Main from './components/Main';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import GoToTopButton from "./components/GoToTopButton";
+import Main from '@/components/Main';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import GoToTopButton from "@/components/GoToTopButton";
 
 function App(){
 
