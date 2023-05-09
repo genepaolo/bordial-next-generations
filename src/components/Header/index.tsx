@@ -1,7 +1,5 @@
 import React from "react";
-import NavBar from "@/components/NavBar";
-import TopInfo from "@/components/TopInfo";
-import CovidInfo from "@/components/CovidInfo";
+import {NavBar, TopInfo, CovidInfo} from "@/components";
 
 function Header(){
     return (

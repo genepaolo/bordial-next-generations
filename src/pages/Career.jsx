@@ -1,6 +1,6 @@
 import React from "react";
 import img from "@/resources/StockImages/shutterstock_473259139-min-20.jpg";
-import PageTitle from "@/components/PageTitle";
+import { PageTitle } from "@/components";
 
 function Career() {
 

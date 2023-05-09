@@ -1,10 +1,8 @@
 import React from "react";
 import img from "@/resources/StockImages/shutterstock_1932198155-min-20.jpg";
-import PageTitle from "@/components/PageTitle";
-import {serviceList, insuranceList, homeList} from "@/resources/Data/data";
-
+import {PageTitle} from "@/components";
+import data from "@/resources/Data/data.json";
 function Services(){
-    console.log(serviceList);
     function displayPageBody(){
         return(
             <div className="container-fluid">
@@ -13,7 +11,7 @@ function Services(){
                 <h3><strong>Services</strong></h3>
                     <ul className="services__list">
                         {
-                            serviceList.map((x) => (
+                            data.serviceList.map((x) => (
                                 <li><a href={x.href} rel="noreferrer" target="_blank"> {x.title} </a></li>
                             ))
                         }
@@ -25,7 +23,7 @@ function Services(){
                 <h3><strong>Insurance Accepted</strong></h3>
                     <ul className="services__list">
                         {
-                            insuranceList.map((x) => (
+                            data.insuranceList.map((x) => (
                                 <li><a href={x.href} rel="noreferrer" target="_blank"> {x.title} </a></li>
                             ))
                         }
@@ -37,7 +35,7 @@ function Services(){
                 <h3><strong>We Care for Patients in the following home settings</strong></h3>
                     <ul className="services__list">
                         {
-                            homeList.map((x) => (
+                            data.homeList.map((x) => (
                                 <li><a href={x.href} rel="noreferrer" target="_blank"> {x.title} </a></li>
                             ))
                         }
