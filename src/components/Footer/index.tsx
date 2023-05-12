@@ -1,5 +1,5 @@
 import React from "react";
-import {prefix} from "@/api/ports";
+import { prefix } from "@/api/ports";
 function Footer(){
 
     function displayContactInfo(){
@@ -11,8 +11,8 @@ function Footer(){
                     <p>University Park Campus, USC</p>
                     <p>Syracuse, NY, 90007</p>
                     <br/>
-                    <p>Phone: <a href ={prefix + "/#"}> (XXX) XXX-XXXX</a></p>
-                    <p>Fax:<a href={prefix + "/#"}> (XXX) XXX-XXXX</a></p>
+                    <p>Phone: <a href ={`${prefix}/#`}> (XXX) XXX-XXXX</a></p>
+                    <p>Fax:<a href={`${prefix}/#`}> (XXX) XXX-XXXX</a></p>
                     <p>Email:<a href ="mailto:paolo.gene@gmail.com"> paolo.gene@gmail.com</a></p>
 
                 </div>
@@ -38,19 +38,19 @@ function Footer(){
                 <div className="footer__collumn">
                     <p className="footer__collumn__titles">NAVIGATION</p>
                     <li className="footer-item">
-                        <a className="footer-link" href={prefix + "/"}>Home</a>
+                        <a className="footer-link" href={`${prefix}/`}>Home</a>
                     </li>
                     <li className="footer-item">
-                        <a className="footer-link" href={prefix + "/services"}>Services</a>
+                        <a className="footer-link" href={`${prefix}/services`}>Services</a>
                     </li>
                     <li className="footer-item">
-                        <a className="footer-link" href={prefix +"/contact-us"}>Contact Us</a>
+                        <a className="footer-link" href={`${prefix}/contact-us`}>Contact Us</a>
                     </li>
                     <li className="footer-item">
-                        <a className="footer-link" href={prefix +"/intake-requests"}>Request A Visit</a>
+                        <a className="footer-link" href={`${prefix}/intake-requests`}>Request A Visit</a>
                     </li>
                     <li className="footer-item">
-                        <a className="footer-link" href={prefix +"/career"}>Careers</a>
+                        <a className="footer-link" href={`${prefix}/career`}>Careers</a>
                     </li>
                 </div>
             </div>

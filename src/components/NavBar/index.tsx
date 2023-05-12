@@ -1,30 +1,12 @@
 import React, {useState, useEffect} from "react";
 import {prefix} from "@/api/ports";
-function NavBar(){
+import {updateActive, handleToggle} from "./helpers";
+const NavBar = () => {
         const [toggled, setToggled] = useState(false);
         
-        function handleToggle(){
-            const icon = document.querySelector(".navbar-toggler__icon");
-            icon.classList.toggle("toggled");
-            setToggled(!toggled);
-        }
-
         useEffect(()=>{
-            function updateActive(){
-                const items = document.querySelectorAll(".nav-item");
-                items.forEach(function(item){
-                    item.classList.remove("active");
-                    const link = item.querySelector(".nav-link");
-                    if(link.getAttribute("href") === window.location.pathname){
-                        item.classList.add("active");
-                    }
-                });
-                
-            }
             updateActive();
         },[])
-
-        
 
         return (
             <section id="navbar">
@@ -33,7 +15,7 @@ function NavBar(){
                     <a className="navbar-brand" href={prefix +"/"}>
                         <h1>BNG</h1>  
                     </a>
-                    <button onClick={handleToggle}className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <button onClick={() => handleToggle(toggled, setToggled)}className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <div className="navbar-toggler__icon"></div>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">

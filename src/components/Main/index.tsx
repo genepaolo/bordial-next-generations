@@ -15,14 +15,14 @@ const Main = () => {
     return (
         <BrowserRouter>
             <Switch> 
-                <Route exact path={prefix + '/'}component={Home} ></Route>
-                <Route exact path={prefix +'/services'} component={Services} ></Route>
-                <Route exact path={prefix +'/contact-us'} component={ContactUs} ></Route>
-                <Route exact path={prefix +'/intake-requests'} component={IntakeRequests} ></Route>
-                <Route exact path={prefix +'/career'} component={Career} ></Route>
-                <Route exact path={prefix +'/covid-update'} component={CovidUpdate} ></Route>
-                <Route exact path={prefix +'/testimonials'} component={Testimonials} ></Route>
-                <Route exact path={prefix +'/unavailable'} component={Unavailable} ></Route>
+                <Route exact path={`${prefix}/`}component={Home} ></Route>
+                <Route exact path={`${prefix}/services`} component={Services} ></Route>
+                <Route exact path={`${prefix}/contact-us`} component={ContactUs} ></Route>
+                <Route exact path={`${prefix}/intake-requests`} component={IntakeRequests} ></Route>
+                <Route exact path={`${prefix}/career`} component={Career} ></Route>
+                <Route exact path={`${prefix}/covid-update`} component={CovidUpdate} ></Route>
+                <Route exact path={`${prefix}/testimonials`} component={Testimonials} ></Route>
+                <Route exact path={`${prefix}/unavailable`} component={Unavailable} ></Route>
                 <Route component={Unavailable} ></Route>
             </Switch>
         </BrowserRouter>

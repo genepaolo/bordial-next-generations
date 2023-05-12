@@ -4,7 +4,7 @@ import {prefix} from "../../api/ports"
 import phone from "@/resources/Icons/telephone.svg";
 import email from "@/resources/Icons/envelope-open.svg";
 
-function TopInfo(){
+const TopInfo = () => {
     return (
         <div className="topinfo">
             <span><img src={phone} alt="Phone:" className="topinfo__icons"></img><a href={prefix +"/"}>&ensp;(XXX) XXX-XXXX</a></span>

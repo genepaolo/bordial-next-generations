@@ -1,33 +1,14 @@
 import React, {useEffect} from "react";
 import welcome1 from "@/resources/StockImages/welcome1.png";
 import welcome2 from "@/resources/StockImages/welcome2.png";
+import {updateImgClass} from "./helpers";
 
-function Welcome(){
+const Welcome = () =>{
     
 
     useEffect(()=>{
         updateImgClass();
     },[]);
-
-    function updateImgClass(){
-        const width = window.innerWidth;
-        const imgs = document.querySelectorAll(".sliding-imgs");
-        if(width<=990){
-            // choose slide-img-right/left
-            imgs[0].classList.add("slide-img-left");
-            imgs[0].classList.remove("slide-left");
-            imgs[1].classList.add("slide-img-right");
-            imgs[1].classList.remove("slide-right");
-        }else{
-            // choose slide-right/left
-            imgs[0].classList.remove("slide-img-left");
-            imgs[0].classList.add("slide-left");
-            imgs[1].classList.remove("slide-img-right");
-            imgs[1].classList.add("slide-right");
-        }
-    }
-    
-    
 
     return(
         <div className="home-welcome">

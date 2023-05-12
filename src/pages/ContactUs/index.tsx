@@ -1,8 +1,8 @@
 import React, {useState} from "react";
-import PageTitle from "@/components/PageTitle";
+import {PageTitle} from "@/components";
 import {portsLocal, portsHeroku} from "@/api/ports";
 
-function ContactUs(){
+const ContactUs = () =>{
 
     const [state, setState] = useState({
         name:'',
@@ -10,21 +10,7 @@ function ContactUs(){
         msg:''
     })
 
-    async function sendEmail(e) {
-        const port = window.location.hostname === "localhost" ? portsLocal.contactus:portsHeroku.contactus;
-        e.preventDefault();
-        const req = {
-            method: "POST",
-            headers: {'Content-type' : 'application/json'},
-            body: JSON.stringify(state)
-        }
-        console.log(port);
-        fetch(port, req)
-        .then(alert("Thank you for the email!"))
-        .catch(error=>alert(error));
-    }
-
-    function updateState(e,key){
+    function updateState(e: any, key:string){
         const value = e.target.value;
         setState(prevState => ({
             ...prevState,
@@ -54,22 +40,22 @@ function ContactUs(){
                 </div>
                 <div className="col-md-12 col-lg-6">
                     <br></br>
-                    <form onSubmit={sendEmail}>
+                    <form onSubmit={(e)=>sendEmail(e,state)}>
                         <div className="form-row">
                             <div className="col-12">
-                            <input placeholder="Enter Name" type="text" onChange={(e) => updateState(e,"name")} className="form-control" name="from_name"id="cu-name" required/>
+                            <input placeholder="Enter Name" onChange={(e) => updateState(e,"name")} className="form-control" name="from_name"id="cu-name" required/>
                             </div>
                         </div>
                         <br/>
                         <div className="form-row">
                             <div className="col-12">
-                            <input placeholder="Enter Email" type="text" onChange={(e) => updateState(e,"email")} className="form-control" name="from_email"id="cu-email" required/>
+                            <input placeholder="Enter Email" onChange={(e) => updateState(e,"email")} className="form-control" name="from_email"id="cu-email" required/>
                             </div>
                         </div>
                         <br/>
                         <div className="form-row">
                             <div className="col-12">
-                            <textarea placeholder="Enter Message"  type="text"  onChange={(e) => updateState(e,"msg")} className="form-control" name="message"id="cu-msg" required/>
+                            <textarea placeholder="Enter Message" onChange={(e) => updateState(e,"msg")} className="form-control" name="message"id="cu-msg" required/>
                             </div>
                         </div>
                         <br/>
@@ -91,6 +77,25 @@ function ContactUs(){
         </div>
     );
     
+}
+
+async function sendEmail(e:any, state: {name: string;email: string;msg: string;}) {
+    const port = window.location.hostname === "localhost" ? portsLocal.contactus:portsHeroku.contactus;
+    e.preventDefault();
+    const req = {
+        method: "POST",
+        headers: {'Content-type' : 'application/json'},
+        body: JSON.stringify(state)
+    }
+    try{
+        const response = await fetch(port, req);
+        if(response.ok) alert("Thank you for the email!")
+    } catch(e){
+        alert(e);
+    }
+    // fetch(port, req)
+    // .then()
+    // .catch(error=>alert(error));
 }
 
 export default ContactUs;

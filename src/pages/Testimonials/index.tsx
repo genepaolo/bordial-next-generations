@@ -3,12 +3,14 @@ import starFilled from "@/resources/Icons/icons8-star-48.png";
 import starEmpty from "@/resources/Icons/icons8-star-48-empty.png";
 import { Loader, PageTitle} from "@/components";
 
-function Testimonials(){
+const Testimonials = () => {
     const [submit, setSubmit] = useState(false);
     const [loading, setLoading] = useState(true);
     const [firstDate, setFirstDate] = useState(null);
     const [lastDate, setLastDate] = useState(null);
     const [loadFirst, setLoadFirst] = useState(false);
+
+    type Testimonial = {name: string, rating: number, msg: string};
     const [testimonial, setTestimonial] = useState({
         name: "",
         rating: 5,
@@ -36,8 +38,8 @@ function Testimonials(){
         }
         function displayLoadMoreButton(){
             if(firstDate!=null && lastDate!=null){
-                const button = document.querySelector(".testimonials__btn");
-                if(firstDate===lastDate) {button.style.display = "none"}
+                const button: HTMLElement = document.querySelector(".testimonials__btn") as HTMLElement;
+                if(firstDate===lastDate) {button.style.display = "none"} //Element doesnt have style but HTMLElement does
                 else {button.style.display = "block"}
             }
             
@@ -58,7 +60,7 @@ function Testimonials(){
     },[firstDate, lastDate, submit, loadFirst])
 
     function clearTestimonial(){
-        const inputs = document.querySelectorAll("#t-name, #t-msg");
+        const inputs = document.querySelectorAll("#t-name, #t-msg") as NodeListOf<HTMLInputElement>;
         inputs.forEach(function(input){
             input.value = '';
         });
@@ -83,14 +85,14 @@ function Testimonials(){
     }
     
 
-    function addTestimonialsToPage(testimonials){
+    function addTestimonialsToPage(testimonials: Testimonial[]){
         testimonials.forEach(function(testimonial){
             appendTestimonial(testimonial.name, testimonial.rating, testimonial.msg);
         });
     }
 
 
-    async function postTestimonial(e) {
+    async function postTestimonial(e:any) {
         var base_url = window.location.origin;
         var url = base_url + "/api/testimonials";
         e.preventDefault();
@@ -109,7 +111,7 @@ function Testimonials(){
         });
     }
 
-    function updateTestimonial(e,key){
+    function updateTestimonial(e:any,key:string){
         const value = e.target.value;
         setTestimonial(prevState => ({
             ...prevState,
@@ -117,7 +119,7 @@ function Testimonials(){
         }))
     }
 
-    function stars(rating){
+    function stars(rating:number){
         
         const div = document.createElement("div");
         for(let i = 0;i<rating;i++){
@@ -154,7 +156,7 @@ function Testimonials(){
         //    </div>
         // );
     }
-    function prependTestimonial(name, rating, msg){
+    function prependTestimonial(name:string, rating:number, msg:string){
         const testSection = document.querySelector(".testimonials");
         const test = document.createElement("div");
         test.className = "testimonial";
@@ -172,7 +174,7 @@ function Testimonials(){
         test.append(left,right);
         testSection.prepend(test);
     }
-    function appendTestimonial(name, rating, msg){
+    function appendTestimonial(name:string, rating:number, msg:string){
         const testSection = document.querySelector(".testimonials");
         const test = document.createElement("div");
         test.className = "testimonial";
@@ -193,7 +195,7 @@ function Testimonials(){
 
     
 
-    function updateRating(e){
+    function updateRating(e:any){
         const val = e.target.value
         e.target.style.setProperty("--value", val);
         console.log(e.target.style.getPropertyValue('--value'));
@@ -221,12 +223,12 @@ function Testimonials(){
                             </div>
                             <div className="form-row">
                                 <div className="col-12">
-                                <input placeholder="Enter Name" type="text" onChange={(e) => updateTestimonial(e,"name")} className="form-control" name="from_name"id="t-name" required/>
+                                <input placeholder="Enter Name" onChange={(e) => updateTestimonial(e,"name")} className="form-control" name="from_name"id="t-name" required/>
                                 </div>
                             </div>
                             <div className="form-row">
                                 <div className="col-12">
-                                <textarea placeholder="Enter Message"  type="text"  onChange={(e) => updateTestimonial(e,"msg")} className="form-control" name="message"id="t-msg" required/>
+                                <textarea placeholder="Enter Message"  onChange={(e) => updateTestimonial(e,"msg")} className="form-control" name="message"id="t-msg" required/>
                                 </div>
                             </div>
                             <button className="form-btn" type="submit">SUBMIT</button>

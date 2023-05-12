@@ -1,5 +1,5 @@
 import React from "react";
-import { Main, Header, Footer, GoToTopButton} from '@/components';
+import { Header, Main, Footer, GoToTopButton} from '@/components';
 
 function App(){
 

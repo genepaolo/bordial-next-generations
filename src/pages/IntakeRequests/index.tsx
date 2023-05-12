@@ -1,13 +1,13 @@
 import React from "react";
 import { PageTitle } from "@/components";
-function IntakeRequests(){
+const IntakeRequests = () =>{
 
 
-    function sendEmail(e) {
+    function sendEmail(e:any) {
         e.preventDefault();
         alert("Functionality disabled on this version!");
     }
-    function sendPDF(e){
+    function sendPDF(e:any){
         e.preventDefault();
         alert("Functionality disabled on this version!");
     }
@@ -235,7 +235,7 @@ function IntakeRequests(){
                                 <label >Other reason or additional comments</label>
                             </div>
                             <div className="col-12 col-md-8">
-                                <textarea type="text" placeholder="..."  className="form-control" name="other-reason"/>
+                                <textarea placeholder="..."  className="form-control" name="other-reason"/>
 
                             </div>
                         </div>

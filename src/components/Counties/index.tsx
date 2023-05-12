@@ -1,7 +1,7 @@
 import React  from "react";
 import {prefix} from "@/api/ports";
 const Counties = () => {
-    
+    return(
         <div className="page-counties">
             <div className="container-fluid">
                 <h1 className="u-center-text">
@@ -17,10 +17,11 @@ const Counties = () => {
                     <li>Kern County</li>
 
                 </ul>
-                <p><a href={prefix + "/contact-us"}>Click here to contact us for an appointment today!</a></p>
+                <p><a href={`${prefix}/contact-us`}>Click here to contact us for an appointment today!</a></p>
             </div>
             
         </div>
+    );
     
     
 };
